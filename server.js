@@ -51,7 +51,8 @@ app.use(helmet({
                 "'unsafe-inline'",          // inline JS in index.html / admin.html
                 "https://cdn.jsdelivr.net",  // Chart.js, Lucide Icons
                 "https://cdn.getphyllo.com", // Phyllo Connect SDK
-                "https://unpkg.com"          // any unpkg CDN assets
+                "https://unpkg.com",         // any unpkg CDN assets
+                "https://cdn.tailwindcss.com" // Tailwind CSS Engine
             ],
             styleSrc: [
                 "'self'",
