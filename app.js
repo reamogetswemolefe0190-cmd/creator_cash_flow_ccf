@@ -2,9 +2,9 @@
    Creator Financial OS - HQ Engine & Database Orchestrator
    ========================================================================== */
 
-const API_BASE_URL = (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'))
-    ? `${window.location.protocol}//${window.location.host}/api`
-    : 'https://creator-cash-flow.onrender.com/api';
+const API_BASE_URL = (typeof window !== 'undefined' && window.location.origin && window.location.origin !== 'null')
+    ? `${window.location.origin}/api`
+    : '/api';
 
 // Application State
 const state = {

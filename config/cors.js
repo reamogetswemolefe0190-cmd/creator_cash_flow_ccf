@@ -12,9 +12,23 @@ const ALLOWED_ORIGINS = [
     'http://localhost:3000'
 ];
 
+function isOriginAllowed(origin) {
+    if (!origin) return true;
+    if (ALLOWED_ORIGINS.includes(origin)) return true;
+    try {
+        const parsed = new URL(origin);
+        if (parsed.hostname.endsWith('.onrender.com') || parsed.hostname === 'onrender.com') {
+            return true;
+        }
+    } catch {
+        return false;
+    }
+    return false;
+}
+
 const corsOptions = {
     origin: (origin, callback) => {
-        if (!origin || ALLOWED_ORIGINS.includes(origin)) {
+        if (isOriginAllowed(origin)) {
             callback(null, true);
         } else {
             const corsError = new Error('Blocked by CORS policy');
