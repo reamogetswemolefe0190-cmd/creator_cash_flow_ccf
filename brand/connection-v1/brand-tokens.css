@@ -1,0 +1,25 @@
+/* Apply this class to the intended product root. Does not alter the site globally. */
+.ccf-brand {
+  --ccf-ink: #252f20;
+  --ccf-paper: #f7f7f2;
+  --ccf-lime: #defb82;
+  --ccf-sage: #a8b698;
+  --ccf-muted: #596451;
+  --ccf-border: #dde2d7;
+  --ccf-surface: #ffffff;
+  --ccf-font: 'Manrope', Arial, sans-serif;
+  --ccf-radius-panel: 12px;
+  --ccf-radius-input: 8px;
+  --ccf-radius-action: 999px;
+  --ccf-space-1: 4px;
+  --ccf-space-2: 8px;
+  --ccf-space-3: 12px;
+  --ccf-space-4: 16px;
+  --ccf-space-6: 24px;
+  --ccf-space-8: 32px;
+  --ccf-space-12: 48px;
+  --ccf-space-16: 64px;
+  font-family: var(--ccf-font);
+  color: var(--ccf-ink);
+  background: var(--ccf-paper);
+}
