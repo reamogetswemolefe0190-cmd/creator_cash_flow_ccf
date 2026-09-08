@@ -1,0 +1,245 @@
+{
+  "viewports": {
+    "iPhone SE": {
+      "winW": 419,
+      "winH": 746,
+      "scrollW": 419,
+      "hasOverflow": false,
+      "overflowElsCount": 5,
+      "overflowEls": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "flex items-center gap-xs text-text-secondary",
+          "right": 488,
+          "width": 137,
+          "winW": 419
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "class": "p-xs hover:text-white rounded-lg transition-colors",
+          "right": 437,
+          "width": 87,
+          "winW": 419
+        },
+        {
+          "tag": "SPAN",
+          "id": "",
+          "class": "material-symbols-outlined text-sm",
+          "right": 433,
+          "width": 79,
+          "winW": 419
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "class": "p-xs hover:text-white rounded-lg transition-colors",
+          "right": 488,
+          "width": 47,
+          "winW": 419
+        },
+        {
+          "tag": "SPAN",
+          "id": "",
+          "class": "material-symbols-outlined text-sm",
+          "right": 484,
+          "width": 39,
+          "winW": 419
+        }
+      ],
+      "navData": {
+        "width": 395,
+        "left": 12,
+        "right": 407,
+        "centered": true,
+        "backdropFilter": "blur(24px)",
+        "borderRadius": "9999px"
+      },
+      "arcData": {
+        "width": 335,
+        "left": 20,
+        "right": 355,
+        "badgeTRClipped": false,
+        "badgeBLClipped": false,
+        "badgeTRRight": 363,
+        "badgeBLLeft": 12
+      },
+      "meshData": {
+        "width": 375,
+        "height": 750,
+        "overflow": "hidden",
+        "orbsCount": 3
+      }
+    },
+    "iPhone 14": {
+      "winW": 434,
+      "winH": 940,
+      "scrollW": 434,
+      "hasOverflow": false,
+      "overflowElsCount": 0,
+      "overflowEls": [],
+      "navData": {
+        "width": 410,
+        "left": 12,
+        "right": 422,
+        "centered": true,
+        "backdropFilter": "blur(24px)",
+        "borderRadius": "9999px"
+      },
+      "arcData": {
+        "width": 350,
+        "left": 20,
+        "right": 370,
+        "badgeTRClipped": false,
+        "badgeBLClipped": false,
+        "badgeTRRight": 378,
+        "badgeBLLeft": 12
+      },
+      "meshData": {
+        "width": 390,
+        "height": 750,
+        "overflow": "hidden",
+        "orbsCount": 3
+      }
+    },
+    "iPhone 14 Pro Max": {
+      "winW": 474,
+      "winH": 1028,
+      "scrollW": 474,
+      "hasOverflow": false,
+      "overflowElsCount": 0,
+      "overflowEls": [],
+      "navData": {
+        "width": 450,
+        "left": 12,
+        "right": 462,
+        "centered": true,
+        "backdropFilter": "blur(24px)",
+        "borderRadius": "9999px"
+      },
+      "arcData": {
+        "width": 390,
+        "left": 20,
+        "right": 410,
+        "badgeTRClipped": false,
+        "badgeBLClipped": false,
+        "badgeTRRight": 418,
+        "badgeBLLeft": 12
+      },
+      "meshData": {
+        "width": 430,
+        "height": 750,
+        "overflow": "hidden",
+        "orbsCount": 3
+      }
+    },
+    "Desktop 1440p": {
+      "winW": 1440,
+      "winH": 900,
+      "scrollW": 1425,
+      "hasOverflow": false,
+      "overflowElsCount": 0,
+      "overflowEls": [],
+      "navData": {
+        "width": 1024,
+        "left": 201,
+        "right": 1225,
+        "centered": false,
+        "backdropFilter": "blur(24px)",
+        "borderRadius": "9999px"
+      },
+      "arcData": {
+        "width": 864,
+        "left": 281,
+        "right": 1145,
+        "badgeTRClipped": false,
+        "badgeBLClipped": false,
+        "badgeTRRight": 1177,
+        "badgeBLLeft": 249
+      },
+      "meshData": {
+        "width": 1024,
+        "height": 750,
+        "overflow": "hidden",
+        "orbsCount": 3
+      }
+    }
+  },
+  "interactions": [
+    {
+      "name": "Initial Balance",
+      "val": "R24,650",
+      "pass": true
+    },
+    {
+      "name": "Annual Balance Toggle",
+      "val": "R295,800",
+      "pass": true
+    },
+    {
+      "name": "Monthly Balance Toggle Back",
+      "val": "R24,650",
+      "pass": true
+    },
+    {
+      "name": "Switch Tab Revenue",
+      "val": "Consolidated Revenue Streams",
+      "pass": true
+    },
+    {
+      "name": "Switch Tab Tax",
+      "val": "Tax Deduction & Savings Engine",
+      "pass": true
+    },
+    {
+      "name": "Switch Tab Overview",
+      "val": "Creator Cash Flow Command Center",
+      "pass": true
+    },
+    {
+      "name": "Sidebar Toggle",
+      "initHidden": true,
+      "afterHidden": false,
+      "pass": true
+    }
+  ],
+  "cssChecks": {
+    "totalKeyframes": 2,
+    "keyframesFound": [
+      {
+        "name": "floatEmerald",
+        "found": false
+      },
+      {
+        "name": "floatTeal",
+        "found": false
+      },
+      {
+        "name": "floatIndigo",
+        "found": false
+      },
+      {
+        "name": "pulseCenterCore",
+        "found": false
+      },
+      {
+        "name": "fadeSlideUp",
+        "found": false
+      },
+      {
+        "name": "floatBadge",
+        "found": false
+      },
+      {
+        "name": "floatBadgeDelayed",
+        "found": false
+      }
+    ],
+    "hasEmeraldOrb": true,
+    "hasTealOrb": true,
+    "hasIndigoOrb": true,
+    "hasCenterGlow": true
+  },
+  "verdict": null
+}

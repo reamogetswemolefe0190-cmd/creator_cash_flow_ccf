@@ -1,0 +1,79 @@
+name: CI / Automated Regression Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    name: Regression & Security Suite (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    env:
+      PORT: 5000
+      NODE_ENV: test
+      JWT_SECRET: ci_test_jwt_secret_token_key_2026_super_secure
+      ADMIN_PASSWORD: CiAdminTestPassword2026!
+      ADMIN_EMAIL: admin@creatorcashflow.com
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Verify Git ignores .env files
+        run: git check-ignore -v .env
+
+      - name: Security Scan - Zero Hardcoded PII & Fallback Secrets
+        run: |
+          echo "Scanning production files for developer personal email..."
+          ! grep -rnwi --exclude-dir={.git,.agents,node_modules,tests} --exclude="ORIGINAL_REQUEST.md" --exclude="test_m1_verification.js" "reamogetswemolefe0190@gmail.com" .
+          echo "Scanning production files for fallback secrets..."
+          ! grep -rnwi --exclude-dir={.git,.agents,node_modules,tests} --exclude="ORIGINAL_REQUEST.md" "creator_cash_flow_secret_key_2026" .
+
+      - name: Start Express Server for Live Health & HTTP Validation
+        run: |
+          node server.js &
+          echo "Waiting for server to become healthy on port 5000..."
+          for i in {1..20}; do
+            if curl -s -f http://localhost:5000/api/health > /dev/null; then
+              echo "Server is healthy!"
+              break
+            fi
+            echo "Waiting for server... ($i/20)"
+            sleep 1
+          done
+          curl -s http://localhost:5000/api/health
+
+      - name: Run Core Regression Test Suite (npm test)
+        run: npm test
+
+      - name: Run Administrative & Verification Test Suites
+        run: |
+          node test_admin_auth.js
+          node test_admin_ui.js
+          node test_admin_m3.js
+          node test_admin_metrics.js
+
+      - name: Run Opaque-Box End-to-End Remediation Suite
+        run: node tests/e2e_remediation_test.js
+
+      - name: Run Challenger Adversarial & Bounds Stress Suites
+        run: |
+          node tests/challenger_m2_adversarial.js
+          node tests/adversarial_m2_challenger2.js
+          node tests/challenger_m3_bounds_stress.js
+          node tests/challenger_m3_stress2.js

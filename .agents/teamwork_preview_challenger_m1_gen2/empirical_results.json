@@ -1,0 +1,287 @@
+{
+  "defect1_linkTag": true,
+  "defect1_keyframesDefined": {
+    "floatEmerald": true,
+    "floatTeal": true,
+    "floatIndigo": true,
+    "pulseCenterCore": true,
+    "fadeSlideUp": true,
+    "floatBadge": true,
+    "floatBadgeDelayed": true
+  },
+  "defect1_keyframesBound": {
+    "floatEmerald": true,
+    "floatTeal": true,
+    "floatIndigo": true,
+    "pulseCenterCore": true,
+    "fadeSlideUp": true,
+    "floatBadge": true,
+    "floatBadgeDelayed": true
+  },
+  "defect1_elementsInDOM": {
+    "floatEmerald": true,
+    "floatTeal": true,
+    "floatIndigo": true,
+    "pulseCenterCore": true,
+    "fadeSlideUp": true,
+    "floatBadge": true,
+    "floatBadgeDelayed": true
+  },
+  "defect2_arcHeaderStructure": false,
+  "defect2_viewportMath": {
+    "320px (Ultra-narrow Mobile)": {
+      "frameWidth": 288,
+      "availableHeaderWidth": 280,
+      "actualPillWidth": 120,
+      "overflow": -64,
+      "passes": true
+    },
+    "375px (iPhone SE)": {
+      "frameWidth": 343,
+      "availableHeaderWidth": 335,
+      "actualPillWidth": 120,
+      "overflow": -119,
+      "passes": true
+    },
+    "390px (iPhone 12/13/14)": {
+      "frameWidth": 358,
+      "availableHeaderWidth": 350,
+      "actualPillWidth": 120,
+      "overflow": -134,
+      "passes": true
+    },
+    "430px (iPhone 14 Pro Max)": {
+      "frameWidth": 398,
+      "availableHeaderWidth": 390,
+      "actualPillWidth": 160,
+      "overflow": -134,
+      "passes": true
+    },
+    "768px (Tablet)": {
+      "frameWidth": 720,
+      "availableHeaderWidth": 688,
+      "actualPillWidth": 448,
+      "overflow": -120,
+      "passes": true
+    },
+    "1024px (Laptop)": {
+      "frameWidth": 976,
+      "availableHeaderWidth": 944,
+      "actualPillWidth": 448,
+      "overflow": -376,
+      "passes": true
+    },
+    "1440px (Desktop Wide)": {
+      "frameWidth": 896,
+      "availableHeaderWidth": 864,
+      "actualPillWidth": 448,
+      "overflow": -296,
+      "passes": true
+    },
+    "1920px (Ultra-wide)": {
+      "frameWidth": 896,
+      "availableHeaderWidth": 864,
+      "actualPillWidth": 448,
+      "overflow": -296,
+      "passes": true
+    }
+  },
+  "overallPass": true,
+  "logs": [
+    {
+      "status": true,
+      "testName": "index.html <head> contains <link rel=\"stylesheet\" href=\"style.css\">",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe '@keyframes floatEmerald' defined in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe 'floatEmerald' assigned to CSS rule in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe '@keyframes floatTeal' defined in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe 'floatTeal' assigned to CSS rule in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe '@keyframes floatIndigo' defined in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe 'floatIndigo' assigned to CSS rule in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe '@keyframes pulseCenterCore' defined in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe 'pulseCenterCore' assigned to CSS rule in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe '@keyframes fadeSlideUp' defined in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe 'fadeSlideUp' assigned to CSS rule in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe '@keyframes floatBadge' defined in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe 'floatBadge' assigned to CSS rule in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe '@keyframes floatBadgeDelayed' defined in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Keyframe 'floatBadgeDelayed' assigned to CSS rule in style.css",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Element target '.ambient-orb-emerald' for keyframe 'floatEmerald' exists in DOM",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Element target '.ambient-orb-teal' for keyframe 'floatTeal' exists in DOM",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Element target '.ambient-orb-indigo' for keyframe 'floatIndigo' exists in DOM",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Element target '.ambient-mesh-center-glow' for keyframe 'pulseCenterCore' exists in DOM",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Element target '.marketing-page-wrapper h1' for keyframe 'fadeSlideUp' exists in DOM",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Element target '.animate-float' for keyframe 'floatBadge' exists in DOM",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Element target '.animate-float-delayed' for keyframe 'floatBadgeDelayed' exists in DOM",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "#arc-browser-frame element exists in index.html",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Arc browser header bar container exists inside #arc-browser-frame",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Traffic lights container has 'flex-shrink-0'",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Window actions container has 'flex-shrink-0'",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "URL pill container has 'flex-1'",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "URL pill container has 'min-w-0'",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "URL pill container has 'overflow-hidden'",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "URL pill contains text truncation element ('truncate')",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Header bar container has 'overflow-hidden'",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Viewport 320px (Ultra-narrow Mobile): Frame=288px, AvailHeader=280px, PillWidth=120px, Overflow=-64px",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Viewport 375px (iPhone SE): Frame=343px, AvailHeader=335px, PillWidth=120px, Overflow=-119px",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Viewport 390px (iPhone 12/13/14): Frame=358px, AvailHeader=350px, PillWidth=120px, Overflow=-134px",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Viewport 430px (iPhone 14 Pro Max): Frame=398px, AvailHeader=390px, PillWidth=160px, Overflow=-134px",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Viewport 768px (Tablet): Frame=720px, AvailHeader=688px, PillWidth=448px, Overflow=-120px",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Viewport 1024px (Laptop): Frame=976px, AvailHeader=944px, PillWidth=448px, Overflow=-376px",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Viewport 1440px (Desktop Wide): Frame=896px, AvailHeader=864px, PillWidth=448px, Overflow=-296px",
+      "details": ""
+    },
+    {
+      "status": true,
+      "testName": "Viewport 1920px (Ultra-wide): Frame=896px, AvailHeader=864px, PillWidth=448px, Overflow=-296px",
+      "details": ""
+    }
+  ]
+}

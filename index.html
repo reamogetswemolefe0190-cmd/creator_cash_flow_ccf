@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Creator Cash Flow | Financial Intelligence for Modern Creators"/>
+    <meta name="description" content="Financial intelligence, cash-flow visibility, creator health metrics, and business records for modern digital creators."/>
+    <meta name="keywords" content="creator cash flow, creator health, creator business os, financial readiness, revenue tracking, financial intelligence"/>
+    <link rel="canonical" href="https://creatorcashflow.co.za/"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://creatorcashflow.co.za/"/>
+    <meta property="og:title" content="Creator Cash Flow | Financial Intelligence for Modern Creators"/>
+    <meta property="og:description" content="Track earnings, understand growth, and build a sustainable creator business."/>
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content="https://creatorcashflow.co.za/"/>
+    <meta property="twitter:title" content="Creator Cash Flow | Financial Intelligence for Modern Creators"/>
+    <meta property="twitter:description" content="Track earnings, understand growth, and build a sustainable creator business."/>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#050505">
+
+    <!-- JSON-LD Structured Data Schema for #1 Google Ranking -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Creator Cash Flow",
+          "operatingSystem": "Web, iOS, Android",
+          "applicationCategory": "FinanceApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "ZAR"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "128"
+          },
+          "description": "Financial Intelligence & Cash Flow OS for Modern Creators, YouTubers, and Streamers."
+        },
+        {
+          "@type": "Organization",
+          "name": "Creator Cash Flow",
+          "url": "https://creatorcashflow.co.za/",
+          "logo": "https://creatorcashflow.co.za/manifest.json",
+          "sameAs": [
+            "https://creatorcashflow.co.za"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Creator Cash Flow?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Creator Cash Flow is the financial intelligence platform and business OS designed for digital creators to track consolidated earnings, monitor creator health, understand cash flow, and organize business records."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Creator Health work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Creator Health is a product-generated business-health indicator derived from revenue consistency, profit margin, expense trends, platform concentration, cash-flow stability, and income growth."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data Schema for #1 Google Ranking -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Creator Cash Flow",
+          "operatingSystem": "Web, iOS, Android",
+          "applicationCategory": "FinanceApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "ZAR"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "128"
+          },
+          "description": "Financial Intelligence & Cash Flow OS for Modern Creators, YouTubers, and Streamers."
+        },
+        {
+          "@type": "Organization",
+          "name": "Creator Cash Flow",
+          "url": "https://creatorcashflow.co.za/",
+          "logo": "https://creatorcashflow.co.za/manifest.json",
+          "sameAs": [
+            "https://creatorcashflow.co.za"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Creator Cash Flow?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Creator Cash Flow is the official financial intelligence platform and business OS designed for digital creators to track consolidated earnings, audit expense write-offs, reserve tax obligations, and optimize profit growth."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Creator Cash Flow calculate tax holds?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CCF includes an automated sole-proprietor tax engine that calculates real-time 15% tax reserve recommendations based on your net monthly earnings."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS with Forms & Container Queries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css?v=20260808T1847">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css?v=2c083b9"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Design System Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#050505",
+                        "surface": "#0B0B0B",
+                        "border-slate": "rgba(255,255,255,0.08)",
+                        "text-primary": "#FFFFFF",
+                        "text-secondary": "#8E8E93",
+                        "accent-emerald": "#22C55E",
+                        "secondary-container": "rgba(34, 197, 94, 0.1)",
+                        "on-secondary-container": "#22C55E"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "12px",
+                        "xl": "16px",
+                        "3xl": "24px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "display": ["Plus Jakarta Sans"],
+                        "body": ["Inter"]
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "container-max": "1280px",
+                        "2xl": "48px",
+                        "xs": "4px",
+                        "3xl": "64px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "base": "4px"
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Noise Texture Overlay */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            opacity: 0.015;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .card-shadow {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+    <!-- Phyllo Connect SDK -->
+    <script src="https://cdn.getphyllo.com/connect/v2/phyllo-connect.js"></script>
+</head>
+<body class="bg-background text-text-primary font-body selection:bg-accent-emerald/30 relative min-h-screen overflow-x-hidden">
+    <!-- Noise overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- ==========================================================================
+       VIEW 1: LANDING PAGE REDESIGN
+       ========================================================================== -->
+    <div id="view-marketing" class="marketing-page-wrapper relative z-10 max-w-5xl mx-auto px-xs sm:px-md">
+        <!-- Ambient Multi-Color Mesh Backdrop (Arc & Framer - Feature F2) -->
+        <div class="ambient-mesh-wrapper pointer-events-none absolute top-[-80px] left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[750px] overflow-hidden z-0" aria-hidden="true">
+            <div class="ambient-orb ambient-orb-emerald"></div>
+            <div class="ambient-orb ambient-orb-teal"></div>
+            <div class="ambient-orb ambient-orb-indigo"></div>
+            <div class="ambient-mesh-center-glow"></div>
+        </div>
+
+        <!-- Floating Glassmorphic Pill Navbar (Arc & Framer - Feature F1) -->
+        <header class="fixed top-3 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1.25rem)] sm:w-[calc(100%-2rem)] max-w-5xl transition-all duration-300">
+            <div class="glass-pill-nav flex justify-between items-center px-3 py-2 sm:px-6 sm:py-3 rounded-full bg-surface/80 backdrop-blur-2xl border border-white/[0.12] shadow-[0_10px_30px_-5px_rgba(0,0,0,0.6),inset_0_1px_1px_rgba(255,255,255,0.15)]">
+                <!-- Left: Logo & Brand Name -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-accent-emerald/10 border border-accent-emerald/20 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-accent-emerald" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M28 72C20 62 20 40 32 28C40 20 54 20 62 24" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                            <path d="M42 76C36 68 36 50 44 40C50 34 60 34 66 38" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+                            <path d="M56 80C52 74 52 60 58 52C62 48 70 48 76 52" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                            <circle cx="74" cy="28" r="5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-xs xs:text-sm sm:text-base md:text-lg font-extrabold text-white tracking-tight whitespace-nowrap">Creator Cash Flow</span>
+                </div>
+
+                <!-- Right: Actions -->
+                <div class="flex items-center gap-1.5 sm:gap-3">
+                    <button class="font-label-lg text-xs sm:text-sm text-text-secondary hover:text-white px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-white/[0.05] active:scale-95 transition-all" onclick="openAccountAuthModal()">Sign In</button>
+                    <button class="bg-white text-black font-label-lg text-xs sm:text-sm py-1.5 px-3 sm:py-2 sm:px-5 rounded-full active:scale-95 transition-all font-bold hover:bg-white/90 shadow-md shadow-white/10 whitespace-nowrap" onclick="startOnboarding()">Get Started</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="pt-32 pb-32">
+            <!-- Section 1: Hero Section (Editorial Title + Visual Object in Environment) -->
+            <section class="mb-3xl text-center relative z-10 max-w-4xl mx-auto px-xs sm:px-md">
+
+                <h1 class="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.08] mb-md">
+                    Financial Intelligence<br><span class="gradient-text">for Modern Creators</span>
+                </h1>
+                <p class="font-body-md text-text-secondary text-base sm:text-xl max-w-2xl mx-auto font-normal leading-relaxed mb-xl">
+                    Track earnings. Understand growth. Build a sustainable creator business.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-md justify-center items-center mb-2xl">
+                    <button class="w-full sm:w-auto bg-white text-black font-bold font-label-lg py-3.5 px-8 rounded-2xl shadow-xl active:scale-95 transition-all hover:bg-white/90 btn-magnetic" onclick="switchView('onboarding')">
+                        Start Free
+                    </button>
+                    <button class="w-full sm:w-auto flex items-center justify-center gap-xs font-label-lg text-white py-3.5 px-8 rounded-2xl border border-white/[0.1] bg-surface hover:bg-white/[0.05] active:scale-95 transition-all" onclick="enterDemoMode()">
+                        Watch Demo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section 2: Desktop 3-Scene Hero Mockup & Smartphone Editorial Card -->
+            <section class="mb-3xl max-w-4xl mx-auto px-xs sm:px-md relative z-10" id="hero-mockup-section">
+                
+                <!-- Ambient Mesh Glow behind Mockup -->
+                <div class="absolute -top-16 -left-16 w-72 h-72 bg-accent-emerald/15 rounded-full blur-[100px] pointer-events-none"></div>
+                <div class="absolute -bottom-16 -right-16 w-72 h-72 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+                <!-- 1. DESKTOP / PC ONLY: OVERSIZED BROWSER WITH 3 ANIMATED HERO SCENES (hidden on mobile, block on md+) -->
+                <div id="hero-mac-desktop-view" class="hidden md:block relative group perspective-1000">
+                    
+
+
+                    <!-- Floating Badge 1: Top-Right AdSense Live Sync -->
+                    <div class="floating-badge badge-top-right absolute -top-8 -right-8 z-30 bg-surface/90 backdrop-blur-xl border border-white/[0.12] p-md rounded-2xl shadow-2xl flex items-center gap-sm animate-float">
+                        <div class="w-10 h-10 rounded-xl bg-accent-emerald/20 border border-accent-emerald/40 flex items-center justify-center text-accent-emerald">
+                            <span class="material-symbols-outlined text-xl">payments</span>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-xs">
+                                <span class="w-2 h-2 rounded-full bg-accent-emerald"></span>
+                                <span class="text-xs font-bold text-text-secondary uppercase tracking-wider">Live Sync</span>
+                            </div>
+                            <p class="text-sm font-extrabold text-white">+R18,420 <span class="text-accent-emerald text-[11px] font-normal">YouTube</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge 2: Bottom-Left Creator Health Indicator -->
+                    <div class="floating-badge badge-bottom-left absolute -bottom-8 -left-8 z-30 bg-surface/90 backdrop-blur-xl border border-white/[0.12] p-md rounded-2xl shadow-2xl flex items-center gap-sm animate-float-delayed">
+                        <div class="w-10 h-10 rounded-xl bg-accent-emerald/20 border border-accent-emerald/40 flex items-center justify-center text-accent-emerald font-display font-extrabold text-base">
+                            82
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1">
+                                <span class="text-xs font-bold text-white">Creator Health</span>
+                                <span class="text-[10px] text-accent-emerald font-bold px-1.5 py-0.2 rounded bg-accent-emerald/10 border border-accent-emerald/30">Healthy</span>
+                            </div>
+                            <p class="text-[11px] text-text-secondary">Revenue ↑ • Cash Flow ↑ • Stability</p>
+                        </div>
+                    </div>
+
+                    <!-- Main Oversized Browser Frame -->
+                    <div id="arc-browser-frame" class="relative rounded-3xl bg-surface/80 backdrop-blur-2xl border border-white/[0.1] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] overflow-hidden transition-transform duration-200 ease-out">
+                        
+                        <!-- Mac Window Header / Traffic Lights -->
+                        <div class="bg-black/60 border-b border-white/[0.08] px-md py-sm flex items-center justify-between select-none overflow-hidden">
+                            <!-- macOS Traffic Light Controls -->
+                            <div class="flex items-center gap-xs flex-shrink-0">
+                                <span class="w-3 h-3 rounded-full bg-[#FF5F56] inline-block hover:opacity-80 transition-opacity"></span>
+                                <span class="w-3 h-3 rounded-full bg-[#FFBD2E] inline-block hover:opacity-80 transition-opacity"></span>
+                                <span class="w-3 h-3 rounded-full bg-[#27C93F] inline-block hover:opacity-80 transition-opacity"></span>
+                            </div>
+
+                            <!-- Arc URL Bar Pill -->
+                            <div class="flex-1 min-w-0 max-w-md mx-md bg-white/[0.04] border border-white/[0.06] rounded-xl px-md py-xs flex items-center justify-center gap-xs text-xs text-text-secondary font-mono shadow-inner overflow-hidden">
+                                <span class="material-symbols-outlined text-accent-emerald text-sm flex-shrink-0">lock</span>
+                                <span class="text-white/90 truncate">app.creatorcashflow.co.za</span>
+                                <span class="text-text-secondary/60 flex-shrink-0">/hq</span>
+                            </div>
+
+                            <!-- Window Actions -->
+                            <div class="flex items-center gap-xs text-text-secondary flex-shrink-0">
+                                <button class="p-xs hover:text-white rounded-lg transition-colors" title="Sidebar Toggle" onclick="toggleArcSidebar()">
+                                    <span class="material-symbols-outlined text-sm">dock_to_right</span>
+                                </button>
+                                <button class="p-xs hover:text-white rounded-lg transition-colors" title="Reload Mockup" onclick="refreshHeroMockup()">
+                                    <span class="material-symbols-outlined text-sm">refresh</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Inner Workspace Layout -->
+                        <div class="flex min-h-[400px]">
+                            
+                            <!-- Arc Left Sidebar -->
+                            <aside id="arc-sidebar-preview" class="w-48 bg-black/40 border-r border-white/[0.06] p-md flex flex-col justify-between select-none">
+                                <div class="space-y-md">
+                                    <div class="flex items-center gap-xs px-xs text-xs font-bold text-text-secondary uppercase tracking-wider">
+                                        <span class="material-symbols-outlined text-accent-emerald text-base">dashboard</span>
+                                        <span>Workspace</span>
+                                    </div>
+                                    <nav class="space-y-xs text-xs">
+                                        <button class="arc-tab-btn active w-full flex items-center justify-between px-sm py-xs rounded-xl bg-white/[0.08] text-white font-semibold border border-white/[0.08] transition-all" data-tab="overview" onclick="switchHeroMockupTab('overview')">
+                                            <span class="flex items-center gap-xs">
+                                                <span class="material-symbols-outlined text-sm text-accent-emerald">space_dashboard</span>
+                                                Overview
+                                            </span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span>
+                                        </button>
+                                        <button class="arc-tab-btn w-full flex items-center justify-between px-sm py-xs rounded-xl text-text-secondary hover:text-white hover:bg-white/[0.03] transition-all" data-tab="revenue" onclick="switchHeroMockupTab('revenue')">
+                                            <span class="flex items-center gap-xs">
+                                                <span class="material-symbols-outlined text-sm">trending_up</span>
+                                                Health
+                                            </span>
+                                            <span class="text-[10px] text-accent-emerald font-bold">82</span>
+                                        </button>
+                                        <button class="arc-tab-btn w-full flex items-center justify-between px-sm py-xs rounded-xl text-text-secondary hover:text-white hover:bg-white/[0.03] transition-all" data-tab="records" onclick="switchHeroMockupTab('records')">
+                                            <span class="flex items-center gap-xs">
+                                                <span class="material-symbols-outlined text-sm">receipt_long</span>
+                                                Records
+                                            </span>
+                                            <span class="text-[10px] bg-white/[0.08] px-xs rounded text-text-secondary">2026</span>
+                                        </button>
+                                    </nav>
+                                </div>
+
+                                <!-- Bottom Status Indicator -->
+                                <div class="pt-sm border-t border-white/[0.06] flex items-center gap-xs text-[11px] text-text-secondary">
+                                    <span class="w-2 h-2 rounded-full bg-accent-emerald"></span>
+                                    <span>Financial Intelligence v3</span>
+                                </div>
+                            </aside>
+
+                            <!-- Main Canvas Content with 3 Hero Scenes -->
+                            <div class="flex-1 p-lg space-y-md bg-background/50 hero-scene-container relative">
+                                
+                                <!-- SCENE A: REVENUE CONSOLIDATION -->
+                                <div id="hero-scene-revenue" class="hero-scene active space-y-md">
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <h4 class="font-display font-bold text-base text-white">Creator Cash Flow Command Center</h4>
+                                            <p class="text-xs text-text-secondary">Real-time consolidated profit intelligence</p>
+                                        </div>
+                                        <div class="flex items-center gap-1 bg-accent-emerald/10 border border-accent-emerald/30 px-3 py-1 rounded-full text-xs text-accent-emerald font-bold">
+                                            <span class="w-2 h-2 rounded-full bg-accent-emerald animate-pulse"></span>
+                                            <span>Live Sync</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Metrics Grid -->
+                                    <div class="grid grid-cols-2 gap-md">
+                                        <div class="p-md glass-card-nested rounded-2xl space-y-xs relative overflow-hidden">
+                                            <div class="flex justify-between items-center text-xs text-text-secondary uppercase tracking-wider font-semibold">
+                                                <span>Net Monthly Cash</span>
+                                                <span class="material-symbols-outlined text-accent-emerald">trending_up</span>
+                                            </div>
+                                            <div class="font-display font-extrabold text-3xl text-white tracking-tight">
+                                                R24,650
+                                            </div>
+                                            <div class="flex items-center gap-xs text-xs text-accent-emerald font-semibold">
+                                                <span class="material-symbols-outlined text-sm">north_east</span>
+                                                <span>+14.8% this month</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-md glass-card-nested rounded-2xl space-y-xs">
+                                            <div class="flex justify-between items-center text-xs text-text-secondary uppercase tracking-wider font-semibold">
+                                                <span>Platform Split</span>
+                                                <span class="text-white font-bold">YouTube 74%</span>
+                                            </div>
+                                            <div class="w-full h-2 bg-white/[0.08] rounded-full overflow-hidden flex">
+                                                <div class="h-full bg-accent-emerald" style="width: 74%;"></div>
+                                                <div class="h-full bg-cyan-400" style="width: 18%;"></div>
+                                                <div class="h-full bg-pink-500" style="width: 8%;"></div>
+                                            </div>
+                                            <div class="flex justify-between items-center text-[11px] text-text-secondary pt-1">
+                                                <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-accent-emerald"></span> YouTube 74%</span>
+                                                <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-cyan-400"></span> TikTok 18%</span>
+                                                <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-pink-500"></span> Instagram 8%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Live Sparkline -->
+                                    <div class="p-md glass-card-nested rounded-2xl space-y-xs">
+                                        <div class="flex justify-between items-center text-xs text-text-secondary">
+                                            <span class="font-semibold uppercase tracking-wider">7-Day Cash Flow Velocity</span>
+                                            <span class="text-accent-emerald font-bold text-xs">Peak R24,650</span>
+                                        </div>
+                                        <div class="w-full h-20 relative pt-2">
+                                            <svg class="w-full h-full overflow-visible" viewBox="0 0 300 60" preserveAspectRatio="none">
+                                                <defs>
+                                                    <linearGradient id="heroChartGradient" x1="0" y1="0" x2="0" y2="1">
+                                                        <stop offset="0%" stop-color="#22C55E" stop-opacity="0.35"/>
+                                                        <stop offset="100%" stop-color="#22C55E" stop-opacity="0.0"/>
+                                                    </linearGradient>
+                                                </defs>
+                                                <path d="M 0,50 Q 50,45 100,30 T 200,20 T 300,5 L 300,60 L 0,60 Z" fill="url(#heroChartGradient)" />
+                                                <path d="M 0,50 Q 50,45 100,30 T 200,20 T 300,5" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" />
+                                                <circle cx="300" cy="5" r="4" fill="#22C55E" class="animate-pulse" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- SCENE B: CREATOR HEALTH & BUSINESS INTELLIGENCE -->
+                                <div id="hero-scene-intelligence" class="hero-scene inactive space-y-md">
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <h4 class="font-display font-bold text-base text-white">Creator Health Indicator</h4>
+                                            <p class="text-xs text-text-secondary">Algorithmic stability & performance score</p>
+                                        </div>
+                                        <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-emerald/10 border border-accent-emerald/30 text-accent-emerald text-xs font-bold">
+                                            <span class="w-2 h-2 rounded-full bg-accent-emerald"></span>
+                                            <span>Score: 82 / 100 Healthy</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-4 gap-2 text-center text-xs">
+                                        <div class="p-3 glass-card-nested rounded-2xl space-y-1">
+                                            <div class="text-[10px] text-text-secondary uppercase font-semibold">Revenue</div>
+                                            <div class="font-display font-extrabold text-lg text-accent-emerald">↑ High</div>
+                                            <span class="text-[9px] text-text-secondary">+14.8% MoM</span>
+                                        </div>
+                                        <div class="p-3 glass-card-nested rounded-2xl space-y-1">
+                                            <div class="text-[10px] text-text-secondary uppercase font-semibold">Expenses</div>
+                                            <div class="font-display font-extrabold text-lg text-accent-emerald">↓ Lean</div>
+                                            <span class="text-[9px] text-text-secondary">13.5% Ratio</span>
+                                        </div>
+                                        <div class="p-3 glass-card-nested rounded-2xl space-y-1">
+                                            <div class="text-[10px] text-text-secondary uppercase font-semibold">Cash Flow</div>
+                                            <div class="font-display font-extrabold text-lg text-accent-emerald">↑ Strong</div>
+                                            <span class="text-[9px] text-text-secondary">60d Buffer</span>
+                                        </div>
+                                        <div class="p-3 glass-card-nested rounded-2xl space-y-1">
+                                            <div class="text-[10px] text-text-secondary uppercase font-semibold">Diversity</div>
+                                            <div class="font-display font-extrabold text-lg text-cyan-400">◐ Balanced</div>
+                                            <span class="text-[9px] text-text-secondary">3 Streams</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Business Analyst AI Briefing Box -->
+                                    <div class="p-md rounded-2xl bg-gradient-to-r from-accent-emerald/10 via-cyan-500/10 to-indigo-500/10 border border-white/10 space-y-1">
+                                        <div class="text-xs font-bold text-white flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm text-accent-emerald">insights</span>
+                                            <span>Business Analyst Intelligence</span>
+                                        </div>
+                                        <p class="text-xs text-text-secondary leading-relaxed">
+                                            "YouTube represents 74% of revenue while TikTok provides rapid growth momentum. Average monthly revenue has increased for 3 consecutive months."
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- SCENE C: FINANCIAL READINESS & CASH FLOW WATERFALL -->
+                                <div id="hero-scene-cashflow" class="hero-scene inactive space-y-md">
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <h4 class="font-display font-bold text-base text-white">Financial Readiness & Cash Flow</h4>
+                                            <p class="text-xs text-text-secondary">Income → Deductions → Operating Margin → Net Cash</p>
+                                        </div>
+                                        <span class="text-xs font-bold text-accent-emerald bg-accent-emerald/10 px-3 py-1 rounded-full border border-accent-emerald/30">Readiness: Excellent</span>
+                                    </div>
+
+                                    <div class="space-y-2 text-xs">
+                                        <div class="waterfall-step p-3 rounded-xl bg-white/[0.04] border border-white/[0.08] flex justify-between items-center">
+                                            <span class="text-text-secondary">1. Gross Revenue (YouTube + TikTok + Instagram)</span>
+                                            <span class="font-bold text-white text-sm">R28,500</span>
+                                        </div>
+                                        <div class="waterfall-step p-3 rounded-xl bg-white/[0.04] border border-white/[0.08] flex justify-between items-center">
+                                            <span class="text-text-secondary">2. Production Expenses & Software Subscriptions</span>
+                                            <span class="font-bold text-red-400 text-sm">-R3,850</span>
+                                        </div>
+                                        <div class="p-3.5 rounded-xl bg-accent-emerald/15 border border-accent-emerald/40 flex justify-between items-center">
+                                            <span class="font-bold text-white text-sm">3. Real Net Profit in Bank</span>
+                                            <span class="font-extrabold text-accent-emerald text-base">R24,650</span>
+                                        </div>
+                                        <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 flex justify-between items-center text-[11px] text-text-secondary">
+                                            <span class="flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-accent-emerald text-sm">check_circle</span>
+                                                Income tracked • Expenses organised • Cash flow clear
+                                            </span>
+                                            <span class="text-white font-bold">Health Score: 82</span>
+                                        </div>
+                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- 2. SMARTPHONE ONLY: ULTRA-LUXURY NATIVE CREATOR OS APP CARD (block on mobile, hidden on md+) -->
+                <div id="mobile-hero-mockup-card" class="block md:hidden relative select-none w-full -mb-8">
+                    <div class="glass-card rounded-3xl p-5 border border-white/[0.12] shadow-2xl bg-surface/90 backdrop-blur-2xl space-y-4 relative overflow-hidden">
+                        
+                        <!-- Top Mobile Live Status Row -->
+                        <div class="flex justify-between items-center pb-2 border-b border-white/[0.06]">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-full bg-accent-emerald/15 border border-accent-emerald/30 flex items-center justify-center text-accent-emerald font-extrabold text-xs">
+                                    T
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-1">
+                                        <span class="text-xs font-bold text-white">Thabo</span>
+                                        <span class="material-symbols-outlined text-[13px] text-accent-emerald">verified</span>
+                                    </div>
+                                    <p class="text-[10px] text-text-secondary">Creator OS</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1 bg-accent-emerald/10 border border-accent-emerald/30 px-2.5 py-1 rounded-full text-[10px] text-accent-emerald font-bold">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent-emerald animate-pulse"></span>
+                                <span>82 Healthy</span>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Net Profit & Growth Headline Card -->
+                        <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] space-y-1">
+                            <div class="flex justify-between items-center text-[11px] text-text-secondary uppercase font-semibold">
+                                <span>Consolidated Net Profit</span>
+                                <span class="text-accent-emerald flex items-center gap-0.5 text-[11px] font-bold">
+                                    <span class="material-symbols-outlined text-[12px]">north_east</span> +14.8%
+                                </span>
+                            </div>
+                            <div class="font-display font-extrabold text-3xl text-white tracking-tight">
+                                R24,650
+                            </div>
+                            <div class="flex justify-between items-center text-[11px] text-text-secondary pt-2 border-t border-white/5">
+                                <span class="flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[13px] text-accent-emerald">check_circle</span>
+                                    Financial Readiness
+                                </span>
+                                <span class="text-white font-bold">Excellent</span>
+                            </div>
+                        </div>
+
+                        <!-- Connected Channels Revenue Chips (YouTube, TikTok, Instagram) -->
+                        <div class="space-y-2">
+                            <div class="text-[11px] text-text-secondary font-bold uppercase tracking-wider px-1">Active Streams</div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center gap-2.5">
+                                    <div class="w-7 h-7 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center shrink-0">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFFFFF"/></svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold text-white">R18,240</div>
+                                        <span class="text-[10px] text-text-secondary">YouTube (74%)</span>
+                                    </div>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center gap-2.5">
+                                    <div class="w-7 h-7 rounded-lg bg-black border border-white/20 flex items-center justify-center shrink-0">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.887 2.887 2.896 2.896 0 0 1-2.888-2.887 2.896 2.896 0 0 1 2.888-2.887c.36 0 .7.067 1.014.187V9.452a6.31 6.31 0 0 0-1.014-.082A6.332 6.332 0 0 0 3.155 15.7a6.332 6.332 0 0 0 6.332 6.332 6.332 6.332 0 0 0 6.332-6.332V9.014a8.212 8.212 0 0 0 4.887 1.583v-3.445a4.814 4.814 0 0 1-1.117-.466z" fill="#00F2FE"/><path d="M18.8 6.2a4.8 4.8 0 0 1-3.4-3.8V2h-2.5v13.7a3.5 3.5 0 0 1-3.5 3.5 3.5 3.5 0 0 1-3.5-3.5 3.5 3.5 0 0 1 3.5-3.5c.3 0 .6.05.9.15V9.8a6.3 6.3 0 0 0-.9-.07 5.7 5.7 0 0 0-5.7 5.7 5.7 5.7 0 0 0 5.7 5.7 5.7 5.7 0 0 0 5.7-5.7V8.5a7.5 7.5 0 0 0 4.2 1.3V7.2a4.8 4.8 0 0 1-.5-1z" fill="#FE2C55"/><path d="M18.2 5.8a4.8 4.8 0 0 1-3-3.4V2h-2.2v13.7a2.9 2.9 0 0 1-2.9 2.9 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.3 0 .6.06.9.18V9.5a5.5 5.5 0 0 0-.9-.08 5.1 5.1 0 0 0-5.1 5.1 5.1 5.1 0 0 0 5.1 5.1 5.1 5.1 0 0 0 5.1-5.1V8.2a7 7 0 0 0 4.1 1.2V6.6a4.8 4.8 0 0 1-3.1-.8z" fill="#FFFFFF"/></svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold text-white">R4,435</div>
+                                        <span class="text-[10px] text-text-secondary">TikTok (18%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Financial Readiness Mini Checklist -->
+                        <div class="p-3 rounded-2xl bg-white/[0.02] border border-white/5 space-y-1.5 text-[11px]">
+                            <div class="flex justify-between items-center text-text-secondary font-semibold">
+                                <span>Financial Health</span>
+                                <span class="text-accent-emerald font-bold">82 / 100</span>
+                            </div>
+                            <div class="flex justify-between items-center text-text-secondary">
+                                <span class="flex items-center gap-1"><span class="text-accent-emerald">✓</span> Income</span>
+                                <span class="flex items-center gap-1"><span class="text-accent-emerald">✓</span> Expenses</span>
+                                <span class="flex items-center gap-1"><span class="text-cyan-400">◐</span> Diversity</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Section 3: The Reality (3 Dramatic Editorial Moments with Staggered Scroll Reveal) -->
+            <section class="mb-3xl max-w-4xl mx-auto px-xs sm:px-md space-y-xl reveal-on-scroll">
+                <div class="text-center space-y-xs">
+                    <h3 class="font-display text-text-secondary font-bold text-sm sm:text-base uppercase tracking-widest">The Reality</h3>
+                    <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+                        Creators know their views.<br><span class="shimmer-text">Most don't know their business.</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                    <!-- Editorial Moment 01 -->
+                    <div class="p-6 sm:p-8 rounded-3xl glass-card text-left flex flex-col justify-between space-y-6 relative overflow-hidden group hover:border-white/20 transition-all reveal-on-scroll reveal-delay-1 glass-card-interactive">
+                        <div class="editorial-num">01</div>
+                        <div class="space-y-2">
+                            <h4 class="font-display font-extrabold text-xl text-white">Your money is everywhere.</h4>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                YouTube Studio, TikTok Creator Fund, Patreon, Brand deals, and Affiliates scattered across 5 disconnected dashboards.
+                            </p>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-xs text-accent-emerald font-bold flex items-center justify-between">
+                            <span>Know where money is going</span>
+                            <span class="material-symbols-outlined text-sm">filter_list</span>
+                        </div>
+                    </div>
+
+                    <!-- Editorial Moment 02 -->
+                    <div class="p-6 sm:p-8 rounded-3xl glass-card text-left flex flex-col justify-between space-y-6 relative overflow-hidden group hover:border-white/20 transition-all reveal-on-scroll reveal-delay-2 glass-card-interactive">
+                        <div class="editorial-num">02</div>
+                        <div class="space-y-2">
+                            <h4 class="font-display font-extrabold text-xl text-white">The profitability blindspot.</h4>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Views are vanity. After deducting camera upgrades, editor salaries, and software write-offs, what actually enters your bank?
+                            </p>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-xs text-indigo-400 font-bold flex items-center justify-between">
+                            <span>How your business performs</span>
+                            <span class="material-symbols-outlined text-sm">visibility</span>
+                        </div>
+                    </div>
+
+                    <!-- Editorial Moment 03 -->
+                    <div class="p-6 sm:p-8 rounded-3xl glass-card text-left flex flex-col justify-between space-y-6 relative overflow-hidden group hover:border-white/20 transition-all reveal-on-scroll reveal-delay-3 glass-card-interactive">
+                        <div class="editorial-num">03</div>
+                        <div class="space-y-2">
+                            <h4 class="font-display font-extrabold text-xl text-white">No runway forecasting.</h4>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Sponsor invoices lag by 60 days. Without predictive cash flow intelligence, creators face sudden liquidity shocks.
+                            </p>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-xs text-amber-400 font-bold flex items-center justify-between">
+                            <span>Clear financial picture</span>
+                            <span class="material-symbols-outlined text-sm">schedule</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Signature Cash Flow Engine & Health Visualization with Glowing Wave -->
+            <section id="money-flow-section" class="mb-3xl max-w-4xl mx-auto px-xs sm:px-md space-y-xl reveal-on-scroll">
+                <div class="p-6 sm:p-10 rounded-3xl glass-card border border-white/[0.1] bg-surface/80 space-y-8 relative overflow-hidden glass-card-interactive">
+                    
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <span class="text-xs font-bold text-accent-emerald uppercase tracking-wider">
+                                Creator Cash Flow Engine
+                            </span>
+                            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">
+                                Turn scattered earnings into a clear financial picture.
+                            </h3>
+                            <p class="text-xs sm:text-sm text-text-secondary max-w-md mt-1">
+                                Multi-platform revenue harmonized into clean expenses, net profit, and an explainable Creator Health score.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-accent-emerald/10 border border-accent-emerald/30 text-right levitate-slow">
+                            <span class="text-[10px] text-text-secondary uppercase font-bold">Financial Health</span>
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-accent-emerald">82 / 100</div>
+                        </div>
+                    </div>
+
+                    <!-- Animated Stream Inflow Nodes with Pulse signals -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                        <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] space-y-1 relative group hover:border-red-500/40 transition-all stream-node-pulse">
+                            <div class="flex items-center gap-1.5 text-text-secondary">
+                                <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                <span class="font-bold text-white">YouTube</span>
+                            </div>
+                            <div class="font-bold text-base text-white">R18,240</div>
+                            <span class="text-[10px] text-accent-emerald font-semibold">74% Revenue</span>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] space-y-1 relative group hover:border-cyan-400/40 transition-all stream-node-pulse">
+                            <div class="flex items-center gap-1.5 text-text-secondary">
+                                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                                <span class="font-bold text-white">TikTok</span>
+                            </div>
+                            <div class="font-bold text-base text-white">R4,435</div>
+                            <span class="text-[10px] text-cyan-400 font-semibold">18% Revenue</span>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] space-y-1 relative group hover:border-pink-500/40 transition-all stream-node-pulse">
+                            <div class="flex items-center gap-1.5 text-text-secondary">
+                                <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+                                <span class="font-bold text-white">Instagram</span>
+                            </div>
+                            <div class="font-bold text-base text-white">R2,100</div>
+                            <span class="text-[10px] text-pink-400 font-semibold">8% Revenue</span>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] space-y-1 relative group hover:border-amber-400/40 transition-all stream-node-pulse">
+                            <div class="flex items-center gap-1.5 text-text-secondary">
+                                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                                <span class="font-bold text-white">Affiliate</span>
+                            </div>
+                            <div class="font-bold text-base text-white">R875</div>
+                            <span class="text-[10px] text-amber-400 font-semibold">Amazon & Gear</span>
+                        </div>
+                    </div>
+
+                    <!-- Flow Diagram (Streams -> Revenue -> Expenses -> Profit -> Health 82) -->
+                    <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-text-secondary">
+                        <span class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-accent-emerald text-sm">hub</span>
+                            <span>Streams ➔ Revenue (R25,650) ➔ Expenses (-R3,850) ➔ Net Cash (R21,800)</span>
+                        </span>
+                        <span class="font-mono text-accent-emerald font-bold">Health: 82 Healthy</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section 5: Flagship Financial Readiness & Creator Health Showcase Card -->
+            <section id="sars-tax-guard-card" class="mb-3xl max-w-4xl mx-auto px-xs sm:px-md reveal-on-scroll">
+                <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-emerald-950/30 via-surface/90 to-background border border-accent-emerald/30 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden glass-card-interactive">
+                    <div class="space-y-3 flex-1 text-left">
+                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-emerald/10 border border-accent-emerald/30 text-accent-emerald text-xs font-bold uppercase tracking-wider">
+                            <span class="material-symbols-outlined text-sm">verified</span>
+                            <span>Financial Readiness</span>
+                        </div>
+                        <h3 class="font-display font-extrabold text-3xl text-white">
+                            Financial Readiness
+                        </h3>
+                        <div class="font-display font-extrabold text-4xl text-accent-emerald">
+                            82 <span class="text-xl font-normal text-white font-sans">Healthy</span>
+                        </div>
+                        <p class="text-sm text-text-secondary leading-relaxed max-w-md">
+                            "Excellent. Your income and expenses are well organised, providing complete cash flow visibility and business intelligence."
+                        </p>
+                    </div>
+
+                    <div class="w-full md:w-auto p-6 rounded-2xl bg-black/40 border border-white/10 space-y-3 text-xs text-left min-w-[280px]">
+                        <div class="readiness-check-item flex justify-between items-center p-2 rounded-xl">
+                            <span class="text-white">Income tracked</span>
+                            <span class="text-accent-emerald font-bold">✓</span>
+                        </div>
+                        <div class="readiness-check-item flex justify-between items-center p-2 rounded-xl">
+                            <span class="text-white">Expenses organised</span>
+                            <span class="text-accent-emerald font-bold">✓</span>
+                        </div>
+                        <div class="readiness-check-item flex justify-between items-center p-2 rounded-xl">
+                            <span class="text-white">Revenue diversified</span>
+                            <span class="text-cyan-400 font-bold">◐</span>
+                        </div>
+                        <div class="readiness-check-item flex justify-between items-center p-2 rounded-xl">
+                            <span class="text-white">Cash flow visibility</span>
+                            <span class="text-accent-emerald font-bold">✓</span>
+                        </div>
+                        <div class="pt-2 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-text-secondary">View financial health →</span>
+                            <span class="material-symbols-outlined text-accent-emerald text-sm">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer / Rights -->
+        <footer class="border-t border-white/[0.08] mt-2xl pt-lg pb-xl text-center">
+            <p class="text-xs text-text-secondary">&copy; 2026 REM Technological Solutions. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- ==========================================================================
+       VIEW 2: IMMERSIVE 3-STEP ONBOARDING CANVAS
+       ========================================================================== -->
+    <div id="view-onboarding" class="onboarding-wrapper hidden min-h-screen flex items-center justify-center p-md relative overflow-hidden">
+        
+        <!-- Ambient Radial Glow Backdrop -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-accent-emerald/20 via-teal-500/10 to-indigo-600/20 rounded-full blur-[120px] opacity-60"></div>
+        </div>
+
+        <!-- Glassmorphic 3-Step Card Container -->
+        <div id="onboard-card" class="w-full max-w-xl bg-surface/90 backdrop-blur-2xl border border-white/[0.12] card-shadow rounded-3xl p-6 sm:p-10 relative z-10 space-y-6">
+            
+            <!-- Step Navigation Bar (Back Button & Counter) -->
+            <div class="flex items-center justify-between min-h-[28px]" id="onboard-nav-header">
+                <button id="onboard-back-btn" class="flex items-center gap-1 text-xs font-semibold text-text-secondary hover:text-white transition-colors invisible" onclick="prevOnboardStep()">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span>
+                    Back
+                </button>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold text-accent-emerald tracking-wide uppercase">Creator Cash Flow</span>
+                    <span id="onboard-step-counter" class="text-xs font-bold text-text-secondary tracking-widest font-mono">01 / 03</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar Fill -->
+            <div class="w-full h-1.5 bg-white/[0.08] rounded-full overflow-hidden">
+                <div id="onboard-progress-fill" class="h-full bg-accent-emerald transition-all duration-300 ease-out rounded-full" style="width: 33.33%;"></div>
+            </div>
+
+            <!-- Selection Validation Banner -->
+            <div id="onboard-validation-error" class="hidden p-xs px-sm bg-red-500/10 border border-red-500/30 rounded-xl text-red-400 text-xs font-semibold flex items-center gap-xs">
+                <span class="material-symbols-outlined text-sm">error</span>
+                <span id="onboard-error-text">Please make a selection to continue.</span>
+            </div>
+            
+                        <!-- STEP 1: Tell us about your creator business -->
+            <div class="onboarding-step space-y-6" id="onboard-step-1">
+                <div class="text-center space-y-1">
+                    <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white">Tell us about your creator business</h1>
+                    <p class="text-xs text-text-secondary">Select your primary content formats and channels.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group" data-value="YouTube" onclick="selectCreatorType(this)">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                            <span class="font-bold text-white text-xs">YouTube</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group" data-value="TikTok" onclick="selectCreatorType(this)">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                            <span class="font-bold text-white text-xs">TikTok</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group" data-value="Instagram" onclick="selectCreatorType(this)">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
+                            <span class="font-bold text-white text-xs">Instagram</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group" data-value="Streaming" onclick="selectCreatorType(this)">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#9146FF]"></span>
+                            <span class="font-bold text-white text-xs">Streaming</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group" data-value="Podcast" onclick="selectCreatorType(this)">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span>
+                            <span class="font-bold text-white text-xs">Podcast</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group" data-value="Other" onclick="selectCreatorType(this)">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                            <span class="font-bold text-white text-xs">Other</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="w-full bg-white text-black font-bold font-label-lg py-3.5 rounded-2xl shadow-xl active:scale-95 transition-all hover:bg-white/90" onclick="nextOnboardStep(2)">Continue →</button>
+            </div>
+
+            <!-- STEP 2: Where does your money come from? -->
+            <div class="onboarding-step hidden space-y-6" id="onboard-step-2">
+                <div class="text-center space-y-1">
+                    <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white">Where does your money come from?</h1>
+                    <p class="text-xs text-text-secondary">Select all revenue streams to connect in your workspace.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-3" id="onboard-choice-grid">
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between" data-value="Platform payouts" onclick="togglePlatformChoice(this)">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-accent-emerald"></span>
+                            <span class="font-bold text-white text-xs">Platform payouts</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between" data-value="Brand deals" onclick="togglePlatformChoice(this)">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+                            <span class="font-bold text-white text-xs">Brand deals</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between" data-value="Affiliate income" onclick="togglePlatformChoice(this)">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
+                            <span class="font-bold text-white text-xs">Affiliate income</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between" data-value="Subscriptions" onclick="togglePlatformChoice(this)">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+                            <span class="font-bold text-white text-xs">Subscriptions</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between" data-value="Products" onclick="togglePlatformChoice(this)">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                            <span class="font-bold text-white text-xs">Products & Merch</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between" data-value="Other" onclick="togglePlatformChoice(this)">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span>
+                            <span class="font-bold text-white text-xs">Other</span>
+                        </div>
+                        <div class="check-indicator text-white/20">
+                            <span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="w-full bg-white text-black font-bold font-label-lg py-3.5 rounded-2xl shadow-xl active:scale-95 transition-all hover:bg-white/90" onclick="nextOnboardStep(3)">Continue →</button>
+            </div>
+
+            <!-- STEP 3: What do you want to understand? -->
+            <div class="onboarding-step hidden space-y-6" id="onboard-step-3">
+                <div class="text-center space-y-1">
+                    <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white">What do you want to understand?</h1>
+                    <p class="text-xs text-text-secondary">Choose the financial clarity and intelligence you need most.</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-2.5" id="onboard-goals-grid">
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group active" data-goal="revenue" onclick="selectGoalOption(this)">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-emerald text-xl">trending_up</span>
+                            <span class="font-bold text-white text-sm">My revenue</span>
+                        </div>
+                        <span class="material-symbols-outlined text-accent-emerald text-lg">check_circle</span>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group" data-goal="expenses" onclick="selectGoalOption(this)">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-indigo-400 text-xl">credit_card</span>
+                            <span class="font-bold text-white text-sm">My expenses</span>
+                        </div>
+                        <span class="material-symbols-outlined text-white/20 text-lg">radio_button_unchecked</span>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group" data-goal="profitability" onclick="selectGoalOption(this)">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-emerald text-xl">savings</span>
+                            <span class="font-bold text-white text-sm">My profitability</span>
+                        </div>
+                        <span class="material-symbols-outlined text-white/20 text-lg">radio_button_unchecked</span>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group" data-goal="cashflow" onclick="selectGoalOption(this)">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-cyan-400 text-xl">hub</span>
+                            <span class="font-bold text-white text-sm">My cash flow</span>
+                        </div>
+                        <span class="material-symbols-outlined text-white/20 text-lg">radio_button_unchecked</span>
+                    </div>
+
+                    <div class="onboard-choice-card border border-white/[0.08] bg-background/60 hover:bg-white/[0.03] p-3.5 rounded-2xl cursor-pointer flex items-center justify-between group" data-goal="growth" onclick="selectGoalOption(this)">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-amber-400 text-xl">monitoring</span>
+                            <span class="font-bold text-white text-sm">My business growth</span>
+                        </div>
+                        <span class="material-symbols-outlined text-white/20 text-lg">radio_button_unchecked</span>
+                    </div>
+                </div>
+
+                <!-- Magic Moment Launch Trigger -->
+                <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] text-left space-y-2 text-xs">
+                    <div class="font-bold text-white text-sm">Your Creator HQ is ready.</div>
+                    <p class="text-text-secondary leading-relaxed">
+                        We've created your financial workspace around your business.
+                    </p>
+                    <div class="grid grid-cols-2 gap-1.5 pt-1 text-text-secondary">
+                        <span class="flex items-center gap-1 text-accent-emerald font-semibold">✓ Revenue tracking</span>
+                        <span class="flex items-center gap-1 text-accent-emerald font-semibold">✓ Expense tracking</span>
+                        <span class="flex items-center gap-1 text-accent-emerald font-semibold">✓ Cash-flow visibility</span>
+                        <span class="flex items-center gap-1 text-accent-emerald font-semibold">✓ Business insights</span>
+                    </div>
+                </div>
+
+                <button id="btn-launch-command-center" class="w-full bg-white text-black font-bold font-label-lg py-3.5 rounded-2xl shadow-xl active:scale-95 transition-all hover:bg-white/90" onclick="executeLaunchSequence()">
+                    Let's see how you're doing →
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+       VIEW 3: LOGGED-IN CREATOR OS DASHBOARD (REVISED ARCHITECTURE)
+       ========================================================================== -->
+    <div id="view-app" class="app-shell hidden flex flex-col lg:flex-row min-h-screen relative z-10">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="hidden lg:flex flex-col w-64 bg-surface border-r border-white/[0.08] p-lg flex-shrink-0 h-screen sticky top-0">
+            <div class="flex items-center gap-sm mb-xl">
+                <div class="w-8 h-8 rounded-full bg-accent-emerald/10 border border-accent-emerald/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-accent-emerald" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28 72C20 62 20 40 32 28C40 20 54 20 62 24" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M42 76C36 68 36 50 44 40C50 34 60 34 66 38" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+                        <path d="M56 80C52 74 52 60 58 52C62 48 70 48 76 52" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                        <circle cx="74" cy="28" r="5" fill="currentColor"/>
+                    </svg>
+                </div>
+                <span class="font-display text-headline-md font-extrabold text-white">Creator HQ</span>
+            </div>
+            
+            <nav class="flex flex-col gap-sm flex-1">
+                <a href="#overview" class="flex items-center gap-md px-md py-sm rounded-xl text-white font-label-lg hover:bg-white/[0.02] active" data-tab="overview">
+                    <span class="material-symbols-outlined">home</span> Overview
+                </a>
+                <a href="#revenue" class="flex items-center gap-md px-md py-sm rounded-xl text-text-secondary font-label-lg hover:bg-white/[0.02]" data-tab="revenue">
+                    <span class="material-symbols-outlined">trending_up</span> Revenue
+                </a>
+                <a href="#expenses" class="flex items-center gap-md px-md py-sm rounded-xl text-text-secondary font-label-lg hover:bg-white/[0.02]" data-tab="expenses">
+                    <span class="material-symbols-outlined">credit_card</span> Expenses
+                </a>
+                <a href="#performance" class="flex items-center gap-md px-md py-sm rounded-xl text-text-secondary font-label-lg hover:bg-white/[0.02]" data-tab="performance">
+                    <span class="material-symbols-outlined">hub</span> Cash Flow
+                </a>
+                <a href="#insights" class="flex items-center gap-md px-md py-sm rounded-xl text-text-secondary font-label-lg hover:bg-white/[0.02]" data-tab="insights">
+                    <span class="material-symbols-outlined">lightbulb</span> Insights
+                </a>
+                <a href="#records" class="flex items-center gap-md px-md py-sm rounded-xl text-text-secondary font-label-lg hover:bg-white/[0.02]" data-tab="records">
+                    <span class="material-symbols-outlined">receipt_long</span> Records
+                </a>
+            </nav>
+
+            <div class="border-t border-white/[0.08] pt-lg mt-auto flex flex-col gap-sm">
+                <a href="#connected" class="flex items-center gap-md px-md py-sm rounded-xl text-text-secondary font-label-lg hover:bg-white/[0.02]" onclick="openConnectedAccountsModal()">
+                    <span class="material-symbols-outlined">cable</span> Connected Accounts
+                </a>
+                <a href="#account" class="flex items-center gap-md px-md py-sm rounded-xl text-text-secondary font-label-lg hover:bg-white/[0.02]" id="btn-auth-modal" data-tab="account">
+                    <span class="material-symbols-outlined">settings</span> <span id="nav-user-label">Settings</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Viewport -->
+        <main class="flex-1 px-md py-xl lg:px-2xl lg:py-2xl max-w-5xl mx-auto w-full pb-32 lg:pb-12">
+            
+            <!-- TAB 1: OVERVIEW -->
+            <section id="tab-overview" class="tab-pane active space-y-xl">
+                
+                <!-- Demo Mode Banner -->
+                <div id="demo-mode-banner" class="demo-banner hidden flex justify-between items-center p-md bg-accent-emerald/10 border border-accent-emerald/20 rounded-2xl text-label-lg text-white">
+                    <span class="flex items-center gap-xs"><span class="material-symbols-outlined text-accent-emerald">auto_awesome</span> <strong>Demo Mode</strong> — Experience the full financial intelligence suite.</span>
+                    <button class="bg-accent-emerald text-white font-label-md px-md py-xs rounded-xl hover:scale-105 transition-transform" onclick="exitDemoMode()">Exit Demo</button>
+                </div>
+
+                <!-- Section 1: Balance Header -->
+                <div class="dashboard-balance-header">
+                    <div class="text-lg text-text-secondary font-medium mb-xs">Good afternoon 👋, <span id="dashboard-user-greeting">Creator</span></div>
+                    <p class="text-sm text-text-secondary">Your creator business generated</p>
+                    <h1 class="font-display text-5xl font-extrabold text-white mt-xs" id="val-current-balance">R24,650</h1>
+                    <div class="text-sm text-accent-emerald font-semibold mt-sm" id="val-change-badge">+14.8% this month</div>
+                </div>
+
+                <!-- Section 2: Creator Health Score Bar (82 Healthy) -->
+                <div class="p-6 rounded-3xl bg-surface border border-white/[0.08] shadow-xl space-y-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                        <div>
+                            <div class="text-xs font-bold text-text-secondary uppercase tracking-wider">Financial Health</div>
+                            <div class="flex items-baseline gap-2 mt-1">
+                                <span class="font-display font-extrabold text-4xl text-accent-emerald">82</span>
+                                <span class="text-lg font-bold text-white">Healthy</span>
+                            </div>
+                        </div>
+                        <div class="text-xs text-text-secondary max-w-sm">
+                            Derived from revenue consistency, margin stability, and 60-day cash flow predictability.
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs pt-3 border-t border-white/[0.06]">
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                            <span class="text-text-secondary">Revenue</span>
+                            <span class="text-accent-emerald font-bold">↑ High</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                            <span class="text-text-secondary">Expenses</span>
+                            <span class="text-accent-emerald font-bold">↓ Controlled</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                            <span class="text-text-secondary">Cash Flow</span>
+                            <span class="text-accent-emerald font-bold">↑ Strong</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                            <span class="text-text-secondary">Diversification</span>
+                            <span class="text-cyan-400 font-bold">◐ Balanced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3 & 4: Where your money comes from & Business Insights -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+                    
+                    <!-- Where your money comes from -->
+                    <div class="space-y-lg">
+                        <h3 class="font-display font-bold text-lg text-white">Where your money comes from</h3>
+                        <div id="sources-stream-list" class="space-y-md">
+                            <!-- Populated dynamically via app.js (YouTube 74%, TikTok 18%, Instagram 8%) -->
+                        </div>
+                    </div>
+
+                    <!-- Business Insights (AI Business Analyst) -->
+                    <div class="space-y-lg">
+                        <h3 class="font-display font-bold text-lg text-white flex items-center gap-xs">
+                            <span class="material-symbols-outlined text-accent-emerald">insights</span> Business Insights
+                        </h3>
+                        <ul id="ai-insights-list" class="space-y-md text-sm text-text-secondary list-none">
+                            <!-- Populated dynamically via app.js -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 5: Cash Flow Snapshot -->
+                <div class="p-6 rounded-3xl bg-surface border border-white/[0.08] space-y-4">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-white">Cash Flow</h3>
+                            <p class="text-xs text-text-secondary">Consolidated liquidity trajectory</p>
+                        </div>
+                        <span class="text-xs font-bold text-accent-emerald">60-Day Runway Secure</span>
+                    </div>
+                    <div class="chart-wrapper h-[240px]">
+                        <canvas id="chart-revenue-intelligence"></canvas>
+                    </div>
+                </div>
+
+                <!-- Section 6: Recent Activity -->
+                <div class="space-y-lg pt-lg border-t border-white/[0.08]">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-white">Recent Activity</h3>
+                            <p class="text-xs text-text-secondary">Real-time ledger audit entries</p>
+                        </div>
+                        <button class="bg-white text-black font-bold font-label-lg py-sm px-lg rounded-xl shadow-lg active:scale-95 transition-transform" onclick="openAddActivityModal()">+ Add Entry</button>
+                    </div>
+                    <div class="activity-list space-y-sm" id="activity-stream-os">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- TAB 2: REVENUE -->
+            <section id="tab-revenue" class="tab-pane hidden space-y-xl">
+                <div class="p-lg bg-surface border border-white/[0.08] rounded-3xl card-shadow">
+                    <h3 class="font-display text-headline-md mb-lg text-white">Revenue Streams</h3>
+                    <div id="full-revenue-stream" class="space-y-md"></div>
+                </div>
+            </section>
+
+            <!-- TAB 3: EXPENSES -->
+            <section id="tab-expenses" class="tab-pane hidden space-y-xl">
+                <div class="p-lg bg-surface border border-white/[0.08] rounded-3xl card-shadow">
+                    <h3 class="font-display text-headline-md mb-lg text-white">Expenses & Write-Offs</h3>
+                    <div id="full-expense-stream" class="space-y-md"></div>
+                </div>
+            </section>
+
+            <!-- TAB 4: CASH FLOW / PERFORMANCE -->
+            <section id="tab-performance" class="tab-pane hidden space-y-xl">
+                <div class="p-lg bg-surface border border-white/[0.08] rounded-3xl card-shadow">
+                    <div class="flex justify-between items-center mb-lg">
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-white">Cash Flow Timeline</h3>
+                            <p class="text-xs text-text-secondary">Consolidated daily liquidity and profit trajectory</p>
+                        </div>
+                        <button class="flex items-center gap-xs font-label-lg text-white px-lg py-sm rounded-xl border border-white/[0.08] bg-surface hover:bg-white/[0.02] active:scale-95 transition-transform" id="btn-sync-trigger">
+                            <span class="material-symbols-outlined text-[18px]">sync</span> Sync Streams
+                        </button>
+                    </div>
+                    <div class="chart-wrapper h-[380px]">
+                        <canvas id="chart-cashflow-full"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: INSIGHTS (Business Analyst AI) -->
+            <section id="tab-insights" class="tab-pane hidden space-y-xl">
+                <div class="p-6 sm:p-8 bg-surface border border-white/[0.08] rounded-3xl card-shadow space-y-lg">
+                    <!-- Header -->
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-md pb-md border-b border-white/[0.06]">
+                        <div>
+                            <div class="flex items-center gap-xs">
+                                <span class="material-symbols-outlined text-accent-emerald text-2xl">auto_awesome</span>
+                                <h3 class="font-display text-2xl font-extrabold text-white">Business Analyst AI</h3>
+                            </div>
+                            <p class="text-xs sm:text-sm text-text-secondary mt-xs">Real-time revenue velocity, expense trends, and platform concentration insights.</p>
+                        </div>
+                        <div class="flex items-center gap-xs px-md py-xs rounded-xl border border-accent-emerald/30 bg-accent-emerald/10 text-accent-emerald text-xs font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-accent-emerald animate-pulse"></span>
+                            <span>Business Intelligence Active</span>
+                        </div>
+                    </div>
+
+                    <!-- Preset Quick Prompt Pills -->
+                    <div class="space-y-xs">
+                        <span class="text-[11px] font-bold text-text-secondary uppercase tracking-wider">Suggested Queries</span>
+                        <div class="flex flex-wrap gap-xs text-xs">
+                            <button class="px-md py-xs rounded-xl border border-white/[0.08] bg-background hover:bg-white/[0.04] text-text-secondary hover:text-white transition-all text-left" onclick="sendPresetPrompt('How has my platform concentration changed over the last 3 months?')">
+                                📊 "How is my platform concentration?"
+                            </button>
+                            <button class="px-md py-xs rounded-xl border border-white/[0.08] bg-background hover:bg-white/[0.04] text-text-secondary hover:text-white transition-all text-left" onclick="sendPresetPrompt('What are my fastest growing expense categories?')">
+                                💳 "What are my fastest growing expenses?"
+                            </button>
+                            <button class="px-md py-xs rounded-xl border border-white/[0.08] bg-background hover:bg-white/[0.04] text-text-secondary hover:text-white transition-all text-left" onclick="sendPresetPrompt('What is my current profit margin trend?')">
+                                📈 "What is my profit margin trend?"
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Chat Message Stream -->
+                    <div id="gemini-chat-stream" class="min-h-[260px] max-h-[420px] overflow-y-auto space-y-md p-md bg-background/60 border border-white/[0.06] rounded-2xl">
+                        <!-- Bot Initial Welcome Message -->
+                        <div class="flex items-start gap-sm">
+                            <div class="w-8 h-8 rounded-xl bg-accent-emerald/20 border border-accent-emerald/40 flex items-center justify-center text-accent-emerald flex-shrink-0">
+                                <span class="material-symbols-outlined text-sm">auto_awesome</span>
+                            </div>
+                            <div class="p-md bg-surface border border-white/[0.08] rounded-2xl text-xs sm:text-sm text-text-primary space-y-xs max-w-xl">
+                                <p class="font-bold text-accent-emerald">Creator Cash Flow Business Analyst</p>
+                                <p>Hello! I've analyzed your creator financials. Your net profit is <strong class="text-white">R24,650</strong> (+14.8% MoM) and your Creator Health score is <strong class="text-accent-emerald">82 Healthy</strong>.</p>
+                                <p class="text-text-secondary text-xs">YouTube accounts for 74% of revenue while TikTok provides strong growth momentum. What would you like to explore?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Box -->
+                    <form onsubmit="handleGeminiSubmit(event)" class="flex gap-sm items-center">
+                        <input type="text" id="gemini-chat-input" class="flex-1 px-md py-sm rounded-xl border border-white/[0.08] bg-background text-white placeholder-text-secondary text-xs sm:text-sm focus:border-accent-emerald focus:ring-0" placeholder="Ask Business Analyst about margin, expense trends, or growth...">
+                        <button type="submit" id="gemini-send-btn" class="bg-white text-black font-bold px-lg py-sm rounded-xl shadow active:scale-95 transition-transform flex items-center gap-xs text-xs sm:text-sm">
+                            <span>Send</span>
+                            <span class="material-symbols-outlined text-sm">send</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- TAB 6: RECORDS (Financial Records Hub) -->
+            <section id="tab-records" class="tab-pane hidden space-y-xl">
+                <div class="p-6 sm:p-8 bg-surface border border-white/[0.08] rounded-3xl card-shadow space-y-8">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-display text-2xl font-extrabold text-white">Financial Records</h3>
+                                <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-white font-bold text-xs font-mono">2026 Archive</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-text-secondary mt-1">Keep your financial records organised and accessible.</p>
+                        </div>
+                        <button class="bg-white text-black font-bold font-label-lg py-2.5 px-5 rounded-xl shadow-lg active:scale-95 transition-transform text-xs sm:text-sm flex items-center gap-2" onclick="openUploadRecordModal()">
+                            <span class="material-symbols-outlined text-sm">upload_file</span>
+                            Upload Record
+                        </button>
+                    </div>
+
+                    <!-- Records 4-Metric Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="records-stat-card p-4 rounded-2xl">
+                            <span class="text-xs text-text-secondary uppercase tracking-wider font-semibold">Total Income</span>
+                            <div class="font-display font-extrabold text-2xl text-white mt-1">R182,450</div>
+                            <span class="text-[10px] text-accent-emerald font-semibold">YTD 2026</span>
+                        </div>
+                        <div class="records-stat-card p-4 rounded-2xl">
+                            <span class="text-xs text-text-secondary uppercase tracking-wider font-semibold">Total Expenses</span>
+                            <div class="font-display font-extrabold text-2xl text-white mt-1">R43,220</div>
+                            <span class="text-[10px] text-text-secondary font-semibold">Organised & Logged</span>
+                        </div>
+                        <div class="records-stat-card p-4 rounded-2xl">
+                            <span class="text-xs text-text-secondary uppercase tracking-wider font-semibold">Transactions</span>
+                            <div class="font-display font-extrabold text-2xl text-accent-emerald mt-1">238</div>
+                            <span class="text-[10px] text-text-secondary font-semibold">Reconciled Entries</span>
+                        </div>
+                        <div class="records-stat-card p-4 rounded-2xl">
+                            <span class="text-xs text-text-secondary uppercase tracking-wider font-semibold">Documents</span>
+                            <div class="font-display font-extrabold text-2xl text-cyan-400 mt-1">18</div>
+                            <span class="text-[10px] text-text-secondary font-semibold">Invoices & Contracts</span>
+                        </div>
+                    </div>
+
+                    <!-- Records List / Table -->
+                    <div class="space-y-3">
+                        <div class="text-xs font-bold text-text-secondary uppercase tracking-wider px-1">Organised Document Ledger</div>
+                        <div class="space-y-2 text-xs" id="records-document-list">
+                            <div class="p-3.5 rounded-2xl bg-white/[0.02] border border-white/5 flex justify-between items-center hover:bg-white/[0.04] transition-all">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-accent-emerald">description</span>
+                                    <div>
+                                        <div class="font-bold text-white">Google AdSense Payout Summary (Jul 2026)</div>
+                                        <span class="text-text-secondary text-[11px]">Verified official payout stub • R18,240</span>
+                                    </div>
+                                </div>
+                                <span class="text-accent-emerald font-semibold">Archived</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-white/[0.02] border border-white/5 flex justify-between items-center hover:bg-white/[0.04] transition-all">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-cyan-400">receipt</span>
+                                    <div>
+                                        <div class="font-bold text-white">Sony Alpha A7IV Camera Lens Invoice</div>
+                                        <span class="text-text-secondary text-[11px]">Capital production gear write-off • R12,499</span>
+                                    </div>
+                                </div>
+                                <span class="text-accent-emerald font-semibold">Archived</span>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-white/[0.02] border border-white/5 flex justify-between items-center hover:bg-white/[0.04] transition-all">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-indigo-400">folder_zip</span>
+                                    <div>
+                                        <div class="font-bold text-white">Adobe Creative Cloud Annual Subscription Stub</div>
+                                        <span class="text-text-secondary text-[11px]">Operating software expense • R725/mo</span>
+                                    </div>
+                                </div>
+                                <span class="text-accent-emerald font-semibold">Archived</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation Bar (Mobile Only) -->
+        <nav class="lg:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-md pb-6 pt-md bg-surface border-t border-white/[0.08] z-50 mobile-bottom-nav">
+            <a href="#overview" class="mobile-nav-item flex flex-col items-center justify-center text-text-secondary active" data-tab="overview">
+                <span class="material-symbols-outlined">home</span>
+                <span class="font-label-md text-label-md">Home</span>
+            </a>
+            <a href="#performance" class="mobile-nav-item flex flex-col items-center justify-center text-text-secondary" data-tab="performance">
+                <span class="material-symbols-outlined">monitoring</span>
+                <span class="font-label-md text-label-md">Performance</span>
+            </a>
+            <a href="#revenue" class="mobile-nav-item flex flex-col items-center justify-center text-text-secondary" data-tab="revenue">
+                <span class="material-symbols-outlined">trending_up</span>
+                <span class="font-label-md text-label-md">Revenue</span>
+            </a>
+            <a href="#expenses" class="mobile-nav-item flex flex-col items-center justify-center text-text-secondary" data-tab="expenses">
+                <span class="material-symbols-outlined">credit_card</span>
+                <span class="font-label-md text-label-md">Expenses</span>
+            </a>
+            <a href="#insights" class="mobile-nav-item flex flex-col items-center justify-center text-text-secondary" data-tab="insights">
+                <span class="material-symbols-outlined">lightbulb</span>
+                <span class="font-label-md text-label-md">Insights</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Minimal Modal Wrapper -->
+    <div class="modal-overlay fixed inset-0 bg-black/80 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-200" id="modal-app">
+        <div class="codex-modal bg-surface border border-white/[0.08] rounded-3xl w-[90%] max-w-md p-lg shadow-2xl transform scale-95 transition-transform duration-200 text-center">
+            <div class="modal-header flex justify-between items-center mb-lg">
+                <h3 class="font-display font-bold text-headline-md text-white" id="modal-title">Modal Title</h3>
+                <button class="modal-close text-text-secondary hover:text-white transition-colors active:scale-90" onclick="closeModal()">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="modal-body space-y-md" id="modal-body">
+                <!-- Modal Forms go here -->
+            </div>
+        </div>
+    </div>
+    <script src="app.js?v=20260808T1847"></script>
+</body>
+</html>

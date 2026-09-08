@@ -1,0 +1,242 @@
+{
+  "timestamp": "2026-08-07T17:34:17.596Z",
+  "total": 33,
+  "passed": 28,
+  "failed": 5,
+  "criticalFails": 2,
+  "highFails": 1,
+  "verdict": "REQUEST_CHANGES",
+  "results": [
+    {
+      "suite": "Charts",
+      "name": "Growth Timeline canvas (#growthTimelineChart) exists in DOM",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Charts",
+      "name": "Channel Breakdown canvas (#channelBreakdownChart) exists in DOM",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Charts",
+      "name": "renderGrowthChart initializes line Chart instance in state.charts.growth",
+      "passed": true,
+      "details": "Labels: Mar, Apr, May",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Charts",
+      "name": "renderGrowthChart destroys previous Chart instance before re-creating",
+      "passed": true,
+      "details": "Previous chart instance successfully destroyed",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Charts",
+      "name": "renderGrowthChart adversarial null input handling",
+      "passed": false,
+      "details": "Crash detected: Cannot read properties of null (reading 'map')",
+      "severity": "MEDIUM"
+    },
+    {
+      "suite": "Charts",
+      "name": "renderGrowthChart empty dataset handling ([])",
+      "passed": true,
+      "details": "Rendered empty line chart without crashing",
+      "severity": "LOW"
+    },
+    {
+      "suite": "Charts",
+      "name": "renderChannelChart initializes doughnut Chart instance in state.charts.channel",
+      "passed": true,
+      "details": "Data: 450000, 300000, 250000, 250000",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Charts",
+      "name": "renderChannelChart updates #channel-legend-list with percentages",
+      "passed": true,
+      "details": "Legend text snapshot: YouTube (36%) TikTok (24%) Patreon (20%) Brands (20%)",
+      "severity": "MEDIUM"
+    },
+    {
+      "suite": "Charts",
+      "name": "renderChannelChart zero revenue handling (no NaN in legend)",
+      "passed": true,
+      "details": "Handled 0 total gracefully",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Charts",
+      "name": "renderChannelChart adversarial null input handling",
+      "passed": false,
+      "details": "Crash detected: Cannot read properties of null (reading 'youtube')",
+      "severity": "MEDIUM"
+    },
+    {
+      "suite": "Audit",
+      "name": "Audit log container (#audit-log-container) & filter (#audit-action-filter) exist",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Audit",
+      "name": "renderAuditLogs renders action type badge and target creator ID",
+      "passed": true,
+      "details": "Rendered HTML snippet: STATUS_CHANGE Target: usr_789 2026/08/07, 16:30:00 Old Value: active New Value: suspended Admin: adm",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Audit",
+      "name": "renderAuditLogs displays 64-char SHA256 IP hash",
+      "passed": true,
+      "details": "SHA256 IP hash matched exactly",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Audit",
+      "name": "renderAuditLogs provides \"IP Hash: N/A\" fallback for null ip_hash",
+      "passed": true,
+      "details": "Fallback IP Hash: N/A found for null ip_hash",
+      "severity": "MEDIUM"
+    },
+    {
+      "suite": "Audit",
+      "name": "renderAuditLogs filters feed by action_type (TIER_CHANGE)",
+      "passed": true,
+      "details": "Successfully filtered out STATUS_CHANGE",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Audit",
+      "name": "renderAuditLogs empty state message when list is empty",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM"
+    },
+    {
+      "suite": "Audit",
+      "name": "Adversarial: old_value/new_value object diff rendering (Detect [object Object])",
+      "passed": false,
+      "details": "FLAW DETECTED: JS object in old_value/new_value rendered as \"[object Object]\" string",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Audit",
+      "name": "Adversarial: HTML/XSS injection in audit log fields",
+      "passed": false,
+      "details": "SECURITY VULNERABILITY DETECTED: Raw unescaped HTML elements injected into DOM via innerHTML",
+      "severity": "CRITICAL"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "Telemetry scorecards & feed container exist in DOM",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "renderTelemetry scorecards display 0/0ms for empty telemetry list",
+      "passed": true,
+      "details": "Queries: 0, Tokens: 0, Latency: 0 ms",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "renderTelemetry empty feed displays \"No AI query telemetry...\" message",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "renderTelemetry total queries scorecard calculation (2)",
+      "passed": true,
+      "details": "Actual: 2",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "renderTelemetry total tokens scorecard calculation (520)",
+      "passed": true,
+      "details": "Actual: 520",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "renderTelemetry average latency scorecard calculation (550 ms)",
+      "passed": true,
+      "details": "Actual: 550 ms",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "renderTelemetry feed displays category tag badges",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "renderTelemetry feed displays PII-masked prompt with quotes",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "renderTelemetry feed displays model tags (gemini-1.5-flash / gemini-1.5-pro)",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "renderTelemetry null fields fallback (General Inquiry & gemini-1.5-flash)",
+      "passed": true,
+      "details": "Card HTML snippet: \n                    <div class=\"bg-white/5 border border-white/10 rounded-2xl p-4 space-y-3\">\n                        <div class=\"flex items-center j",
+      "severity": "MEDIUM"
+    },
+    {
+      "suite": "Telemetry",
+      "name": "Adversarial: HTML/XSS injection in prompt_masked",
+      "passed": false,
+      "details": "SECURITY VULNERABILITY DETECTED: Raw unescaped HTML tag injected via prompt_masked innerHTML",
+      "severity": "CRITICAL"
+    },
+    {
+      "suite": "Tabs",
+      "name": "switchTab(\"overview\") displays #view-overview panel and activates tab button",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Tabs",
+      "name": "switchTab(\"creators\") displays #view-creators panel",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Tabs",
+      "name": "switchTab(\"audit\") displays #view-audit panel",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    },
+    {
+      "suite": "Tabs",
+      "name": "switchTab(\"telemetry\") displays #view-telemetry panel",
+      "passed": true,
+      "details": "",
+      "severity": "HIGH"
+    }
+  ]
+}

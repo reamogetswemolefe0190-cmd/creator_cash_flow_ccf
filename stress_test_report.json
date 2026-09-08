@@ -1,0 +1,100 @@
+{
+  "timestamp": "2026-09-04T10:15:49.732Z",
+  "config": {
+    "concurrency": 150,
+    "durationSeconds": 5,
+    "targetUrl": "http://localhost:5000",
+    "pacingMs": 10
+  },
+  "summary": {
+    "totalRequests": 2706,
+    "successfulRequests": 2706,
+    "clientErrors": 0,
+    "serverErrors": 0,
+    "networkErrors": 0,
+    "successRatePercent": 100,
+    "actualDurationSeconds": 5.11,
+    "requestsPerSecond": 529.31
+  },
+  "latenciesMs": {
+    "min": 31.09,
+    "avg": 265.13,
+    "max": 982.49,
+    "p50": 215.1,
+    "p90": 505.25,
+    "p95": 659.16,
+    "p99": 725.45
+  },
+  "endpointBreakdown": {
+    "POST /api/auth/signup": {
+      "count": 600,
+      "successCount": 600,
+      "successRatePercent": 100,
+      "latenciesMs": {
+        "min": 104.87,
+        "avg": 283.78,
+        "max": 792.56,
+        "p50": 187.29,
+        "p90": 609.55,
+        "p95": 663.54,
+        "p99": 773.54
+      }
+    },
+    "POST /api/auth/login": {
+      "count": 600,
+      "successCount": 600,
+      "successRatePercent": 100,
+      "latenciesMs": {
+        "min": 31.09,
+        "avg": 237.41,
+        "max": 688.8,
+        "p50": 162.39,
+        "p90": 422.86,
+        "p95": 676.74,
+        "p99": 685.94
+      }
+    },
+    "GET /api/transactions": {
+      "count": 600,
+      "successCount": 600,
+      "successRatePercent": 100,
+      "latenciesMs": {
+        "min": 107.71,
+        "avg": 261,
+        "max": 982.49,
+        "p50": 194.77,
+        "p90": 652.83,
+        "p95": 702.07,
+        "p99": 723.73
+      }
+    },
+    "POST /api/transactions": {
+      "count": 456,
+      "successCount": 456,
+      "successRatePercent": 100,
+      "latenciesMs": {
+        "min": 96.58,
+        "avg": 276.64,
+        "max": 534.16,
+        "p50": 275.92,
+        "p90": 477.63,
+        "p95": 503.34,
+        "p99": 526.27
+      }
+    },
+    "GET /api/admin/metrics": {
+      "count": 450,
+      "successCount": 450,
+      "successRatePercent": 100,
+      "latenciesMs": {
+        "min": 125.03,
+        "avg": 271.08,
+        "max": 516.12,
+        "p50": 287.96,
+        "p90": 366.84,
+        "p95": 409.16,
+        "p99": 496.65
+      }
+    }
+  }
+}

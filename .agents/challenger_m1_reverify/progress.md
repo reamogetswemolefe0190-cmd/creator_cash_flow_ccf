@@ -1,0 +1,22 @@
+# Progress — Milestone M1 Re-verification
+
+- Last visited: 2026-09-04T10:16:00Z
+- Status: Verification and stress-testing complete. Preparing handoff report.
+- Completed:
+  - Reviewed DISPATCH.md and created BRIEFING.md
+  - Inspected server.js (trust proxy, getClientIp, rate limiters, corsMiddleware error handler)
+  - Executed `node tests/challenger_m1_security_test.js`: 65/65 passed, VERDICT: APPROVE
+  - Executed `node test_full_site.js`: 11/11 passed
+  - Executed `node test_admin_auth.js`: 31/31 passed
+  - Executed `node test_admin_ui.js`: 72/72 passed
+  - Executed `node test_m1_verification.js`: All security checks passed
+  - Executed `node tests/e2e_remediation_test.js`: 61/61 passed
+  - Created and executed `node tests/adversarial_reverify_m1.js`: 171/171 checks passed
+    - Tested XFF multi-proxy chains, whitespace trimming, array formatting, and fallbacks
+    - Tested live burst lockouts with distinct innocent IP isolation on both user and admin auth
+    - Tested 7 unlisted CORS origins across 5 endpoints + preflight: 100% returned HTTP 403 with `{"error": "Blocked by CORS policy"}` and zero stack traces / zero 500s
+  - Executed `node stress_harness.js`: 2,706 requests, 529 req/sec, 100% success rate (0 errors)
+- Current Step:
+  - Update BRIEFING.md and write final handoff.md with APPROVE verdict
+- Next Steps:
+  - Send message to parent with explicit APPROVE verdict

@@ -1,0 +1,16 @@
+{
+  "name": "Creator Cash Flow - Financial OS",
+  "short_name": "Creator Cash Flow",
+  "description": "Unified financial software for content creators to track social revenue, bank expenses, and tax write-offs.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0B0F19",
+  "theme_color": "#4F46E5",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=192&auto=format&fit=crop&q=80",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
