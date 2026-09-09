@@ -6,6 +6,9 @@ const { supabase } = require('../services/supabase');
 const { memoryDb } = require('../services/memoryDb');
 
 async function getTransactions(req, res) {
+    if (process.env.NODE_ENV === 'production' && !supabase) {
+        return res.status(503).json({ error: 'Your records are temporarily unavailable. Please try again later.' });
+    }
     try {
         if (supabase) {
             try {
@@ -29,8 +32,14 @@ async function getTransactions(req, res) {
 
                     return res.json({ transactions: formatted });
                 }
+                if (process.env.NODE_ENV === 'production') {
+                    return res.status(503).json({ error: 'Your records are temporarily unavailable. Please try again later.' });
+                }
                 console.warn('⚠️ Supabase transactions query error, falling back to memoryDb:', error?.message);
             } catch (sErr) {
+                if (process.env.NODE_ENV === 'production') {
+                    return res.status(503).json({ error: 'Your records are temporarily unavailable. Please try again later.' });
+                }
                 console.warn('⚠️ Supabase transactions query exception, falling back to memoryDb:', sErr.message);
             }
         }
@@ -45,6 +54,9 @@ async function getTransactions(req, res) {
 }
 
 async function createTransaction(req, res) {
+    if (process.env.NODE_ENV === 'production' && !supabase) {
+        return res.status(503).json({ error: 'Saving records is temporarily unavailable. Please try again later.' });
+    }
     try {
         const { source, merchant, type, category, amount, date } = req.body;
         const txId = 'tx_' + Date.now();
@@ -67,6 +79,9 @@ async function createTransaction(req, res) {
                 const { error } = await supabase.from('transactions').insert([newTx]);
                 if (error) throw error;
             } catch (sErr) {
+                if (process.env.NODE_ENV === 'production') {
+                    return res.status(503).json({ error: 'Your transaction could not be saved. Please try again later.' });
+                }
                 console.warn('⚠️ Supabase transaction insert notice, using memoryDb fallback:', sErr.message);
             }
         }
