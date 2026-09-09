@@ -37,7 +37,7 @@ function setupScrollReveals(){
  if(!items.length)return;
  items.forEach((item,index)=>{item.classList.add('cc-scroll-reveal');item.style.setProperty('--reveal-delay',`${(index%3)*110}ms`);});
  if(!('IntersectionObserver' in window)){items.forEach(item=>item.classList.add('is-visible'));return;}
- scrollRevealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');scrollRevealObserver?.unobserve(entry.target);}}),{threshold:.16,rootMargin:'0px 0px -9% 0px'});
+ scrollRevealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');scrollRevealObserver?.unobserve(entry.target);}}),{threshold:.08,rootMargin:'0px 0px -2% 0px'});
  items.forEach(item=>scrollRevealObserver.observe(item));
 }
 render=function(){
