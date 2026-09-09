@@ -175,22 +175,29 @@ const state = {
             if (state.page === 'landing') {
                 viewport.innerHTML = `
                     <!-- Hero Section -->
-                    <section class="ce-hero">
-                        <div class="ce-eyebrow">
-                            <span class="ce-dot"></span>Creator accounts live · Collaboration pilot
+                    <section class="ce-hero ce-hero-v2">
+                        <div class="ce-hero-copy">
+                            <div class="ce-eyebrow"><span class="ce-dot"></span>The operating layer for creator work</div>
+                            <h1>Great campaigns.<br><em>Clearly connected.</em></h1>
+                            <p>Briefs, creators, performance and payment milestones—moving together in one beautifully simple workspace.</p>
+                            <div class="cc-actions">
+                                <button class="cc-btn cc-primary" data-command="setPage('signup')">Start as a creator ↗</button>
+                                <button class="cc-btn" data-command="setPage('journey')">Watch the workflow</button>
+                            </div>
+                            <div class="ce-release-line"><span><i></i>Creator HQ live</span><span>Agency + brand pilot</span><a href="#availability">See what’s available →</a></div>
                         </div>
-                        <h1>Run creator campaigns.<br><em>From brief to payment.</em></h1>
-                        <p>Creators can track real income today. Agencies and brands can join our pilot for campaign coordination, consented reporting and payment milestones.</p>
-                        <div class="cc-actions">
-                            <button class="cc-btn cc-primary" data-command="setPage('signup')">Create free creator account ↗</button>
-                            <button class="cc-btn" data-command="setPage('journey')">View sample campaign ↗</button>
+                        <div class="ce-product-stage" aria-label="Animated campaign workspace preview">
+                            <div class="ce-stage-orbit"></div>
+                            <article class="ce-stage-main">
+                                <div class="ce-stage-top"><span>SPRING IN MOTION</span><b>LIVE</b></div>
+                                <h3>One campaign.<br>Everyone in sync.</h3>
+                                <div class="ce-stage-progress"><span></span></div>
+                                <div class="ce-stage-people"><span>TM</span><span>SN</span><span>VA</span><small>Creator → Agency → Brand</small></div>
+                            </article>
+                            <article class="ce-float-card ce-float-metric"><small>VERIFIED VIEWS</small><strong>128.4K</strong><span>↑ 18.6%</span></article>
+                            <article class="ce-float-card ce-float-payment"><small>MILESTONE REACHED</small><strong>R5,000</strong><span>Ready for approval →</span></article>
+                            <div class="ce-signal ce-signal-one"></div><div class="ce-signal ce-signal-two"></div>
                         </div>
-                    </section>
-
-                    <section class="ce-status-grid" aria-label="Product availability">
-                        <article><span class="ce-status is-live">Live</span><strong>Creator HQ</strong><p>Personal income ledger, cash-flow overview and CSV export.</p></article>
-                        <article><span class="ce-status is-pilot">Pilot</span><strong>Agency & brand collaboration</strong><p>Controlled onboarding for rosters, campaigns and approvals.</p></article>
-                        <article><span class="ce-status is-sandbox">Sandbox</span><strong>Connected social data</strong><p>Phyllo integration is being validated before production access.</p></article>
                     </section>
 
                     <!-- Showcase Collage Grid -->
