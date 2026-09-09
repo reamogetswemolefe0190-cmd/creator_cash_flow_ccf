@@ -33,7 +33,13 @@ const FALLBACK_ADMIN_PASS = process.env.ADMIN_PASSWORD || (isProduction ? '' : '
 const CREATOR_SEED_PASSWORD = process.env.CREATOR_SEED_PASSWORD || (isProduction ? '' : 'CreatorPass2026!');
 
 // External Services
-const PHYLLO_AUTH_HEADER = process.env.PHYLLO_AUTH_HEADER;
+const PHYLLO_CLIENT_ID = process.env.PHYLLO_CLIENT_ID;
+const PHYLLO_CLIENT_SECRET = process.env.PHYLLO_CLIENT_SECRET;
+const PHYLLO_AUTH_HEADER = process.env.PHYLLO_AUTH_HEADER || (
+    PHYLLO_CLIENT_ID && PHYLLO_CLIENT_SECRET
+        ? `Basic ${Buffer.from(`${PHYLLO_CLIENT_ID}:${PHYLLO_CLIENT_SECRET}`).toString('base64')}`
+        : undefined
+);
 const PHYLLO_API_URL = process.env.PHYLLO_API_URL || 'https://api.staging.getphyllo.com';
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
@@ -58,6 +64,8 @@ module.exports = {
     FALLBACK_ADMIN_PASS,
     CREATOR_SEED_PASSWORD,
     PHYLLO_AUTH_HEADER,
+    PHYLLO_CLIENT_ID,
+    PHYLLO_CLIENT_SECRET,
     PHYLLO_API_URL,
     RESEND_API_KEY,
     RESEND_API_URL,

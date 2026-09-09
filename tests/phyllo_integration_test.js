@@ -3,6 +3,8 @@
 process.env.NODE_ENV = 'test';
 process.env.PORT = '5057';
 delete process.env.PHYLLO_AUTH_HEADER;
+delete process.env.PHYLLO_CLIENT_ID;
+delete process.env.PHYLLO_CLIENT_SECRET;
 
 const assert = require('assert');
 const { app } = require('../server');
