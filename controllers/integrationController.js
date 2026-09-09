@@ -2,11 +2,9 @@
 // Creator Cash Flow - Third-Party Integrations Controller (Phyllo SDK)
 // ==========================================================================
 
-const jwt = require('jsonwebtoken');
 const {
     PHYLLO_AUTH_HEADER,
-    PHYLLO_API_URL,
-    JWT_SECRET
+    PHYLLO_API_URL
 } = require('../config/env');
 const { supabase } = require('../services/supabase');
 const { memoryDb } = require('../services/memoryDb');
@@ -14,37 +12,15 @@ const { memoryDb } = require('../services/memoryDb');
 async function getPhylloToken(req, res) {
     try {
         if (!PHYLLO_AUTH_HEADER) {
-            console.error('[PHYLLO CONFIG ERROR] PHYLLO_AUTH_HEADER environment variable is missing.');
-            return res.status(500).json({ error: 'Server configuration error: Phyllo credentials missing. Please set PHYLLO_AUTH_HEADER in Render dashboard.' });
+            return res.status(503).json({ error: 'Social account connections are not enabled yet.', code: 'PHYLLO_NOT_CONFIGURED' });
         }
-        let userId = null;
-        let userName = null;
-
-        // Try to authenticate if authorization header is provided
-        const authHeader = req.headers['authorization'];
-        const token = authHeader && authHeader.split(' ')[1];
-
-        if (token) {
-            try {
-                const decoded = jwt.verify(token, JWT_SECRET);
-                userId = decoded.id;
-                userName = decoded.name;
-            } catch (e) {
-                // Ignore and fallback to guest mode
-            }
-        }
-
-        const isGuest = !userId;
-        if (isGuest) {
-            userId = 'guest_' + Date.now();
-            userName = 'Guest Creator';
-        }
+        const userId = req.user.id;
+        const userName = req.user.name || 'Creator';
 
         let phylloUserId = null;
 
         // 1. Fetch user to see if they already have a phyllo_user_id
-        if (!isGuest) {
-            if (supabase) {
+        if (supabase) {
                 const { data } = await supabase
                     .from('users')
                     .select('phyllo_user_id')
@@ -54,11 +30,10 @@ async function getPhylloToken(req, res) {
                 if (data && data.phyllo_user_id) {
                     phylloUserId = data.phyllo_user_id;
                 }
-            } else {
-                const user = (memoryDb.users || []).find(u => u.id === userId);
-                if (user && user.phyllo_user_id) {
-                    phylloUserId = user.phyllo_user_id;
-                }
+        } else {
+            const user = (memoryDb.users || []).find(u => u.id === userId);
+            if (user && user.phyllo_user_id) {
+                phylloUserId = user.phyllo_user_id;
             }
         }
 
@@ -80,22 +55,20 @@ async function getPhylloToken(req, res) {
 
             if (!userResponse.ok) {
                 console.error('[PHYLLO USER CREATION ERROR]', userData);
-                return res.status(userResponse.status).json({ error: 'Failed to create user in Phyllo staging.', details: userData });
+                return res.status(502).json({ error: 'The secure connection service could not create this creator profile.', code: 'PHYLLO_USER_ERROR' });
             }
 
             phylloUserId = userData.id;
 
-            // Save the newly created phyllo_user_id (if not guest)
-            if (!isGuest) {
-                if (supabase) {
-                    await supabase
+            if (supabase) {
+                const { error } = await supabase
                         .from('users')
                         .update({ phyllo_user_id: phylloUserId })
                         .eq('id', userId);
-                } else {
-                    const user = (memoryDb.users || []).find(u => u.id === userId);
-                    if (user) user.phyllo_user_id = phylloUserId;
-                }
+                if (error) throw error;
+            } else {
+                const user = (memoryDb.users || []).find(u => u.id === userId);
+                if (user) user.phyllo_user_id = phylloUserId;
             }
         }
 
@@ -109,21 +82,16 @@ async function getPhylloToken(req, res) {
             },
             body: JSON.stringify({
                 user_id: phylloUserId,
-                products: [
-                    "IDENTITY",
-                    "IDENTITY.AUDIENCE",
-                    "ENGAGEMENT",
-                    "ENGAGEMENT.AUDIENCE",
-                    "INCOME",
-                    "ACTIVITY"
-                ]
+                // Income is intentionally excluded. It requires a separate,
+                // explicit creator consent experience.
+                products: ["IDENTITY", "IDENTITY.AUDIENCE", "ENGAGEMENT", "ENGAGEMENT.AUDIENCE"]
             })
         });
         const tokenData = await tokenResponse.json();
 
         if (!tokenResponse.ok) {
             console.error('[PHYLLO TOKEN GENERATION ERROR]', tokenData);
-            return res.status(tokenResponse.status).json({ error: 'Failed to generate SDK token in Phyllo staging.', details: tokenData });
+            return res.status(502).json({ error: 'The secure connection service could not start.', code: 'PHYLLO_TOKEN_ERROR' });
         }
 
         // 4. Fetch active work platforms to map names to IDs dynamically
@@ -154,7 +122,9 @@ async function getPhylloToken(req, res) {
         res.json({
             sdkToken: tokenData.sdk_token,
             phylloUserId: phylloUserId,
-            platforms: platformMap
+            platforms: platformMap,
+            environment: PHYLLO_API_URL.includes('staging') ? 'sandbox' : 'production',
+            products: ["IDENTITY", "IDENTITY.AUDIENCE", "ENGAGEMENT", "ENGAGEMENT.AUDIENCE"]
         });
 
     } catch (err) {
@@ -163,6 +133,49 @@ async function getPhylloToken(req, res) {
     }
 }
 
+async function getPhylloStatus(req, res) {
+    let phylloUserId = null;
+    if (supabase) {
+        const { data, error } = await supabase.from('users').select('phyllo_user_id').eq('id', req.user.id).maybeSingle();
+        if (error) return res.status(503).json({ error: 'Connection status is temporarily unavailable.' });
+        phylloUserId = data?.phyllo_user_id || null;
+    } else {
+        phylloUserId = memoryDb.usersById.get(req.user.id)?.phyllo_user_id || null;
+    }
+    const connections = [];
+    let syncAvailable = true;
+    if (phylloUserId && PHYLLO_AUTH_HEADER) {
+        try {
+            const response = await fetch(`${PHYLLO_API_URL}/v1/accounts?user_id=${encodeURIComponent(phylloUserId)}`, {
+                headers: { Authorization: PHYLLO_AUTH_HEADER }
+            });
+            const payload = await response.json();
+            if (!response.ok) syncAvailable = false;
+            const accounts = Array.isArray(payload) ? payload : (payload.data || []);
+            for (const account of accounts) {
+                connections.push({
+                    id: account.id,
+                    platform: account.work_platform?.name || account.work_platform_name || 'Connected platform',
+                    username: account.username || account.profile?.username || '',
+                    status: String(account.status || 'UNKNOWN').toUpperCase(),
+                    connectedAt: account.created_at || null
+                });
+            }
+        } catch (error) {
+            syncAvailable = false;
+        }
+    }
+    return res.json({
+        configured: Boolean(PHYLLO_AUTH_HEADER),
+        provisioned: Boolean(phylloUserId),
+        connected: connections.some(connection => connection.status === 'CONNECTED'),
+        connections,
+        syncAvailable,
+        environment: PHYLLO_API_URL.includes('staging') ? 'sandbox' : 'production'
+    });
+}
+
 module.exports = {
-    getPhylloToken
+    getPhylloToken,
+    getPhylloStatus
 };

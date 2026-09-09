@@ -36,6 +36,7 @@ const transactionRoutes = require('./routes/transactionRoutes');
 const onboardingRoutes = require('./routes/onboardingRoutes');
 const integrationRoutes = require('./routes/integrationRoutes');
 const aiRoutes = require('./routes/aiRoutes');
+const collaborationRoutes = require('./routes/collaborationRoutes');
 
 // Express Application Initialization
 const app = express();
@@ -116,6 +117,9 @@ app.use('/api/integrations', integrationRoutes);
 
 // Gemini 1.5 Flash AI Query & Privacy Telemetry Proxy (/api/gemini)
 app.use('/api/gemini', aiRoutes);
+
+// Consent-scoped agency, brand and creator collaboration
+app.use('/api/collaboration', collaborationRoutes);
 
 // 404 Route Not Found Envelope & Centralized Error Handler
 app.use(notFoundHandler);

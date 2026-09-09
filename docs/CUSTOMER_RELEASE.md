@@ -10,6 +10,8 @@ This release separates real creator accounts and transaction records from the co
 - Authenticated Creator HQ with an account-aware header, persistent Overview, Campaigns, Income & ledger, AI assistant and Campaign sandbox navigation.
 - Real account totals, recent activity, creator-native quick logging, a clearly labelled 15% SARS planning estimate and a transparent financial-health snapshot.
 - Warm first-run onboarding for empty accounts; no mock transactions are presented as customer records.
+- Authenticated Phyllo Connect entry point with connection status, explicit identity/engagement/audience scope and no default income permission.
+- Collaboration API foundation for agency/brand organisations, roster invitations, campaign creation, creator assignment and consent, and performance milestones.
 - New customer accounts start empty; welcome emails no longer claim verification or seed financial data.
 - Production signup/login and transaction reads/writes return a service error if durable storage is unavailable, instead of silently using temporary memory.
 - Demo-only creator/agency/brand workspaces. Shared campaign revisions, approval history, conversation and invoice status are explicitly browser-local; no real invitations, approvals, notifications or payments are sent.
@@ -20,6 +22,8 @@ This release separates real creator accounts and transaction records from the co
 The targeted browser check exercises real local test APIs: registration, Creator HQ onboarding, authenticated navigation/header state, invalid/valid login, creator-native transaction save, calculated totals and CSV download. It also checks responsive account rendering, campaign revision/approval/invoice transitions, escaped feedback, all public routes at desktop/mobile widths, mobile menu behaviour and absence of inline event attributes/CSP errors.
 
 Production must supply a working Supabase configuration with the existing users/transactions schema. Tests use the isolated in-memory test environment; production database permissions, live email delivery and deployment configuration still require post-deploy verification. Existing user data is not migrated or deleted.
+
+Before enabling agency and brand workspaces, run `migrations/20260909_campaign_collaboration.sql` in Supabase. Enable Phyllo in sandbox by setting `PHYLLO_AUTH_HEADER` and keeping `PHYLLO_API_URL=https://api.staging.getphyllo.com`. Production Phyllo access should only be enabled after redirect domains, platform review and data scopes are approved.
 
 ## Capability limits
 
