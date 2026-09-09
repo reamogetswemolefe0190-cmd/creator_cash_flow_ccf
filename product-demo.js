@@ -177,14 +177,20 @@ const state = {
                     <!-- Hero Section -->
                     <section class="ce-hero">
                         <div class="ce-eyebrow">
-                            <span class="ce-dot"></span>Built for the business of creating
+                            <span class="ce-dot"></span>Creator accounts live · Collaboration pilot
                         </div>
-                        <h1>Your creativity.<br><em>A business in motion.</em></h1>
-                        <p>From the first brief to the final invoice. Bring your campaigns, collaborators and cash flow together.</p>
+                        <h1>Run creator campaigns.<br><em>From brief to payment.</em></h1>
+                        <p>Creators can track real income today. Agencies and brands can join our pilot for campaign coordination, consented reporting and payment milestones.</p>
                         <div class="cc-actions">
-                            <button class="cc-btn cc-primary" data-command="setPage('login')">Get started ↗</button>
-                            <button class="cc-btn" data-command="setPage('journey')">Explore the platform ↗</button>
+                            <button class="cc-btn cc-primary" data-command="setPage('signup')">Create free creator account ↗</button>
+                            <button class="cc-btn" data-command="setPage('journey')">View sample campaign ↗</button>
                         </div>
+                    </section>
+
+                    <section class="ce-status-grid" aria-label="Product availability">
+                        <article><span class="ce-status is-live">Live</span><strong>Creator HQ</strong><p>Personal income ledger, cash-flow overview and CSV export.</p></article>
+                        <article><span class="ce-status is-pilot">Pilot</span><strong>Agency & brand collaboration</strong><p>Controlled onboarding for rosters, campaigns and approvals.</p></article>
+                        <article><span class="ce-status is-sandbox">Sandbox</span><strong>Connected social data</strong><p>Phyllo integration is being validated before production access.</p></article>
                     </section>
 
                     <!-- Showcase Collage Grid -->
@@ -230,28 +236,30 @@ const state = {
 
                     <!-- Roles Architecture Section -->
                     <section class="ce-section-head">
-                        <h2>Different roles.<br>One connected workspace.</h2>
-                        <p>The right view for everyone behind a great campaign.</p>
+                        <h2>One workflow.<br>Three clear roles.</h2>
+                        <p>Creator accounts are live. Agency and brand screens below are labelled product previews.</p>
                     </section>
 
                     <section class="ce-roles">
                         <div class="ce-role">
-                            <span class="cc-kicker">01 / CREATORS</span>
+                            <span class="cc-kicker">01 / CREATORS · LIVE ACCOUNT</span>
                             <h3>Your talent. Your business.</h3>
                             <p>Manage deliverables, see upcoming payments and stay on top of your income.</p>
-                            <button class="cc-link" data-command="setPage('creator')">Explore workspace ↗</button>
+                            <button class="cc-link" data-command="setPage('creator')">View creator demo ↗</button>
                         </div>
                         <div class="ce-role">
-                            <span class="cc-kicker">02 / AGENCIES</span>
+                            <span class="cc-kicker">02 / AGENCIES · EARLY-ACCESS PILOT</span>
                             <h3>Bring the whole team together.</h3>
                             <p>Connect your roster to the right briefs and keep every approval moving.</p>
-                            <button class="cc-link" data-command="setPage('agency')">Explore workspace ↗</button>
+                            <button class="cc-link" data-command="setPage('agency')">View agency preview ↗</button>
+                            <a class="cc-link ce-pilot-link" href="mailto:reamogetswemolefe@creatorcashflow.co.za?subject=Agency%20pilot%20application">Apply for pilot</a>
                         </div>
                         <div class="ce-role">
-                            <span class="cc-kicker">03 / BRANDS</span>
+                            <span class="cc-kicker">03 / BRANDS · EARLY-ACCESS PILOT</span>
                             <h3>Good ideas. Real outcomes.</h3>
                             <p>Set the brief, approve the work and understand where your budget goes.</p>
-                            <button class="cc-link" data-command="setPage('brand')">Explore workspace ↗</button>
+                            <button class="cc-link" data-command="setPage('brand')">View brand preview ↗</button>
+                            <a class="cc-link ce-pilot-link" href="mailto:reamogetswemolefe@creatorcashflow.co.za?subject=Brand%20campaign%20enquiry">Request a campaign</a>
                         </div>
                     </section>
 
@@ -262,7 +270,7 @@ const state = {
                             <div class="cc-kicker" style="color: #C4D3A9;">LESS BACK AND FORTH</div>
                             <h2>Great work is<br>a team sport.</h2>
                             <p>A shared brief. Clear feedback. A visible next step. Keep creators, agencies and brands on the same page.</p>
-                            <button class="cc-btn cc-primary" data-command="setPage('journey')">Follow a campaign ↗</button>
+                            <button class="cc-btn cc-primary" data-command="setPage('journey')">View sample campaign ↗</button>
                         </div>
                     </section>
                 `;
