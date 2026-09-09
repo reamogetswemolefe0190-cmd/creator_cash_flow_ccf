@@ -866,9 +866,9 @@ const state = {
                 }
 
                 viewport.innerHTML = `
-                    <div class="cc-shell">
-                        <aside class="cc-side">
-                            <div class="cc-kicker">${roleLabel} workspace</div>
+                    <div class="cc-shell cc-demo-shell cc-role-${role}">
+                        <aside class="cc-side cc-demo-side">
+                            <div class="cc-kicker">${roleLabel} workspace · preview</div>
                             <button class="${state.activeWorkspaceTab === 'Overview' ? 'cc-active' : ''}" data-command="setWorkspaceTab('Overview')">
                                 <i data-lucide="layout-dashboard"></i> Overview
                             </button>
@@ -886,14 +886,15 @@ const state = {
                             </button>
                         </aside>
 
-                        <main class="cc-main">
-                            <div class="cc-title-row">
+                        <main class="cc-main cc-demo-main">
+                            <div class="cc-demo-context"><span><i></i>Interactive product preview</span><b>${roleLabel} perspective</b></div>
+                            <div class="cc-title-row cc-demo-title">
                                 <div>
                                     <div class="cc-kicker">${roleLabel} / ${state.activeWorkspaceTab}</div>
                                     <h2>${isCreator ? 'Good morning, ' : ''}${roleName}${isCreator ? '.' : ''}</h2>
                                     <p>${isCreator ? 'Your work is moving. Here’s where your money stands.' : isAgency ? 'Your campaigns, creators and next decisions.' : 'See what’s working. Keep your campaign moving.'}</p>
                                 </div>
-                                <span class="cc-avatar">${roleAvatar}</span>
+                                <div class="cc-demo-title-actions"><button class="cc-btn cc-primary" data-command="openCampaignFlow('${role}')">Open shared campaign →</button><span class="cc-avatar">${roleAvatar}</span></div>
                             </div>
 
                             ${subViewContent}
