@@ -13,5 +13,7 @@ router.post('/campaigns', controller.createCampaign);
 router.post('/campaigns/:campaignId/creators', controller.assignCreator);
 router.post('/campaigns/:campaignId/accept', controller.acceptAssignment);
 router.post('/campaigns/:campaignId/milestones', controller.createMilestone);
+router.get('/campaigns/:campaignId/messages', controller.getMessages);
+router.post('/campaigns/:campaignId/messages', controller.addMessage);
 
 module.exports = router;

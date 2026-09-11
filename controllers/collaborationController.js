@@ -163,4 +163,61 @@ async function getWorkspace(req, res) {
     }
 }
 
-module.exports = { createOrganization, inviteMember, createCampaign, assignCreator, acceptAssignment, createMilestone, getWorkspace };
+async function getMessages(req, res) {
+    if (isProdUnavailable(res)) return;
+    const campaignId = clean(req.params.campaignId, 100);
+    if (!supabase) {
+        const messages = memoryDb.campaign_messages.filter(m => m.campaign_id === campaignId);
+        // Map sender details
+        const enriched = messages.map(m => {
+            const user = memoryDb.users.find(u => u.id === m.sender_user_id);
+            return { ...m, sender_name: user ? user.name : 'Unknown' };
+        });
+        return res.json({ messages: enriched });
+    }
+    try {
+        const { data, error } = await supabase
+            .from('campaign_messages')
+            .select('*, users!sender_user_id(name)')
+            .eq('campaign_id', campaignId)
+            .order('created_at', { ascending: true });
+        if (error) throw error;
+        const enriched = data.map(m => ({ ...m, sender_name: m.users?.name || 'Unknown' }));
+        return res.json({ messages: enriched });
+    } catch (error) {
+        return res.status(503).json({ error: 'Messages could not be loaded.' });
+    }
+}
+
+async function addMessage(req, res) {
+    if (isProdUnavailable(res)) return;
+    const campaignId = clean(req.params.campaignId, 100);
+    const content = clean(req.body?.content, 2000);
+    if (!content || content.length === 0) return res.status(400).json({ error: 'Message content is required.' });
+    
+    try {
+        const message = await insert('campaign_messages', {
+            id: id('msg'),
+            campaign_id: campaignId,
+            sender_user_id: req.user.id,
+            content,
+            created_at: new Date().toISOString()
+        });
+        
+        let senderName = 'Unknown';
+        if (!supabase) {
+            const user = memoryDb.users.find(u => u.id === req.user.id);
+            if (user) senderName = user.name;
+        } else {
+            const { data } = await supabase.from('users').select('name').eq('id', req.user.id).single();
+            if (data) senderName = data.name;
+        }
+        
+        return res.status(201).json({ message: { ...message, sender_name: senderName } });
+    } catch (error) {
+        console.error('[ADD MESSAGE]', error.message);
+        return res.status(503).json({ error: 'The message could not be sent.' });
+    }
+}
+
+module.exports = { createOrganization, inviteMember, createCampaign, assignCreator, acceptAssignment, createMilestone, getWorkspace, getMessages, addMessage };
