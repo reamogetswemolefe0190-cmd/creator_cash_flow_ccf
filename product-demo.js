@@ -178,7 +178,7 @@ const state = {
                     <section class="ce-hero ce-hero-v2">
                         <div class="ce-hero-copy">
                             <h1>Great campaigns.<br><em>Clearly connected.</em></h1>
-                            <p>Briefs, creators, performance and payment milestones—moving together in one beautifully simple workspace.</p>
+                            <p>Briefs, creators, performance and payment milestones moving together in one beautifully simple workspace.</p>
                             <div class="cc-actions">
                                 <button class="cc-btn cc-primary" data-command="setPage('signup')">Start as a creator ↗</button>
                                 <button class="cc-btn" data-command="setPage('journey')">Watch the workflow</button>
