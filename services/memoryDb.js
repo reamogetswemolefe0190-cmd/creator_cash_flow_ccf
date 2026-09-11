@@ -150,6 +150,24 @@ if (memoryDb.transactions.length === 0) {
     });
 }
 
+// Seed sandbox campaign for messaging demo
+if (memoryDb.campaigns.length === 0) {
+    const orgId = 'org_demo_1';
+    memoryDb.organizations.push({ id: orgId, name: 'Vela Active', type: 'brand', created_by: 'usr_seed_1', created_at: new Date().toISOString() });
+    memoryDb.campaigns.push({
+        id: 'cmp_spring_001',
+        organization_id: orgId,
+        brand_organization_id: orgId,
+        name: 'Spring in motion',
+        brief: 'Sandbox demo campaign',
+        status: 'active',
+        currency: 'ZAR',
+        fixed_fee: 12000,
+        created_by: 'usr_seed_1',
+        created_at: new Date().toISOString()
+    });
+}
+
 // Trigger Supabase Seeding
 seedAdminAccountInSupabase();
 seedDefaultCreatorsInSupabase(DEFAULT_SEED_CREATORS, DEFAULT_SEED_TRANSACTIONS);
