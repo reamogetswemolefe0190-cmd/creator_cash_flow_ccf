@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Dashboard | Creator Cash Flow</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="public-header">
+        <a class="cc-logo" href="/#landing">Creator Cash Flow</a>
+        <div class="hq-header-actions">
+            <span class="hq-plan">Agency Pilot</span>
+            <button class="hq-signout" onclick="localStorage.removeItem('ccf_session'); window.location.href='/#login'">Sign out</button>
+        </div>
+    </header>
+    <main class="hq-shell">
+        <div class="hq-welcome">
+            <div>
+                <span class="hq-eyebrow">Agency Workspace</span>
+                <h1>Your Creator Roster</h1>
+                <p>Track your connected creators, view aggregate YouTube/Instagram metrics, and manage brand campaigns.</p>
+            </div>
+        </div>
+        <div class="hq-content-grid">
+            <section class="hq-panel">
+                <div class="hq-empty">
+                    <h3>No creators connected yet</h3>
+                    <p>Invite creators to join your roster to securely view their analytics.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

@@ -20,10 +20,20 @@ async function signup(req, res) {
         return res.status(503).json({ error: 'Account registration is temporarily unavailable. Please try again later.' });
     }
     try {
-        const { email, password, name } = req.body;
+        const { email, password, name, role = 'creator', organization_name = '' } = req.body;
+        
+        // Validate role
+        if (!['creator', 'agency', 'brand'].includes(role)) {
+            return res.status(400).json({ error: 'Invalid account role.' });
+        }
 
         const passwordHash = await bcrypt.hash(password, BCRYPT_ROUNDS);
         const userId = 'usr_' + Date.now() + '_' + crypto.randomBytes(4).toString('hex');
+        
+        let orgId = null;
+        if (role !== 'creator' && organization_name) {
+            orgId = 'org_' + Date.now() + '_' + crypto.randomBytes(4).toString('hex');
+        }
 
         const newUserObj = {
             id: userId,
@@ -31,29 +41,40 @@ async function signup(req, res) {
             passwordHash,
             password_hash: passwordHash,
             name,
+            role,
+            organization_id: orgId,
             plan_tier: 'Free',
             status: 'active',
             created_at: new Date().toISOString()
         };
 
         if (supabase) {
-            // Check if user exists in Supabase
             const { data: existing } = await supabase.from('users').select('id').eq('email', email.toLowerCase()).maybeSingle();
             if (existing) {
                 return res.status(400).json({ success: false, error: 'An account with this email already exists.', code: 'EMAIL_ALREADY_EXISTS' });
             }
+            
+            // Note: In production we need to handle creating the organization record first if orgId exists.
+            // For now, we update users table to accept role and organization_id.
+            if (orgId) {
+                await supabase.from('organizations').insert([{
+                    id: orgId,
+                    name: organization_name,
+                    type: role
+                }]);
+            }
 
-            // Insert into Supabase
             const { error } = await supabase.from('users').insert([{
                 id: userId,
                 email: email.toLowerCase(),
                 password_hash: passwordHash,
-                name
+                name,
+                role,
+                organization_id: orgId
             }]);
 
             if (error) throw error;
         } else {
-            // Check in memoryDb
             const existing = findUserByEmail(email);
             if (existing) {
                 return res.status(400).json({ success: false, error: 'An account with this email already exists.', code: 'EMAIL_ALREADY_EXISTS' });
@@ -65,34 +86,34 @@ async function signup(req, res) {
             memoryDb.users.push(newUserObj);
             memoryDb.usersByEmail.set(newUserObj.email, newUserObj);
             memoryDb.usersById.set(newUserObj.id, newUserObj);
+            
+            if (orgId) {
+                if (!memoryDb.organizations) memoryDb.organizations = [];
+                memoryDb.organizations.push({ id: orgId, name: organization_name, type: role });
+            }
         }
 
-        // Generate session token
+        // Generate session token WITH role
         const token = jwt.sign(
-            { id: userId, email: email.toLowerCase(), name },
+            { id: userId, email: email.toLowerCase(), name, role, organization_id: orgId },
             JWT_SECRET,
             { expiresIn: '7d' }
         );
 
-        // Customer ledgers start empty. Illustrative records belong only in the demo.
-
-        // Dispatch Live Transactional Email via Resend asynchronously
         if (RESEND_API_KEY) {
             console.log('[RESEND] Sending account welcome email');
-            fetch(`${RESEND_API_URL}/emails`, {
+            fetch( + "${RESEND_API_URL}/emails" + , {
                 method: 'POST',
                 headers: {
-                    'Authorization': `Bearer ${RESEND_API_KEY}`,
+                    'Authorization':  + "Bearer " + ,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     from: FROM_EMAIL,
                     to: email.toLowerCase(),
                     subject: 'Welcome to Creator Cash Flow',
-                    text: 'Welcome to Creator Cash Flow. Your creator account has been created. Accounts are free during this release and your transaction ledger starts empty. Agency and brand campaigns are available as a demo. For support, contact reamogetswemolefe@creatorcashflow.co.za. This email does not verify ownership of your email address.'
+                    text: 'Welcome to Creator Cash Flow. Your account has been created. For support, contact reamogetswemolefe@creatorcashflow.co.za. This email does not verify ownership of your email address.'
                 })
-            }).then(r => r.json()).then(emailData => {
-                console.log('[RESEND SUCCESS] Welcome email sent:', emailData.id);
             }).catch(err => {
                 console.error('[RESEND DISPATCH ERROR]', err);
             });
@@ -103,7 +124,8 @@ async function signup(req, res) {
             message: 'Registration successful!',
             userId,
             email,
-            token
+            token,
+            role
         });
     } catch (err) {
         console.error(err);
@@ -128,7 +150,9 @@ async function login(req, res) {
                 id: data.id,
                 name: data.name,
                 email: data.email,
-                passwordHash: data.password_hash
+                passwordHash: data.password_hash,
+                role: data.role || 'creator',
+                organization_id: data.organization_id || null
             };
         } else {
             const memUser = findUserByEmail(email);
@@ -144,7 +168,7 @@ async function login(req, res) {
         }
 
         const sessionToken = jwt.sign(
-            { id: user.id, email: user.email, name: user.name },
+            { id: user.id, email: user.email, name: user.name, role: user.role || 'creator', organization_id: user.organization_id },
             JWT_SECRET,
             { expiresIn: '7d' }
         );
@@ -156,7 +180,8 @@ async function login(req, res) {
             user: {
                 id: user.id,
                 name: user.name,
-                email: user.email
+                email: user.email,
+                role: user.role || 'creator'
             }
         });
     } catch (err) {
