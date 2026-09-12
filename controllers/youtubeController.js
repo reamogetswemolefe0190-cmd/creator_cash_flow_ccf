@@ -4,6 +4,32 @@ const { memoryDb } = require('../services/memoryDb');
 const jwt = require('jsonwebtoken');
 
 // Mock Data for Fallback/Dev Mode when Google API keys are missing
+let cachedExchangeRate = null;
+let lastExchangeRateFetch = 0;
+
+async function getUsdToZarRate() {
+    const now = Date.now();
+    // Cache the rate for 12 hours (43200000 ms) to avoid API limits and keep requests fast
+    if (cachedExchangeRate && (now - lastExchangeRateFetch < 43200000)) {
+        return cachedExchangeRate;
+    }
+
+    try {
+        const res = await fetch('https://open.er-api.com/v6/latest/USD');
+        const data = await res.json();
+        if (data && data.rates && data.rates.ZAR) {
+            cachedExchangeRate = data.rates.ZAR;
+            lastExchangeRateFetch = now;
+            return cachedExchangeRate;
+        }
+    } catch (e) {
+        console.error('Failed to fetch live exchange rate:', e);
+    }
+    
+    // Fallback if the API is down
+    return cachedExchangeRate || 18.0;
+}
+
 const MOCK_YOUTUBE_DATA = {
     yt_channel_id: 'UC_x5XG1OV2P6uZZ5FSM9Ttw',
     channel_name: 'Creator Mock Channel',
@@ -197,7 +223,8 @@ async function getMetrics(req, res) {
                     
                     // estimatedRevenue is in USD by default. Convert to ZAR for CCF (approx 18x).
                     const revUsd = getVal('estimatedRevenue');
-                    const revZar = revUsd * 18.0;
+                    const currentRate = await getUsdToZarRate();
+                    const revZar = revUsd * currentRate;
                     advancedStats.estimatedRevenue = 'R' + revZar.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits:2});
                 }
             } catch (analyticsError) {
@@ -245,6 +272,7 @@ async function disconnect(req, res) {
 }
 
 module.exports = { login, callback, getMetrics, disconnect };
+
 
 
 
