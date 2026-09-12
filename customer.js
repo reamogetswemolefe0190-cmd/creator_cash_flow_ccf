@@ -96,8 +96,60 @@ function campaignsContent() {
     return html;
 }
 function assistantContent(){return `<div class="hq-welcome"><div><span class="hq-eyebrow">AI business assistant</span><h1>Ask about your creator business.</h1><p>Get general guidance using your totals. Transaction descriptions are not automatically sent.</p></div></div><div class="hq-content-grid"><section class="hq-panel"><form id="assistant-form"><label for="assistant-question">What would you like to understand?</label><textarea id="assistant-question" required maxlength="1000" placeholder="How should I plan for uneven brand-deal income?"></textarea><button class="cc-btn cc-primary" type="submit" ${assistantLoading?'disabled':''}>${assistantLoading?'Thinking…':'Ask CCF Assistant →'}</button></form><p class="customer-meta">Avoid entering private identifying or banking information.</p></section><section class="hq-panel"><span class="hq-eyebrow">Response</span><div id="assistant-response" aria-live="polite">${assistantReply?`<p>${escape(assistantReply)}</p>`:'<div class="hq-empty"><p>Your answer will appear here.</p></div>'}</div></section></div>`;}
+let youtubeStatus = { loading: true, connected: false };
+async function loadYoutubeStatus() {
+    if (!session) return;
+    try {
+        const response = await fetch('/api/youtube/metrics', { headers: { Authorization: 'Bearer ' + session.token }});
+        if (response.ok) {
+            youtubeStatus = await response.json();
+            youtubeStatus.loading = false;
+        }
+    } catch(e) {
+        youtubeStatus.loading = false;
+    }
+    if (state.page === 'account' && accountTab === 'connections') render();
+}
+window.connectYoutube = async function() {
+    try {
+        const r = await fetch('/api/youtube/auth/login', {
+            method: 'POST',
+            headers: { Authorization: 'Bearer ' + session.token }
+        });
+        const data = await r.json();
+        if (data.url) window.location.href = data.url;
+    } catch (e) { alert('Failed to connect YouTube'); }
+};
+window.disconnectYoutube = async function() {
+    try {
+        await fetch('/api/youtube/auth/disconnect', { method: 'POST', headers: { Authorization: 'Bearer ' + session.token }});
+        youtubeStatus = { loading: false, connected: false };
+        render();
+    } catch (e) { alert('Failed to disconnect YouTube'); }
+};
+function youtubeContent() {
+    if (youtubeStatus.loading) return '<section class="hq-panel"><div class="hq-section-head"><h2>YouTube</h2></div><p>Loading...</p></section>';
+    if (!youtubeStatus.connected) return '<section class="hq-panel"><div class="hq-section-head"><h2>YouTube</h2></div><p>Connect your YouTube channel to share verified analytics.</p><button class="cc-btn cc-primary" onclick="connectYoutube()">Connect YouTube</button></section>';
+    
+    return \<section class="hq-panel">
+        <div class="hq-section-head">
+            <div><span class="hq-eyebrow">Connected</span><h2>YouTube: \</h2></div>
+            <button class="cc-btn" onclick="disconnectYoutube()">Disconnect</button>
+        </div>
+        <div class="hq-connections">
+            <article>
+                <span class="hq-platform">S</span>
+                <div><strong>Subscribers</strong><small>\</small></div>
+            </article>
+            <article>
+                <span class="hq-platform">V</span>
+                <div><strong>Total Views</strong><small>\</small></div>
+            </article>
+        </div>
+    </section>\;
+}
 function connectionsContent(){const configured=phylloStatus?.configured,connections=phylloStatus?.connections||[];return `<section class="hq-panel"><div class="hq-section-head"><div><span class="hq-eyebrow">Separate connection provider</span><h2>Other platforms via Phyllo</h2></div><span class="customer-pill">${escape(phylloStatus?.environment||'sandbox')}</span></div><p>Phyllo connections remain separate from direct Instagram. Sandbox connections use sample data, not verified creator performance. Identity, engagement and supported audience access may be requested; income access is excluded.</p><button class="cc-btn" data-action="connect-phyllo" ${phylloLoading||configured===false?'disabled':''}>${phylloLoading?'Checking connection…':'Open Phyllo connection →'}</button>${configured===false?'<p>Phyllo is not enabled on this deployment.</p>':''}<div role="status">${escape(phylloMessage)}</div><div class="hq-connections">${connections.map(c=>`<article><span class="hq-platform">${escape(c.platform[0]||'C')}</span><div><strong>${escape(c.platform)}</strong><small>${escape(c.username||'Connected creator account')}</small></div><span class="hq-connection-state">${escape(c.status.toLowerCase())}</span></article>`).join('')}</div></section>`;}
-function account(){if(!session){auth(false);return;}const body=accountTab==='income'?incomeContent():accountTab==='campaigns'?campaignsContent():accountTab==='connections'?'<section class="hq-panel" id="instagram-panel"></section>'+connectionsContent():accountTab==='assistant'?assistantContent():overviewContent();document.getElementById('cc-screen').innerHTML=`<section class="hq-shell" id="main-content">${accountNav()}<div class="hq-main">${body}</div></section>`;if(accountTab==='connections')window.CCFInstagram?.mount(document.getElementById('instagram-panel'),session.token);}
+function account(){if(!session){auth(false);return;}const body=accountTab==='income'?incomeContent():accountTab==='campaigns'?campaignsContent():accountTab==='connections'?'<section class="hq-panel" id="instagram-panel"></section>'+(youtubeStatus.loading ? (loadYoutubeStatus(), youtubeContent()) : youtubeContent())+connectionsContent():accountTab==='assistant'?assistantContent():overviewContent();document.getElementById('cc-screen').innerHTML=`<section class="hq-shell" id="main-content">${accountNav()}<div class="hq-main">${body}</div></section>`;if(accountTab==='connections')window.CCFInstagram?.mount(document.getElementById('instagram-panel'),session.token);}
 const info={
 privacy:['Privacy notice','Account data','Creator accounts use your name, email address and a password hash. Signing in returns a session token. This interface keeps that token in page memory; reloading the page requires signing in again.','Transaction records','The account view requests records associated with your authenticated user ID. Authentication and ledger services may use the configured Supabase database. Server logging and operational processing are separate from this browser interface.','Demo and external resources','Demo messages and approvals remain in this browser tab and reset on refresh. Do not enter confidential material into the demo. The site loads fonts from Google Fonts and icons from jsDelivr, which receive normal browser requests. No analytics or advertising tracking is added by this update.','Your privacy requests','Creator Cash Flow is the service operator. Email reamogetswemolefe@creatorcashflow.co.za to ask about records held, correction, deletion, retention or service providers. Do not include passwords or private financial records in your initial message. This notice is not a compliance certification.'],
 terms:['Service information','Current availability','Creator sign-in and transaction retrieval use the account API. Agency, brand and shared campaign screens are demonstrations. Demo approvals, invoices, invitations and messages do not create contracts, transfer money or notify other people.','Financial information','Displayed demo amounts are illustrative. Records and exports are not certified receipts, tax advice or proof of payment. Content approval and payment status are separate.','Accounts and acceptable use','Use your own account credentials and do not upload material you are not entitled to share. Keep your password private. The interface does not currently offer self-service password recovery.','Free release and support','Creator accounts are free during this release. No subscription purchase or automatic payment is offered here. Contact Creator Cash Flow at reamogetswemolefe@creatorcashflow.co.za for support or an account closure request. Any future paid plan will need separate pricing and acceptance; no payment authorisation is collected in this flow.'],
@@ -144,3 +196,5 @@ document.addEventListener('submit',async e=>{if(e.target.id==='create-org-form')
 async function loadCampaignMessages(){if(!session)return;try{const r=await fetch('/api/collaboration/campaigns/'+campaign.id+'/messages',{headers:{Authorization:'Bearer '+session.token}});if(r.ok){const data=await r.json();campaign.messages=data.messages.map(m=>({sender:m.sender_name,text:m.content}));render();}}catch(e){console.error('Failed to load campaign messages:', e);}}
 document.addEventListener('DOMContentLoaded',()=>{const logo=document.querySelector('.cc-logo')?.outerHTML||'<a href="#landing">Creator Cash Flow</a>';const header=document.querySelector('header');if(header)header.outerHTML=`<header class="public-header">${logo}<button class="mobile-menu" data-action="menu" aria-controls="public-nav" aria-expanded="false">Menu</button><nav id="public-nav" class="public-nav" aria-label="Main navigation"><a href="#landing">Product</a><a href="#availability">What’s live</a><a href="#journey">Campaign demo</a><a href="#login">Sign in</a><a class="primary-link" href="#signup">Create free account</a></nav></header>`;document.querySelector('footer').outerHTML='<footer class="customer-footer"><span>© 2026 Creator Cash Flow</span><a href="#privacy">Privacy notice</a><a href="#terms">Service information</a><a href="#security">Security</a><a href="#availability">Free release & availability</a><a href="mailto:reamogetswemolefe@creatorcashflow.co.za">Contact support</a></footer>';const hash=location.hash.slice(1);state.page=known.includes(hash)?hash:'landing';window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(known.includes(h)&&state.page!==h){state.page=h;if(h==='journey')loadCampaignMessages();render();}});if(state.page==='journey')loadCampaignMessages();render();});
 })();
+
+

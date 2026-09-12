@@ -35,6 +35,7 @@ const adminRoutes = require('./routes/adminRoutes');
 const transactionRoutes = require('./routes/transactionRoutes');
 const onboardingRoutes = require('./routes/onboardingRoutes');
 const integrationRoutes = require('./routes/integrationRoutes');
+const youtubeRoutes = require('./routes/youtubeRoutes');
 const aiRoutes = require('./routes/aiRoutes');
 const collaborationRoutes = require('./routes/collaborationRoutes');
 
@@ -114,6 +115,7 @@ app.use('/api/onboarding', onboardingRoutes);
 
 // Third-Party Integrations Routes (/api/integrations/phyllo/token)
 app.use('/api/integrations', integrationRoutes);
+app.use('/api/youtube', youtubeRoutes);
 
 // Gemini 1.5 Flash AI Query & Privacy Telemetry Proxy (/api/gemini)
 app.use('/api/gemini', aiRoutes);

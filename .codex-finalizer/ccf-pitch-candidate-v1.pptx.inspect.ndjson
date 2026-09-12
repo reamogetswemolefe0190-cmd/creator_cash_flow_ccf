@@ -1,0 +1,262 @@
+{"kind":"deck","id":"pr/9rybf8","name":"Deck"}
+{"kind":"layout","layoutId":"b28b1493-689a-420a-b9d3-818b76999029","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"5bc81eea-2c76-42ed-a8e1-0a57746f1e11","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/hwkdrx","slide":1,"title":"PILOT PARTNERSHIP DECK","textShapes":10}
+{"kind":"textbox","id":"sh/503ahwzm","slide":1,"text":"PILOT PARTNERSHIP DECK","textPreview":"PILOT PARTNERSHIP DECK","textChars":22,"textLines":1,"bbox":[66,174,420,26]}
+{"kind":"textbox","id":"sh/4za9ori1","slide":1,"text":"Creator Cash Flow","textPreview":"Creator Cash Flow","textChars":17,"textLines":1,"bbox":[62,208,760,92]}
+{"kind":"textbox","id":"sh/r2lsj6hs","slide":1,"text":"Campaign operations for agencies, brands and creators","textPreview":"Campaign operations for agencies, brands and creators","textChars":53,"textLines":1,"bbox":[66,312,690,90]}
+{"kind":"shape","id":"sh/61crq107","slide":1,"bbox":[66,445,520,0]}
+{"kind":"textbox","id":"sh/t43algzy","slide":1,"text":"A live product, a focused pilot and a path to trusted campaign reporting","textPreview":"A live product, a focused pilot and a path to trusted campaign reporting","textChars":72,"textLines":1,"bbox":[66,472,650,72]}
+{"kind":"shape","id":"sh/s3utsbid","slide":1,"bbox":[850,135,310,420]}
+{"kind":"textbox","id":"sh/f6lsn6ho","slide":1,"text":"ONE CAMPAIGN","textPreview":"ONE CAMPAIGN","textChars":12,"textLines":1,"bbox":[886,175,230,26]}
+{"kind":"textbox","id":"sh/e5cbu103","slide":1,"text":"Brand","textPreview":"Brand","textChars":5,"textLines":1,"bbox":[886,240,230,34]}
+{"kind":"shape","id":"sh/sfmpc3ex","slide":1,"bbox":[902,281,0,44]}
+{"kind":"textbox","id":"sh/tgv6l8fi","slide":1,"text":"Agency","textPreview":"Agency","textChars":6,"textLines":1,"bbox":[886,330,230,34]}
+{"kind":"shape","id":"sh/6d47atgr","slide":1,"bbox":[902,371,0,44]}
+{"kind":"textbox","id":"sh/7edojyxc","slide":1,"text":"Creator","textPreview":"Creator","textChars":7,"textLines":1,"bbox":[886,420,230,34]}
+{"kind":"textbox","id":"sh/g3mpgnet","slide":1,"text":"Brief to payment status","textPreview":"Brief to payment status","textChars":23,"textLines":1,"bbox":[886,500,230,28]}
+{"kind":"textbox","id":"sh/h4f6p8fe","slide":1,"text":"September 2026","textPreview":"September 2026","textChars":14,"textLines":1,"bbox":[66,644,260,28]}
+{"kind":"image","id":"im/zqdknet4","slide":1,"name":"","alt":"Creator Cash Flow logo","bbox":[64,46,156,54]}
+{"kind":"notes","id":"nt/hwkdrx","slide":1,"text":"Creator Cash Flow brings the campaign, the people, the proof and the payment status into one shared operating layer. This deck presents the live pilot experience and clearly labels planned capabilities."}
+{"kind":"slide","id":"sl/pf4zdx","slide":2,"title":"02","textShapes":9}
+{"kind":"textbox","id":"sh/xkri187i","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/wji1s3qx","slide":2,"text":"MARKET CONTEXT","textPreview":"MARKET CONTEXT","textChars":14,"textLines":1,"bbox":[64,112,300,26]}
+{"kind":"textbox","id":"sh/nep0vypg","slide":2,"text":"Creator marketing is becoming an operating challenge","textPreview":"Creator marketing is becoming an operating challenge","textChars":52,"textLines":1,"bbox":[64,142,1120,78]}
+{"kind":"textbox","id":"sh/mdgzmt8v","slide":2,"text":"$480B","textPreview":"$480B","textChars":5,"textLines":1,"bbox":[66,276,430,110]}
+{"kind":"textbox","id":"sh/9g7ix87m","slide":2,"text":"estimated creator economy by 2027","textPreview":"estimated creator economy by 2027","textChars":33,"textLines":1,"bbox":[70,380,430,50]}
+{"kind":"textbox","id":"sh/ofy1o3q1","slide":2,"text":"$250B estimated in 2023","textPreview":"$250B estimated in 2023","textChars":23,"textLines":1,"bbox":[70,438,430,34]}
+{"kind":"shape","id":"sh/zqp0rep4","slide":2,"bbox":[566,264,0,260]}
+{"kind":"textbox","id":"sh/epwzit8z","slide":2,"text":"Brand deals account for about 70% of creator revenue in the research cited by Goldman Sachs.","textPreview":"Brand deals account for about 70% of creator revenue in the research cited by Goldman Sachs.","textChars":92,"textLines":1,"bbox":[628,276,520,100]}
+{"kind":"shape","id":"sh/knmt476l","slide":2,"bbox":[628,420,4,90]}
+{"kind":"textbox","id":"sh/lovadc76","slide":2,"text":"More campaign spend means more briefs, approvals, reporting requests and payment coordination.","textPreview":"More campaign spend means more briefs, approvals, reporting requests and payment coordination.","textChars":94,"textLines":1,"bbox":[652,416,496,98]}
+{"kind":"textbox","id":"sh/ylkr2xov","slide":2,"text":"Source: Goldman Sachs Research, 19 April 2023","textPreview":"Source: Goldman Sachs Research, 19 April 2023","textChars":45,"textLines":1,"bbox":[70,638,640,24]}
+{"kind":"image","id":"im/fqt0beto","slide":2,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"notes","id":"nt/pf4zdx","slide":2,"text":"Goldman Sachs Research estimated that the creator economy could grow from $250 billion in 2023 to $480 billion by 2027. The same article states that brand deals account for about 70% of creator revenue. Source: https://www.goldmansachs.com/insights/articles/the-creator-economy-could-approach-half-a-trillion-dollars-by-2027"}
+{"kind":"slide","id":"sl/x6rkla","slide":3,"title":"03","textShapes":17}
+{"kind":"textbox","id":"sh/7e5wn2to","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/6dcfexsj","slide":3,"text":"THE OPERATING PROBLEM","textPreview":"THE OPERATING PROBLEM","textChars":21,"textLines":1,"bbox":[64,108,340,26]}
+{"kind":"textbox","id":"sh/ls3elsby","slide":3,"text":"Campaign operations are fragmented","textPreview":"Campaign operations are fragmented","textChars":34,"textLines":1,"bbox":[64,140,930,78]}
+{"kind":"textbox","id":"sh/krudcnad","slide":3,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[66,262,70,42]}
+{"kind":"shape","id":"sh/jqlwjits","slide":3,"bbox":[66,320,244,0]}
+{"kind":"textbox","id":"sh/ypcvaxs7","slide":3,"text":"Brief","textPreview":"Brief","textChars":5,"textLines":1,"bbox":[66,342,245,44]}
+{"kind":"textbox","id":"sh/5o7ehwb2","slide":3,"text":"Scope and usage rights live in documents","textPreview":"Scope and usage rights live in documents","textChars":40,"textLines":1,"bbox":[66,398,245,90]}
+{"kind":"textbox","id":"sh/4nyxorah","slide":3,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[364,262,70,42]}
+{"kind":"shape","id":"sh/edkned4f","slide":3,"bbox":[364,320,244,0]}
+{"kind":"textbox","id":"sh/zeto7il0","slide":3,"text":"Creator team","textPreview":"Creator team","textChars":12,"textLines":1,"bbox":[364,342,245,44]}
+{"kind":"textbox","id":"sh/0f25gnml","slide":3,"text":"Roster decisions happen in spreadsheets","textPreview":"Roster decisions happen in spreadsheets","textChars":39,"textLines":1,"bbox":[364,398,245,90]}
+{"kind":"textbox","id":"sh/1gb69s36","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[662,262,70,42]}
+{"kind":"shape","id":"sh/qp0nad4j","slide":3,"bbox":[662,320,244,0]}
+{"kind":"textbox","id":"sh/rq9o3ilo","slide":3,"text":"Approvals","textPreview":"Approvals","textChars":9,"textLines":1,"bbox":[662,342,245,44]}
+{"kind":"textbox","id":"sh/sri5c3m9","slide":3,"text":"Feedback moves through chat and email","textPreview":"Feedback moves through chat and email","textChars":37,"textLines":1,"bbox":[662,398,245,90]}
+{"kind":"textbox","id":"sh/dsr6583u","slide":3,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[960,262,70,42]}
+{"kind":"shape","id":"sh/al4nmx4n","slide":3,"bbox":[960,320,244,0]}
+{"kind":"textbox","id":"sh/bmdof2l8","slide":3,"text":"Proof and payment","textPreview":"Proof and payment","textChars":17,"textLines":1,"bbox":[960,342,245,44]}
+{"kind":"textbox","id":"sh/7elcrax8","slide":3,"text":"Performance and invoices arrive later","textPreview":"Performance and invoices arrive later","textChars":37,"textLines":1,"bbox":[960,398,245,90]}
+{"kind":"shape","id":"sh/mdcbi5gn","slide":3,"bbox":[66,552,4,56]}
+{"kind":"textbox","id":"sh/9g3ut0fe","slide":3,"text":"No participant sees the same campaign state at the same time.","textPreview":"No participant sees the same campaign state at the same time.","textChars":61,"textLines":1,"bbox":[90,548,826,64]}
+{"kind":"textbox","id":"sh/8futkfyt","slide":3,"text":"The cost shows up as follow-ups, slow approvals, disputed results and delayed payment decisions.","textPreview":"The cost shows up as follow-ups, slow approvals, disputed results and delayed payment decisions.","textChars":96,"textLines":1,"bbox":[66,620,1100,38]}
+{"kind":"image","id":"im/10ri54b2","slide":3,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"notes","id":"nt/x6rkla","slide":3,"text":"Most teams already have messaging, spreadsheets and analytics. The missing layer is a shared campaign record that connects the work across those tools."}
+{"kind":"slide","id":"sl/igj710","slide":4,"title":"04","textShapes":12}
+{"kind":"textbox","id":"sh/vuxkfaxo","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/uto3m5g3","slide":4,"text":"THE CCF MODEL","textPreview":"THE CCF MODEL","textChars":13,"textLines":1,"bbox":[64,108,280,26]}
+{"kind":"textbox","id":"sh/5kz2lkfq","slide":4,"text":"One campaign record with controlled views","textPreview":"One campaign record with controlled views","textChars":41,"textLines":1,"bbox":[64,140,980,78]}
+{"kind":"shape","id":"sh/4jqlszy5","slide":4,"bbox":[458,264,364,178]}
+{"kind":"textbox","id":"sh/jixkjuxk","slide":4,"text":"SHARED CAMPAIGN","textPreview":"SHARED CAMPAIGN","textChars":15,"textLines":1,"bbox":[500,292,280,28]}
+{"kind":"textbox","id":"sh/ixo3qpgz","slide":4,"text":"Brief\nDeliverables\nMilestones\nPayment status","textPreview":"Brief | Deliverables | Milestones | Payment status","textChars":44,"textLines":4,"bbox":[500,334,280,90]}
+{"kind":"shape","id":"sh/lov290f6","slide":4,"bbox":[70,292,300,130]}
+{"kind":"textbox","id":"sh/knmlgvy1","slide":4,"text":"Creator","textPreview":"Creator","textChars":7,"textLines":1,"bbox":[98,312,250,35]}
+{"kind":"textbox","id":"sh/uh0f29wv","slide":4,"text":"Own fee, tasks, content and invoice","textPreview":"Own fee, tasks, content and invoice","textChars":35,"textLines":1,"bbox":[98,356,240,48]}
+{"kind":"shape","id":"sh/vitgbexg","slide":4,"bbox":[910,246,300,130]}
+{"kind":"textbox","id":"sh/wj2x4jel","slide":4,"text":"Agency","textPreview":"Agency","textChars":6,"textLines":1,"bbox":[938,266,250,35]}
+{"kind":"textbox","id":"sh/hkbydof6","slide":4,"text":"Roster, review queue and campaign budget","textPreview":"Roster, review queue and campaign budget","textChars":40,"textLines":1,"bbox":[938,310,240,48]}
+{"kind":"shape","id":"sh/ilkf69wr","slide":4,"bbox":[910,438,300,130]}
+{"kind":"textbox","id":"sh/jmtgfexc","slide":4,"text":"Brand","textPreview":"Brand","textChars":5,"textLines":1,"bbox":[938,458,250,35]}
+{"kind":"textbox","id":"sh/4n2x8jex","slide":4,"text":"Campaign spend, approvals and performance","textPreview":"Campaign spend, approvals and performance","textChars":41,"textLines":1,"bbox":[938,502,240,48]}
+{"kind":"shape","id":"sh/5obyhofi","slide":4,"bbox":[370,357,88,0]}
+{"kind":"shape","id":"sh/6p4zatw3","slide":4,"bbox":[822,319,88,0]}
+{"kind":"shape","id":"sh/rqdgjyx8","slide":4,"bbox":[822,411,48,0]}
+{"kind":"shape","id":"sh/3edw7ytg","slide":4,"bbox":[870,411,0,92]}
+{"kind":"textbox","id":"sh/2t4fytcv","slide":4,"text":"Creator consent limits social data to the campaign. Personal income and unrelated work stay private.","textPreview":"Creator consent limits social data to the campaign. Personal income and unrelated work stay private.","textChars":100,"textLines":1,"bbox":[70,612,1120,44]}
+{"kind":"image","id":"im/lk721wvq","slide":4,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"notes","id":"nt/igj710","slide":4,"text":"Creator Cash Flow gives each participant the information needed for the campaign without opening the creator's full business to an agency or brand. Social account access remains creator controlled. Phyllo currently runs in sandbox validation."}
+{"kind":"slide","id":"sl/ok6lt0","slide":5,"title":"05","textShapes":6}
+{"kind":"textbox","id":"sh/pwb6d872","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/ov25kn6h","slide":5,"text":"PILOT ENTRY","textPreview":"PILOT ENTRY","textChars":11,"textLines":1,"bbox":[64,105,260,26]}
+{"kind":"textbox","id":"sh/f6to7yp0","slide":5,"text":"The product explains its value before asking for details","textPreview":"The product explains its value before asking for details","textChars":56,"textLines":1,"bbox":[64,137,1110,78]}
+{"kind":"textbox","id":"sh/e5knetof","slide":5,"text":"Creators enter a private workspace with a clear three-step path.","textPreview":"Creators enter a private workspace with a clear three-step path.","textChars":64,"textLines":1,"bbox":[66,216,440,58]}
+{"kind":"shape","id":"sh/1sb6987q","slide":5,"bbox":[66,308,4,64]}
+{"kind":"textbox","id":"sh/gr25g365","slide":5,"text":"Real account records stay separate from sample campaign data.","textPreview":"Real account records stay separate from sample campaign data.","textChars":61,"textLines":1,"bbox":[90,304,396,72]}
+{"kind":"shape","id":"sh/zmdoj2p4","slide":5,"bbox":[66,409,4,84]}
+{"kind":"textbox","id":"sh/y14nqxoj","slide":5,"text":"The pilot requires no card and keeps social access under creator consent.","textPreview":"The pilot requires no card and keeps social access under creator consent.","textChars":73,"textLines":1,"bbox":[90,405,396,92]}
+{"kind":"shape","id":"sh/03up4fm5","slide":5,"bbox":[540,162,676,486]}
+{"kind":"image","id":"im/zi5wfepg","slide":5,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"image","id":"im/elkba9sr","slide":5,"name":"","geometry":"roundRect","alt":"Creator Cash Flow pilot signup screen","bbox":[548,170,660,470]}
+{"kind":"notes","id":"nt/ok6lt0","slide":5,"text":"The onboarding screen sets expectations before registration. Creator accounts are free during the current release. Agency and brand participation is handled through the pilot rather than self-service onboarding."}
+{"kind":"slide","id":"sl/eaorkv","slide":6,"title":"06","textShapes":10}
+{"kind":"textbox","id":"sh/z2l0rq1o","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/ehcjyl03","slide":6,"text":"CREATOR WORKFLOW","textPreview":"CREATOR WORKFLOW","textChars":16,"textLines":1,"bbox":[64,104,320,26]}
+{"kind":"textbox","id":"sh/98nix0jq","slide":6,"text":"Creators know what needs attention","textPreview":"Creators know what needs attention","textChars":34,"textLines":1,"bbox":[64,136,470,78]}
+{"kind":"textbox","id":"sh/o7u14vi5","slide":6,"text":"The creator sees the fee, deliverable deadline, campaign conversation and upcoming payment in one view.","textPreview":"The creator sees the fee, deliverable deadline, campaign conversation and upcoming payment in one view.","textChars":103,"textLines":1,"bbox":[66,230,410,94]}
+{"kind":"textbox","id":"sh/n6l0va1k","slide":6,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[68,360,52,34]}
+{"kind":"textbox","id":"sh/m5cj250z","slide":6,"text":"Accept the scope with the fee visible","textPreview":"Accept the scope with the fee visible","textChars":37,"textLines":1,"bbox":[132,350,350,54]}
+{"kind":"textbox","id":"sh/xcn21kjm","slide":6,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[68,436,52,34]}
+{"kind":"textbox","id":"sh/wbe18fih","slide":6,"text":"Submit work inside the campaign","textPreview":"Submit work inside the campaign","textChars":31,"textLines":1,"bbox":[132,426,350,54]}
+{"kind":"textbox","id":"sh/mtsf6lsn","slide":6,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[68,512,52,34]}
+{"kind":"textbox","id":"sh/nu1gzq98","slide":6,"text":"Track approval and invoice status","textPreview":"Track approval and invoice status","textChars":33,"textLines":1,"bbox":[132,502,350,54]}
+{"kind":"shape","id":"sh/8vax8vat","slide":6,"bbox":[524,120,696,536]}
+{"kind":"image","id":"im/t8ra1sju","slide":6,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"image","id":"im/2l8zq587","slide":6,"name":"","geometry":"roundRect","alt":"Creator workspace screenshot","bbox":[532,128,680,520]}
+{"kind":"notes","id":"nt/eaorkv","slide":6,"text":"The creator view removes the need to chase context across messages. The demo shows sample data. Live creator accounts currently support authentication and personal transaction records."}
+{"kind":"slide","id":"sl/avtl48","slide":7,"title":"07","textShapes":10}
+{"kind":"textbox","id":"sh/8vqtgn65","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/9wzu98nq","slide":7,"text":"AGENCY WORKFLOW","textPreview":"AGENCY WORKFLOW","textChars":15,"textLines":1,"bbox":[64,104,320,26]}
+{"kind":"textbox","id":"sh/e5obato3","slide":7,"text":"Agencies run the handoffs","textPreview":"Agencies run the handoffs","textChars":25,"textLines":1,"bbox":[64,136,470,78]}
+{"kind":"textbox","id":"sh/z6xs3y5o","slide":7,"text":"The manager sees the active portfolio, roster status and review queue before work reaches the brand.","textPreview":"The manager sees the active portfolio, roster status and review queue before work reaches the brand.","textChars":100,"textLines":1,"bbox":[66,230,410,94]}
+{"kind":"textbox","id":"sh/076tc369","slide":7,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[68,360,52,34]}
+{"kind":"textbox","id":"sh/18fu58nu","slide":7,"text":"Match creators to the agreed brief","textPreview":"Match creators to the agreed brief","textChars":34,"textLines":1,"bbox":[132,350,350,54]}
+{"kind":"textbox","id":"sh/q14b6to7","slide":7,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[68,436,52,34]}
+{"kind":"textbox","id":"sh/r2dszy5c","slide":7,"text":"Consolidate feedback before brand review","textPreview":"Consolidate feedback before brand review","textChars":40,"textLines":1,"bbox":[132,426,350,54]}
+{"kind":"textbox","id":"sh/7y1krqhw","slide":7,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[68,512,52,34]}
+{"kind":"textbox","id":"sh/6xsjil0b","slide":7,"text":"Monitor every campaign decision","textPreview":"Monitor every campaign decision","textChars":31,"textLines":1,"bbox":[132,502,350,54]}
+{"kind":"shape","id":"sh/tkj2t0zm","slide":7,"bbox":[524,120,696,536]}
+{"kind":"image","id":"im/mlk3u5ob","slide":7,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"image","id":"im/fu50vulg","slide":7,"name":"","geometry":"roundRect","alt":"Agency workspace screenshot","bbox":[532,128,680,520]}
+{"kind":"notes","id":"nt/avtl48","slide":7,"text":"The agency becomes the operational centre of the campaign without owning the creator's private data. Agency access is currently an early access pilot rather than a self-service live account."}
+{"kind":"slide","id":"sl/8z9cdy","slide":8,"title":"08","textShapes":10}
+{"kind":"textbox","id":"sh/i54rmloj","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/3qdsvq54","slide":8,"text":"BRAND WORKFLOW","textPreview":"BRAND WORKFLOW","textChars":14,"textLines":1,"bbox":[64,104,320,26]}
+{"kind":"textbox","id":"sh/g3m9kb6d","slide":8,"text":"Brands see progress without chasing updates","textPreview":"Brands see progress without chasing updates","textChars":43,"textLines":1,"bbox":[64,136,470,78]}
+{"kind":"textbox","id":"sh/h4vatgny","slide":8,"text":"The brand sees committed spend, final approvals and campaign performance inside the same record used by the agency.","textPreview":"The brand sees committed spend, final approvals and campaign performance inside the same record used by the agency.","textChars":115,"textLines":1,"bbox":[66,230,410,94]}
+{"kind":"textbox","id":"sh/u1kri1on","slide":8,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[68,360,52,34]}
+{"kind":"textbox","id":"sh/v2tsr6ps","slide":8,"text":"Approve deliverables against the brief","textPreview":"Approve deliverables against the brief","textChars":38,"textLines":1,"bbox":[132,350,350,54]}
+{"kind":"textbox","id":"sh/0z6twf6x","slide":8,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[68,436,52,34]}
+{"kind":"textbox","id":"sh/10fa5kni","slide":8,"text":"See campaign-scoped performance","textPreview":"See campaign-scoped performance","textChars":31,"textLines":1,"bbox":[132,426,350,54]}
+{"kind":"textbox","id":"sh/p832tcrq","slide":8,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[68,512,52,34]}
+{"kind":"textbox","id":"sh/o7ulk7a5","slide":8,"text":"Confirm milestone and payment decisions","textPreview":"Confirm milestone and payment decisions","textChars":39,"textLines":1,"bbox":[132,502,350,54]}
+{"kind":"shape","id":"sh/n61kr29k","slide":8,"bbox":[524,120,696,536]}
+{"kind":"image","id":"im/gba5cfe1","slide":8,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"image","id":"im/1cf6xovy","slide":8,"name":"","geometry":"roundRect","alt":"Brand workspace screenshot","bbox":[532,128,680,520]}
+{"kind":"notes","id":"nt/8z9cdy","slide":8,"text":"The brand sees campaign evidence and approval state without access to a creator's unrelated income or campaigns. Brand access is currently part of the pilot."}
+{"kind":"slide","id":"sl/ntv7bm","slide":9,"title":"09","textShapes":18}
+{"kind":"textbox","id":"sh/1oju9szu","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/gnatgny9","slide":9,"text":"SHARED WORKFLOW","textPreview":"SHARED WORKFLOW","textChars":15,"textLines":1,"bbox":[64,104,300,26]}
+{"kind":"textbox","id":"sh/7i1c3ihs","slide":9,"text":"Every decision stays with the campaign","textPreview":"Every decision stays with the campaign","textChars":38,"textLines":1,"bbox":[64,136,1100,78]}
+{"kind":"textbox","id":"sh/6h8badg7","slide":9,"text":"Six handoffs connect the brief to payment status. Each role sees the same stage and owns a clear next action.","textPreview":"Six handoffs connect the brief to payment status. Each role sees the same stage and owns a clear next action.","textChars":109,"textLines":1,"bbox":[66,214,500,70]}
+{"kind":"shape","id":"sh/tkju5szi","slide":9,"bbox":[66,320,34,34]}
+{"kind":"textbox","id":"sh/sjatcnyd","slide":9,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[66,320,34,34]}
+{"kind":"shape","id":"sh/juhszyhg","slide":9,"bbox":[100,337,48,0]}
+{"kind":"textbox","id":"sh/it8b6tgv","slide":9,"text":"Brief","textPreview":"Brief","textChars":5,"textLines":1,"bbox":[54,366,70,38]}
+{"kind":"shape","id":"sh/o32lcv2l","slide":9,"bbox":[148,320,34,34]}
+{"kind":"textbox","id":"sh/94bml036","slide":9,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[148,320,34,34]}
+{"kind":"shape","id":"sh/m1k3alkf","slide":9,"bbox":[182,337,48,0]}
+{"kind":"textbox","id":"sh/n2tkjql0","slide":9,"text":"Team","textPreview":"Team","textChars":4,"textLines":1,"bbox":[136,366,70,38]}
+{"kind":"shape","id":"sh/0f2l8b29","slide":9,"bbox":[230,320,34,34]}
+{"kind":"textbox","id":"sh/1gb2hg3u","slide":9,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[230,320,34,34]}
+{"kind":"shape","id":"sh/edk36lk3","slide":9,"bbox":[264,337,48,0]}
+{"kind":"textbox","id":"sh/zetkf6lo","slide":9,"text":"Create","textPreview":"Create","textChars":6,"textLines":1,"bbox":[218,366,70,38]}
+{"kind":"shape","id":"sh/kbmlkf2t","slide":9,"bbox":[312,320,34,34]}
+{"kind":"textbox","id":"sh/lcfmtkjy","slide":9,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[312,320,34,34]}
+{"kind":"shape","id":"sh/tsb2d0bi","slide":9,"bbox":[346,337,48,0]}
+{"kind":"textbox","id":"sh/sr2l4fux","slide":9,"text":"Agency review","textPreview":"Agency review","textChars":13,"textLines":1,"bbox":[300,366,70,38]}
+{"kind":"shape","id":"sh/7q9kbatc","slide":9,"bbox":[394,320,34,34]}
+{"kind":"textbox","id":"sh/6p0325cr","slide":9,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[394,320,34,34]}
+{"kind":"shape","id":"sh/5or290b6","slide":9,"bbox":[428,337,48,0]}
+{"kind":"textbox","id":"sh/knil0vul","slide":9,"text":"Brand approval","textPreview":"Brand approval","textChars":14,"textLines":1,"bbox":[382,366,70,38]}
+{"kind":"shape","id":"sh/jm9k7qt0","slide":9,"bbox":[476,320,34,34]}
+{"kind":"textbox","id":"sh/i103ylcf","slide":9,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[476,320,34,34]}
+{"kind":"textbox","id":"sh/x0r25gba","slide":9,"text":"Payment status","textPreview":"Payment status","textChars":14,"textLines":1,"bbox":[464,366,70,38]}
+{"kind":"textbox","id":"sh/wzylwvup","slide":9,"text":"The workflow keeps content approval separate from invoice payment.","textPreview":"The workflow keeps content approval separate from invoice payment.","textChars":66,"textLines":1,"bbox":[66,458,460,64]}
+{"kind":"textbox","id":"sh/mtcrqxob","slide":9,"text":"That distinction gives agencies and brands a reliable decision trail without making financial claims the platform cannot verify.","textPreview":"That distinction gives agencies and brands a reliable decision trail without making financial claims the platform cannot verify.","textChars":128,"textLines":1,"bbox":[66,536,455,80]}
+{"kind":"shape","id":"sh/nul8j25w","slide":9,"bbox":[554,168,662,486]}
+{"kind":"image","id":"im/zidkzmds","slide":9,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"image","id":"im/nud03m9o","slide":9,"name":"","geometry":"roundRect","alt":"Shared campaign workflow screenshot","bbox":[562,176,646,470]}
+{"kind":"notes","id":"nt/ntv7bm","slide":9,"text":"The shared campaign demo is interactive. A user can request a revision, submit a new version, send work to the brand, approve the deliverable and mark the sample invoice as sent. These actions remain in the browser and notify nobody."}
+{"kind":"slide","id":"sl/w1dauo","slide":10,"title":"10","textShapes":15}
+{"kind":"textbox","id":"sh/czahcv2h","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/x0jyl0jm","slide":10,"text":"PLANNED CAPABILITY","textPreview":"PLANNED CAPABILITY","textChars":18,"textLines":1,"bbox":[64,104,330,26]}
+{"kind":"textbox","id":"sh/y1sze5k7","slide":10,"text":"Campaign reports generated from the shared record","textPreview":"Campaign reports generated from the shared record","textChars":49,"textLines":1,"bbox":[64,136,1080,78]}
+{"kind":"textbox","id":"sh/z2lgna1s","slide":10,"text":"Illustrative concept for pilot validation","textPreview":"Illustrative concept for pilot validation","textChars":41,"textLines":1,"bbox":[66,208,450,32]}
+{"kind":"textbox","id":"sh/l43yp0jy","slide":10,"text":"128.4K","textPreview":"128.4K","textChars":6,"textLines":1,"bbox":[834,272,320,70]}
+{"kind":"textbox","id":"sh/m5czi5kj","slide":10,"text":"illustrative verified views","textPreview":"illustrative verified views","textChars":27,"textLines":1,"bbox":[838,338,320,30]}
+{"kind":"shape","id":"sh/76l0ra14","slide":10,"bbox":[836,392,340,0]}
+{"kind":"textbox","id":"sh/rytojqx8","slide":10,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[838,414,42,30]}
+{"kind":"textbox","id":"sh/qxknqlw3","slide":10,"text":"Executive summary for the client","textPreview":"Executive summary for the client","textChars":32,"textLines":1,"bbox":[890,408,300,38]}
+{"kind":"textbox","id":"sh/d0b6l0fe","slide":10,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[838,462,42,30]}
+{"kind":"textbox","id":"sh/sz25svet","slide":10,"text":"Deliverable performance by creator","textPreview":"Deliverable performance by creator","textChars":34,"textLines":1,"bbox":[890,456,300,38]}
+{"kind":"textbox","id":"sh/3a9of6xc","slide":10,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[838,510,42,30]}
+{"kind":"textbox","id":"sh/i90nmlwr","slide":10,"text":"Milestones, approvals and spend","textPreview":"Milestones, approvals and spend","textChars":31,"textLines":1,"bbox":[890,504,300,38]}
+{"kind":"textbox","id":"sh/5cr6hgfi","slide":10,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[838,558,42,30]}
+{"kind":"textbox","id":"sh/4bi5obex","slide":10,"text":"Export to PDF and secure share link","textPreview":"Export to PDF and secure share link","textChars":35,"textLines":1,"bbox":[890,552,300,38]}
+{"kind":"textbox","id":"sh/n6doraxg","slide":10,"text":"Data shown here is illustrative. Report generation is not live in the current pilot.","textPreview":"Data shown here is illustrative. Report generation is not live in the current pilot.","textChars":84,"textLines":1,"bbox":[66,644,1110,24]}
+{"kind":"chart","id":"ch/ovap4nyl","slide":10,"name":"","chartType":"bar","bbox":[66,284,690,322]}
+{"kind":"image","id":"im/elc3ypsr","slide":10,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"notes","id":"nt/w1dauo","slide":10,"text":"Planned report generation would turn the campaign record into a client-ready report. The example metrics are illustrative. The pilot should validate which report sections agencies and brands need before this feature is built."}
+{"kind":"slide","id":"sl/f3chk9","slide":11,"title":"11","textShapes":18}
+{"kind":"textbox","id":"sh/pwn2po7y","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/ovelgjqd","slide":11,"text":"PROPOSED PILOT","textPreview":"PROPOSED PILOT","textChars":14,"textLines":1,"bbox":[64,104,280,26]}
+{"kind":"textbox","id":"sh/bi5krep4","slide":11,"text":"An eight-week test of real campaign operations","textPreview":"An eight-week test of real campaign operations","textChars":46,"textLines":1,"bbox":[64,136,1040,78]}
+{"kind":"textbox","id":"sh/qhw3it8j","slide":11,"text":"Weeks 1–2","textPreview":"Weeks 1–2","textChars":9,"textLines":1,"bbox":[66,274,350,28]}
+{"kind":"shape","id":"sh/dkn2to7u","slide":11,"bbox":[66,316,330,0]}
+{"kind":"textbox","id":"sh/cjelkjq9","slide":11,"text":"Set up","textPreview":"Set up","textChars":6,"textLines":1,"bbox":[66,344,330,42]}
+{"kind":"textbox","id":"sh/zmp4vyp0","slide":11,"text":"Choose one agency, one brand campaign and a small creator group.","textPreview":"Choose one agency, one brand campaign and a small creator group.","textChars":64,"textLines":1,"bbox":[66,398,330,100]}
+{"kind":"textbox","id":"sh/ylg3mt8f","slide":11,"text":"Weeks 3–6","textPreview":"Weeks 3–6","textChars":9,"textLines":1,"bbox":[464,274,350,28]}
+{"kind":"shape","id":"sh/gnel4b6h","slide":11,"bbox":[464,316,330,0]}
+{"kind":"textbox","id":"sh/1onmxgn2","slide":11,"text":"Run the campaign","textPreview":"Run the campaign","textChars":16,"textLines":1,"bbox":[464,344,330,42]}
+{"kind":"textbox","id":"sh/elw321ob","slide":11,"text":"Use CCF for the brief, assignments, feedback, approvals and milestone status.","textPreview":"Use CCF for the brief, assignments, feedback, approvals and milestone status.","textChars":77,"textLines":1,"bbox":[464,398,330,100]}
+{"kind":"textbox","id":"sh/fm54v65w","slide":11,"text":"Weeks 7–8","textPreview":"Weeks 7–8","textChars":9,"textLines":1,"bbox":[862,274,350,28]}
+{"kind":"shape","id":"sh/oryl8v6d","slide":11,"bbox":[862,316,330,0]}
+{"kind":"textbox","id":"sh/ps7m10ny","slide":11,"text":"Review evidence","textPreview":"Review evidence","textChars":15,"textLines":1,"bbox":[862,344,330,42]}
+{"kind":"textbox","id":"sh/2pg36lon","slide":11,"text":"Compare turnaround, follow-ups, data trust and reporting needs.","textPreview":"Compare turnaround, follow-ups, data trust and reporting needs.","textChars":63,"textLines":1,"bbox":[862,398,330,100]}
+{"kind":"textbox","id":"sh/3qp4zq58","slide":11,"text":"Pilot measures","textPreview":"Pilot measures","textChars":14,"textLines":1,"bbox":[66,548,260,34]}
+{"kind":"textbox","id":"sh/cvylcv6p","slide":11,"text":"Approval turnaround","textPreview":"Approval turnaround","textChars":19,"textLines":1,"bbox":[348,548,210,34]}
+{"kind":"textbox","id":"sh/dw7m50na","slide":11,"text":"Follow-up volume","textPreview":"Follow-up volume","textChars":16,"textLines":1,"bbox":[584,548,200,34]}
+{"kind":"textbox","id":"sh/lcnmp0fe","slide":11,"text":"Creator adoption","textPreview":"Creator adoption","textChars":16,"textLines":1,"bbox":[806,548,190,34]}
+{"kind":"textbox","id":"sh/kbulwvyt","slide":11,"text":"Report usefulness","textPreview":"Report usefulness","textChars":17,"textLines":1,"bbox":[1004,548,200,34]}
+{"kind":"textbox","id":"sh/zal4nqx8","slide":11,"text":"This is a proposed pilot structure. Scope and success thresholds should be agreed with each partner.","textPreview":"This is a proposed pilot structure. Scope and success thresholds should be agreed with each partner.","textChars":100,"textLines":1,"bbox":[66,636,1120,28]}
+{"kind":"image","id":"im/vudgba58","slide":11,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"notes","id":"nt/f3chk9","slide":11,"text":"The proposed pilot starts narrow so CCF can learn from real campaign behaviour. Success thresholds should be agreed with the pilot agency and brand before launch."}
+{"kind":"slide","id":"sl/3tdhzq","slide":12,"title":"12","textShapes":18}
+{"kind":"textbox","id":"sh/ni5w3m9s","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1170,36,56,26]}
+{"kind":"textbox","id":"sh/2hwfah87","slide":12,"text":"COMMERCIAL HYPOTHESES","textPreview":"COMMERCIAL HYPOTHESES","textChars":21,"textLines":1,"bbox":[64,104,360,26]}
+{"kind":"textbox","id":"sh/x87y9wru","slide":12,"text":"Revenue follows the teams that coordinate and report","textPreview":"Revenue follows the teams that coordinate and report","textChars":52,"textLines":1,"bbox":[64,136,1080,78]}
+{"kind":"textbox","id":"sh/c7yxgrq9","slide":12,"text":"Agency workspace","textPreview":"Agency workspace","textChars":16,"textLines":1,"bbox":[66,278,340,42]}
+{"kind":"textbox","id":"sh/b6pg7m9o","slide":12,"text":"SUBSCRIPTION HYPOTHESIS","textPreview":"SUBSCRIPTION HYPOTHESIS","textChars":23,"textLines":1,"bbox":[66,330,340,24]}
+{"kind":"shape","id":"sh/algfeh83","slide":12,"bbox":[66,374,332,0]}
+{"kind":"textbox","id":"sh/lcrydgrq","slide":12,"text":"Roster management, campaign workflow and team collaboration.","textPreview":"Roster management, campaign workflow and team collaboration.","textChars":60,"textLines":1,"bbox":[66,398,332,100]}
+{"kind":"textbox","id":"sh/kbyxkbq5","slide":12,"text":"Brand participation","textPreview":"Brand participation","textChars":19,"textLines":1,"bbox":[464,278,340,42]}
+{"kind":"textbox","id":"sh/qdwfyt87","slide":12,"text":"CAMPAIGN OR WORKSPACE HYPOTHESIS","textPreview":"CAMPAIGN OR WORKSPACE HYPOTHESIS","textChars":32,"textLines":1,"bbox":[464,330,340,24]}
+{"kind":"shape","id":"sh/by5g7e9s","slide":12,"bbox":[464,374,332,0]}
+{"kind":"textbox","id":"sh/czex0jqx","slide":12,"text":"Approvals, performance visibility and client reporting.","textPreview":"Approvals, performance visibility and client reporting.","textChars":55,"textLines":1,"bbox":[464,398,332,100]}
+{"kind":"textbox","id":"sh/d0ny9ori","slide":12,"text":"Premium capabilities","textPreview":"Premium capabilities","textChars":20,"textLines":1,"bbox":[862,278,340,42]}
+{"kind":"textbox","id":"sh/y1wf2t83","slide":12,"text":"EXPANSION HYPOTHESIS","textPreview":"EXPANSION HYPOTHESIS","textChars":20,"textLines":1,"bbox":[862,330,340,24]}
+{"kind":"shape","id":"sh/z25gby9o","slide":12,"bbox":[862,374,332,0]}
+{"kind":"textbox","id":"sh/03yx43q9","slide":12,"text":"Production data connections, generated reports and deeper financial operations.","textPreview":"Production data connections, generated reports and deeper financial operations.","textChars":79,"textLines":1,"bbox":[862,398,332,100]}
+{"kind":"shape","id":"sh/l47yd87u","slide":12,"bbox":[66,542,1142,88]}
+{"kind":"textbox","id":"sh/e5cfq98z","slide":12,"text":"Capital priorities","textPreview":"Capital priorities","textChars":18,"textLines":1,"bbox":[92,562,210,34]}
+{"kind":"textbox","id":"sh/f6lwzu9k","slide":12,"text":"Phyllo production access","textPreview":"Phyllo production access","textChars":24,"textLines":1,"bbox":[330,556,220,46]}
+{"kind":"textbox","id":"sh/jahcrapc","slide":12,"text":"Security and privacy review","textPreview":"Security and privacy review","textChars":27,"textLines":1,"bbox":[564,556,240,46]}
+{"kind":"textbox","id":"sh/i98vy5or","slide":12,"text":"Reporting and exports","textPreview":"Reporting and exports","textChars":21,"textLines":1,"bbox":[818,556,190,46]}
+{"kind":"textbox","id":"sh/5czut072","slide":12,"text":"Pilot onboarding","textPreview":"Pilot onboarding","textChars":16,"textLines":1,"bbox":[1010,556,170,46]}
+{"kind":"textbox","id":"sh/4bqd0v6x","slide":12,"text":"Pricing and funding requirements remain hypotheses until the pilot produces usage and cost evidence.","textPreview":"Pricing and funding requirements remain hypotheses until the pilot produces usage and cost evidence.","textChars":100,"textLines":1,"bbox":[66,650,1120,22]}
+{"kind":"image","id":"im/lk3utgjy","slide":12,"name":"","alt":"Creator Cash Flow logo","bbox":[54,32,124,44]}
+{"kind":"notes","id":"nt/3tdhzq","slide":12,"text":"CCF has not set public agency or brand pricing. The pilot should test willingness to pay and identify the buyer. Capital would fund production social-data access, security and privacy work, report generation and operational onboarding."}
+{"kind":"slide","id":"sl/zosdvq","slide":13,"title":"PARTNERSHIP ASK","textShapes":12}
+{"kind":"textbox","id":"sh/qdwv69wf","slide":13,"text":"PARTNERSHIP ASK","textPreview":"PARTNERSHIP ASK","textChars":15,"textLines":1,"bbox":[66,146,300,26]}
+{"kind":"textbox","id":"sh/be5wfux0","slide":13,"text":"Help us prove the operating layer for creator campaigns","textPreview":"Help us prove the operating layer for creator campaigns","textChars":55,"textLines":1,"bbox":[64,184,860,132]}
+{"kind":"shape","id":"sh/0jydcjeh","slide":13,"bbox":[68,370,5,54]}
+{"kind":"textbox","id":"sh/lk7elof2","slide":13,"text":"Agency partners","textPreview":"Agency partners","textChars":15,"textLines":1,"bbox":[94,362,230,38]}
+{"kind":"textbox","id":"sh/yhwva9wb","slide":13,"text":"Run a live campaign and shape the manager workflow.","textPreview":"Run a live campaign and shape the manager workflow.","textChars":51,"textLines":1,"bbox":[342,362,650,48]}
+{"kind":"shape","id":"sh/zipwjexw","slide":13,"bbox":[68,444,5,54]}
+{"kind":"textbox","id":"sh/8nyxgjed","slide":13,"text":"Brand partners","textPreview":"Brand partners","textChars":14,"textLines":1,"bbox":[94,436,230,38]}
+{"kind":"textbox","id":"sh/9o7epovy","slide":13,"text":"Test approvals, evidence and reporting access.","textPreview":"Test approvals, evidence and reporting access.","textChars":46,"textLines":1,"bbox":[342,436,650,48]}
+{"kind":"shape","id":"sh/xg7qlkji","slide":13,"bbox":[68,518,5,54]}
+{"kind":"textbox","id":"sh/wvypsfix","slide":13,"text":"Capital partners","textPreview":"Capital partners","textChars":16,"textLines":1,"bbox":[94,510,230,38]}
+{"kind":"textbox","id":"sh/bup8ja1s","slide":13,"text":"Fund the move from validated pilot to production infrastructure.","textPreview":"Fund the move from validated pilot to production infrastructure.","textChars":64,"textLines":1,"bbox":[342,510,650,48]}
+{"kind":"shape","id":"sh/atw7q507","slide":13,"bbox":[948,150,260,164]}
+{"kind":"textbox","id":"sh/lk7qpkju","slide":13,"text":"CURRENT STATUS","textPreview":"CURRENT STATUS","textChars":14,"textLines":1,"bbox":[974,174,210,24]}
+{"kind":"textbox","id":"sh/kjypwfi9","slide":13,"text":"Creator accounts live\nMulti-role pilot demo live\nPhyllo sandbox configured","textPreview":"Creator accounts live | Multi-role pilot demo live | Phyllo sandbox configured","textChars":74,"textLines":3,"bbox":[974,214,210,78]}
+{"kind":"textbox","id":"sh/jip8na1o","slide":13,"text":"reamogetswemolefe@creatorcashflow.co.za","textPreview":"reamogetswemolefe@creatorcashflow.co.za","textChars":39,"textLines":1,"bbox":[66,638,570,28]}
+{"kind":"textbox","id":"sh/yhg7u503","slide":13,"text":"creator-cash-flow-ccf.onrender.com","textPreview":"creator-cash-flow-ccf.onrender.com","textChars":34,"textLines":1,"bbox":[718,638,490,28]}
+{"kind":"image","id":"im/4fmdgb6p","slide":13,"name":"","alt":"Creator Cash Flow logo","bbox":[64,44,156,54]}
+{"kind":"notes","id":"nt/zosdvq","slide":13,"text":"The immediate ask is for an agency willing to run a real pilot, a brand willing to use the campaign view and capital partners who understand the infrastructure needed to move from sandbox validation to production."}

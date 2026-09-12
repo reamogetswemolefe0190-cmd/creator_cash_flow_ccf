@@ -49,6 +49,10 @@ const FROM_EMAIL = process.env.FROM_EMAIL || 'Creator Cash Flow <onboarding@rese
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_API_URL = process.env.GEMINI_API_URL || 'https://generativelanguage.googleapis.com/v1beta';
 
+const YOUTUBE_CLIENT_ID = process.env.YOUTUBE_CLIENT_ID;
+const YOUTUBE_CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET;
+const YOUTUBE_REDIRECT_URI = process.env.YOUTUBE_REDIRECT_URI || (isProduction ? 'https://creatorcashflow.co.za/api/youtube/auth/callback' : 'http://localhost:5000/api/youtube/auth/callback');
+
 module.exports = {
     isProduction,
     isStressTest,
@@ -71,5 +75,9 @@ module.exports = {
     RESEND_API_URL,
     FROM_EMAIL,
     GEMINI_API_KEY,
-    GEMINI_API_URL
+    GEMINI_API_URL,
+    YOUTUBE_CLIENT_ID,
+    YOUTUBE_CLIENT_SECRET,
+    YOUTUBE_REDIRECT_URI
 };
+
