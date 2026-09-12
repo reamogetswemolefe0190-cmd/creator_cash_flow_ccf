@@ -1334,6 +1334,8 @@ input:focus-visible, .role-segmented-control input:focus-visible + span {
 
 /* Product polish: depth is reserved for hierarchy, not decoration. */
 html { scroll-behavior: smooth; }
+/* Keep arrow glyphs typographic on Android/iOS instead of falling back to emoji. */
+body, button, a, .cc-btn, .cc-link, .panel-link { font-variant-emoji: text; }
 .public-header { isolation: isolate; }
 .public-header::after { content:''; position:absolute; inset:auto 4% -1px; height:1px; background:linear-gradient(90deg,transparent,rgba(212,249,115,.55),transparent); opacity:.7; }
 .ce-hero { position:relative; overflow:hidden; }
