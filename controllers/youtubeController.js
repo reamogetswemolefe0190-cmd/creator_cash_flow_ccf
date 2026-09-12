@@ -10,9 +10,12 @@ const MOCK_YOUTUBE_DATA = {
     access_token: 'mock_yt_token_123',
     refresh_token: 'mock_yt_refresh_123',
     metrics: {
-        subscriberCount: '154000',
-        viewCount: '23450000',
-        videoCount: '142'
+        subscriberCount: '154,000',
+        viewCount: '23,450,000',
+        videoCount: '142',
+        monthlyViews: '1,205,000',
+        monthlyLikes: '84,500',
+        estimatedRevenue: 'R 28,450.00'
     }
 };
 
@@ -27,7 +30,7 @@ async function login(req, res) {
         return res.json({ url: '/api/youtube/auth/callback?code=mock_auth_code&state=' + state });
     }
     
-    const scope = 'https://www.googleapis.com/auth/youtube.readonly';
+    const scope = 'https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/yt-analytics.readonly';
     const authUrl = "https://accounts.google.com/o/oauth2/v2/auth?client_id=" + YOUTUBE_CLIENT_ID + "&redirect_uri=" + encodeURIComponent(YOUTUBE_REDIRECT_URI) + "&response_type=code&scope=" + encodeURIComponent(scope) + "&access_type=offline&prompt=consent&state=" + state;
     
     res.json({ url: authUrl });
@@ -151,7 +154,7 @@ async function getMetrics(req, res) {
         });
     }
 
-    // Real API fetch
+        // Real API fetch
     try {
         const channelResponse = await fetch('https://youtube.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true', {
             headers: { Authorization: "Bearer " + connection.access_token }
@@ -160,13 +163,55 @@ async function getMetrics(req, res) {
 
         if (channelResponse.ok && channelData.items && channelData.items.length > 0) {
             const stats = channelData.items[0].statistics;
+            
+            // Fetch Advanced Analytics for the last 30 days
+            const today = new Date();
+            const thirtyDaysAgo = new Date(today.getTime() - (30 * 24 * 60 * 60 * 1000));
+            
+            const formatDate = (d) => d.toISOString().split('T')[0];
+            const startDate = formatDate(thirtyDaysAgo);
+            const endDate = formatDate(today);
+
+            const analyticsUrl = https://youtubeanalytics.googleapis.com/v2/reports?ids=channel==MINE&startDate= + startDate + &endDate= + endDate + &metrics=views,likes,comments,estimatedMinutesWatched,estimatedRevenue;
+            
+            let advancedStats = {
+                monthlyViews: '0',
+                monthlyLikes: '0',
+                estimatedRevenue: 'R0.00'
+            };
+
+            try {
+                const analyticsResponse = await fetch(analyticsUrl, {
+                    headers: { Authorization: "Bearer " + connection.access_token }
+                });
+                const analyticsData = await analyticsResponse.json();
+                
+                if (analyticsResponse.ok && analyticsData.rows && analyticsData.rows.length > 0) {
+                    const row = analyticsData.rows[0];
+                    // Map headers to values
+                    const headers = analyticsData.columnHeaders.map(c => c.name);
+                    const getVal = (name) => row[headers.indexOf(name)] || 0;
+                    
+                    advancedStats.monthlyViews = getVal('views').toLocaleString();
+                    advancedStats.monthlyLikes = getVal('likes').toLocaleString();
+                    
+                    // estimatedRevenue is in USD by default. Convert to ZAR for CCF (approx 18x).
+                    const revUsd = getVal('estimatedRevenue');
+                    const revZar = revUsd * 18.0;
+                    advancedStats.estimatedRevenue = 'R' + revZar.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits:2});
+                }
+            } catch (analyticsError) {
+                console.error('Analytics fetch failed, might not be in Partner Program:', analyticsError);
+            }
+
             return res.json({
                 connected: true,
                 channel: connection.channel_name,
                 metrics: {
-                    subscriberCount: stats.subscriberCount,
-                    viewCount: stats.viewCount,
-                    videoCount: stats.videoCount
+                    subscriberCount: parseInt(stats.subscriberCount).toLocaleString(),
+                    viewCount: parseInt(stats.viewCount).toLocaleString(),
+                    videoCount: parseInt(stats.videoCount).toLocaleString(),
+                    ...advancedStats
                 },
                 connectedAt: connection.connected_at
             });
@@ -200,4 +245,7 @@ async function disconnect(req, res) {
 }
 
 module.exports = { login, callback, getMetrics, disconnect };
+
+
+
 
