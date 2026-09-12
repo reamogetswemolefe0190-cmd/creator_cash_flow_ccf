@@ -1208,3 +1208,106 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 0 3px rgba(0, 255, 128, 0.1) !important;
     outline: none !important;
 }
+/* ==========================================================================
+   AMBIENT MESH BACKGROUND & FULL GLASSMORPHISM
+   ========================================================================== */
+
+/* 1. Ambient Background Glows */
+body {
+    background: #050505 !important;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before, body::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    opacity: 0.4;
+    animation: pulseGlow 15s ease-in-out infinite alternate;
+}
+
+body::before {
+    width: 600px;
+    height: 600px;
+    background: rgba(0, 255, 128, 0.15); /* Emerald glow */
+    top: -200px;
+    left: -200px;
+}
+
+body::after {
+    width: 500px;
+    height: 500px;
+    background: rgba(40, 100, 255, 0.15); /* Deep blue glow */
+    bottom: -150px;
+    right: -100px;
+    animation-delay: -5s;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(1) translate(0, 0); opacity: 0.3; }
+    50% { transform: scale(1.2) translate(50px, -20px); opacity: 0.5; }
+    100% { transform: scale(0.9) translate(-30px, 40px); opacity: 0.3; }
+}
+
+/* 2. Glassmorphism Everywhere */
+.hq-form, .hq-insight-strip article, .pilot-auth-panel, .pilot-auth-story {
+    background: rgba(20, 20, 20, 0.4) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 24px;
+}
+
+/* 3. Premium Segmented Control (Replacing the ugly Select dropdown) */
+.role-segmented-control {
+    display: flex;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 16px;
+}
+
+.role-segmented-control label {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+.role-segmented-control input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.role-segmented-control span.role-btn {
+    display: block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #888;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+.role-segmented-control input[type="radio"]:checked + span.role-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Fix focus rings */
+input:focus-visible, .role-segmented-control input:focus-visible + span {
+    outline: 2px solid rgba(0, 255, 128, 0.5) !important;
+    outline-offset: 2px;
+}
