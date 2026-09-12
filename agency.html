@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agency Dashboard | Creator Cash Flow</title>
     <link rel="stylesheet" href="/style.css">
+    <style>
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; }
+        .modal.is-active { display: flex; }
+        .modal-content { background: #0B0B0B; padding: 32px; border-radius: 24px; width: 100%; max-width: 480px; border: 1px solid #333; }
+        .modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+        .modal-head h2 { font-size: 20px; color: #fff; margin: 0; }
+        .close-btn { background: none; border: none; color: #888; font-size: 24px; cursor: pointer; }
+        .copy-link-box { display: flex; gap: 8px; margin-top: 16px; margin-bottom: 24px; }
+        .copy-link-box input { flex: 1; padding: 12px; background: #111; border: 1px solid #333; border-radius: 8px; color: #fff; }
+    </style>
 </head>
 <body>
     <header class="public-header">
         <a class="cc-logo" href="/#landing">Creator Cash Flow</a>
         <div class="hq-header-actions">
             <span class="hq-plan">Agency Pilot</span>
+            <button class="cc-btn cc-primary" onclick="openInviteModal()">+ Invite Creator</button>
             <button class="hq-signout" onclick="localStorage.removeItem('ccf_session'); window.location.href='/#login'">Sign out</button>
         </div>
     </header>
@@ -27,9 +38,103 @@
                 <div class="hq-empty">
                     <h3>No creators connected yet</h3>
                     <p>Invite creators to join your roster to securely view their analytics.</p>
+                    <button class="cc-btn" onclick="openInviteModal()">Invite your first creator</button>
                 </div>
             </section>
         </div>
     </main>
+
+    <div id="invite-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h2>Invite a Creator</h2>
+                <button class="close-btn" onclick="closeInviteModal()">&times;</button>
+            </div>
+            
+            <p style="color: #aaa; margin-bottom: 8px; font-size: 14px;">Option 1: Send invite via WhatsApp</p>
+            <div class="copy-link-box">
+                <input type="text" id="invite-link" readonly value="https://creatorcashflow.co.za/#signup?agency=org_123">
+                <button class="cc-btn" onclick="copyInviteLink()">Copy Link</button>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid #333; margin: 24px 0;">
+
+            <p style="color: #aaa; margin-bottom: 16px; font-size: 14px;">Option 2: Send invite via Email</p>
+            <form id="invite-form" onsubmit="sendEmailInvite(event)">
+                <label for="invite-email">Creator's Email</label>
+                <input type="email" id="invite-email" required placeholder="creator@example.com" style="width: 100%; padding: 12px; background: #111; border: 1px solid #333; border-radius: 8px; color: #fff; margin-bottom: 16px;">
+                <button class="cc-btn cc-primary" type="submit" style="width: 100%;">Send Email Invite</button>
+                <div id="invite-status" style="margin-top: 12px; font-size: 14px; text-align: center;"></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Parse JWT to get organization details safely
+        function parseJwt(token) {
+            try { return JSON.parse(atob(token.split('.')[1])); } catch (e) { return null; }
+        }
+
+        const sessionToken = localStorage.getItem('ccf_session');
+        if (!sessionToken) { window.location.href = '/#login'; }
+        
+        const user = parseJwt(sessionToken);
+        if (user && user.role !== 'agency') { window.location.href = '/#login'; }
+
+        // Generate the unique invite link
+        const inviteUrl = window.location.origin + '/#signup?agency_id=' + (user.organization_id || 'demo') + '&agency_name=' + encodeURIComponent(user.name);
+        document.getElementById('invite-link').value = inviteUrl;
+
+        function openInviteModal() {
+            document.getElementById('invite-modal').classList.add('is-active');
+        }
+
+        function closeInviteModal() {
+            document.getElementById('invite-modal').classList.remove('is-active');
+            document.getElementById('invite-status').textContent = '';
+        }
+
+        function copyInviteLink() {
+            const linkInput = document.getElementById('invite-link');
+            linkInput.select();
+            document.execCommand('copy');
+            const btn = event.target;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy Link', 2000);
+        }
+
+        async function sendEmailInvite(e) {
+            e.preventDefault();
+            const email = document.getElementById('invite-email').value;
+            const btn = e.target.querySelector('button');
+            const status = document.getElementById('invite-status');
+            
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            
+            try {
+                const response = await fetch('/api/agency/invite', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + sessionToken
+                    },
+                    body: JSON.stringify({ email: email, invite_link: inviteUrl })
+                });
+                
+                if (!response.ok) throw new Error('Failed to send invite');
+                
+                status.textContent = '✓ Invite sent successfully!';
+                status.style.color = '#0f0';
+                e.target.reset();
+            } catch (err) {
+                status.textContent = 'Error sending invite.';
+                status.style.color = '#f00';
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Send Email Invite';
+            }
+        }
+    </script>
 </body>
 </html>
