@@ -16,7 +16,7 @@
         .copy-link-box input { flex: 1; padding: 12px; background: #111; border: 1px solid #333; border-radius: 8px; color: #fff; }
     </style>
 </head>
-<body>
+<body class="role-workspace agency-workspace">
     <header class="public-header">
         <a class="cc-logo" href="/#landing">Creator Cash Flow</a>
         <div class="hq-header-actions">
@@ -25,24 +25,7 @@
             <button class="hq-signout" onclick="localStorage.removeItem('ccf_session'); window.location.href='/#login'">Sign out</button>
         </div>
     </header>
-    <main class="hq-shell">
-        <div class="hq-welcome">
-            <div>
-                <span class="hq-eyebrow">Agency Workspace</span>
-                <h1>Your Creator Roster</h1>
-                <p>Track your connected creators, view aggregate YouTube/Instagram metrics, and manage brand campaigns.</p>
-            </div>
-        </div>
-        <div class="hq-content-grid">
-            <section class="hq-panel">
-                <div class="hq-empty">
-                    <h3>No creators connected yet</h3>
-                    <p>Invite creators to join your roster to securely view their analytics.</p>
-                    <button class="cc-btn" onclick="openInviteModal()">Invite your first creator</button>
-                </div>
-            </section>
-        </div>
-    </main>
+    <main class="role-workspace-shell"><aside class="role-rail"><span class="cc-kicker">STUDIO NORTH</span><button class="is-active">Overview</button><button>Campaigns <b>8</b></button><button>Roster <b>24</b></button><button>Reviews <b>5</b></button><button>Messages</button><div><small>ACTIVE BUDGET</small><strong>R180K</strong><span>across 8 campaigns</span></div></aside><section class="role-content"><div class="role-context"><span><i></i>Agency operations</span><small>Studio North · September 2026</small></div><div class="role-heading"><div><span class="cc-kicker">THE DELIVERY DESK</span><h1>Keep every creator,<br><em>brief and approval moving.</em></h1><p>See the handoffs that need attention before they slow a campaign down.</p></div><button class="cc-btn cc-primary" onclick="openInviteModal()">Invite creator</button></div><div class="role-metrics"><article class="role-metric role-metric-hero"><span>Campaigns on track</span><strong>6 / 8</strong><small>Two handoffs require a team decision</small><div class="metric-bar"><i style="width:75%"></i></div></article><article class="role-metric"><span>Active roster</span><strong>24</strong><small class="up">4 creators available this week</small></article><article class="role-metric"><span>Awaiting agency review</span><strong>05</strong><small>Across 3 client campaigns</small></article></div><div class="role-grid"><article class="role-panel"><div class="panel-head"><div><span class="cc-kicker">PRIORITY QUEUE</span><h2>Handoffs needing you</h2></div><span class="cc-tag cc-tag-pending">5 open</span></div><div class="creative-row"><span class="role-avatar">TM</span><div><strong>Spring in motion · draft review</strong><small>Thando Mokoena · Vela Active · due today</small></div><span class="cc-tag cc-tag-pending">Review</span><button class="cc-btn cc-primary">Open</button></div><div class="creative-row"><span class="role-avatar alt">SK</span><div><strong>Urban Movement · creator match</strong><small>Peak Athletics · 2 roster confirmations</small></div><span class="cc-tag">Roster</span><button class="cc-btn">Assign</button></div><button class="panel-link">Open delivery queue →</button></article><article class="role-panel"><div class="panel-head"><div><span class="cc-kicker">TODAY'S PULSE</span><h2>Campaign activity</h2></div></div><ol class="role-timeline"><li class="done"><i>✓</i><div><b>Naledi submitted stories</b><small>Spring in motion · 09:14</small></div></li><li class="current"><i>2</i><div><b>Review Thando's Reel</b><small>Due today · Vela Active</small></div></li><li><i>3</i><div><b>Confirm creator shortlist</b><small>Urban Movement · tomorrow</small></div></li></ol></article></div></section></main>
 
     <div id="invite-modal" class="modal">
         <div class="modal-content">

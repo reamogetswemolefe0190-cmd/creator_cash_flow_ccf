@@ -6,7 +6,7 @@
     <title>Brand Dashboard | Creator Cash Flow</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="role-workspace brand-workspace">
     <header class="public-header">
         <a class="cc-logo" href="/#landing">Creator Cash Flow</a>
         <div class="hq-header-actions">
@@ -14,22 +14,16 @@
             <button class="hq-signout" onclick="localStorage.removeItem('ccf_session'); window.location.href='/#login'">Sign out</button>
         </div>
     </header>
-    <main class="hq-shell">
-        <div class="hq-welcome">
-            <div>
-                <span class="hq-eyebrow">Brand Workspace</span>
-                <h1>Campaign Tracker</h1>
-                <p>Monitor live ROI, review deliverables, and fund creators securely.</p>
-            </div>
-        </div>
-        <div class="hq-content-grid">
-            <section class="hq-panel">
-                <div class="hq-empty">
-                    <h3>No active campaigns</h3>
-                    <p>Start a new campaign with a creator or agency to track deliverables here.</p>
-                </div>
-            </section>
-        </div>
+    <main class="role-workspace-shell">
+        <aside class="role-rail"><span class="cc-kicker">BRAND WORKSPACE</span><button class="is-active">Overview</button><button>Campaigns <b>3</b></button><button>Creator partners</button><button>Approvals <b>2</b></button><button>Reports</button><div><small>SEPTEMBER BUDGET</small><strong>R60,000</strong><span>Spring in motion</span></div></aside>
+        <section class="role-content">
+            <div class="role-context"><span><i></i>Live campaign workspace</span><small>Campaign-only data</small></div>
+            <div class="role-heading"><div><span class="cc-kicker">CAMPAIGN PERFORMANCE</span><h1>See what is moving<br><em>the work forward.</em></h1><p>Make decisions with a clear view of spend, creative approvals and the next deliverable.</p></div><button class="cc-btn">Export snapshot</button></div>
+            <div class="role-metrics"><article class="role-metric role-metric-hero"><span>Current campaign spend</span><strong>R42,000</strong><small>70% of approved campaign budget</small><div class="metric-bar"><i style="width:70%"></i></div></article><article class="role-metric"><span>Verified reach</span><strong>128.4K</strong><small class="up">↑ 18.6% this week</small></article><article class="role-metric"><span>Awaiting review</span><strong>02</strong><small>Creative items need a decision</small></article></div>
+            <div class="role-grid"><article class="role-panel"><div class="panel-head"><div><span class="cc-kicker">NEXT UP</span><h2>Creative awaiting approval</h2></div><span class="cc-tag cc-tag-pending">2 items</span></div><div class="creative-row"><span class="role-avatar">TM</span><div><strong>Outdoor movement Reel</strong><small>Thando Mokoena · checked by Studio North</small></div><span class="cc-tag">V1</span><button class="cc-btn cc-primary" data-review>Review</button></div><div class="creative-row"><span class="role-avatar alt">ND</span><div><strong>Hydration stories</strong><small>Naledi Dube · goes live 18 Sep</small></div><span class="cc-tag cc-tag-completed">Approved</span><button class="cc-btn">Open</button></div><button class="panel-link">View campaign approvals →</button></article><article class="role-panel"><div class="panel-head"><div><span class="cc-kicker">CAMPAIGN HEALTH</span><h2>Spring in motion</h2></div><span class="cc-tag cc-tag-completed">On track</span></div><ol class="role-timeline"><li class="done"><i>✓</i><div><b>Brief confirmed</b><small>02 Sep · Vela Active</small></div></li><li class="done"><i>✓</i><div><b>Roster assigned</b><small>06 Sep · Studio North</small></div></li><li class="current"><i>3</i><div><b>Creative sign-off</b><small>2 decisions awaiting you</small></div></li><li><i>4</i><div><b>Go live & report</b><small>Scheduled for 18 Sep</small></div></li></ol></article></div>
+        </section>
     </main>
+    <div class="role-sheet" hidden><div><button class="sheet-close">×</button><span class="cc-kicker">CREATIVE REVIEW · VERSION 1</span><h2>Outdoor movement Reel</h2><p>Opening shot, product moment and caption are ready for final approval.</p><div class="sheet-preview"><span>60 SEC REEL</span><button>▶</button></div><div class="sheet-actions"><button class="cc-btn" data-revision>Request change</button><button class="cc-btn cc-primary" data-approve>Approve for publishing</button></div></div></div>
+    <script>const sheet=document.querySelector('.role-sheet');document.querySelector('[data-review]').onclick=()=>sheet.hidden=false;document.querySelector('.sheet-close').onclick=()=>sheet.hidden=true;document.querySelector('[data-approve]').onclick=()=>{sheet.hidden=true;const row=document.querySelector('[data-review]').closest('.creative-row');row.querySelector('.cc-tag').className='cc-tag cc-tag-completed';row.querySelector('.cc-tag').textContent='Approved';row.querySelector('[data-review]').textContent='Open'};document.querySelector('[data-revision]').onclick=()=>{sheet.hidden=true;alert('Revision request added to the campaign thread.');};</script>
 </body>
 </html>
