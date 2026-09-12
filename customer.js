@@ -131,22 +131,7 @@ function youtubeContent() {
     if (youtubeStatus.loading) return '<section class="hq-panel"><div class="hq-section-head"><h2>YouTube</h2></div><p>Loading...</p></section>';
     if (!youtubeStatus.connected) return '<section class="hq-panel"><div class="hq-section-head"><h2>YouTube</h2></div><p>Connect your YouTube channel to share verified analytics.</p><button class="cc-btn cc-primary" onclick="connectYoutube()">Connect YouTube</button></section>';
     
-    return \<section class="hq-panel">
-        <div class="hq-section-head">
-            <div><span class="hq-eyebrow">Connected</span><h2>YouTube: \</h2></div>
-            <button class="cc-btn" onclick="disconnectYoutube()">Disconnect</button>
-        </div>
-        <div class="hq-connections">
-            <article>
-                <span class="hq-platform">S</span>
-                <div><strong>Subscribers</strong><small>\</small></div>
-            </article>
-            <article>
-                <span class="hq-platform">V</span>
-                <div><strong>Total Views</strong><small>\</small></div>
-            </article>
-        </div>
-    </section>\;
+    return '<section class="hq-panel"><div class="hq-section-head"><div><span class="hq-eyebrow">Connected</span><h2>YouTube: ' + escape(youtubeStatus.channel) + '</h2></div><button class="cc-btn" onclick="disconnectYoutube()">Disconnect</button></div><div class="hq-connections"><article><span class="hq-platform">S</span><div><strong>Subscribers</strong><small>' + escape(youtubeStatus.metrics.subscriberCount) + '</small></div></article><article><span class="hq-platform">V</span><div><strong>Total Views</strong><small>' + escape(youtubeStatus.metrics.viewCount) + '</small></div></article></div></section>';
 }
 function connectionsContent(){const configured=phylloStatus?.configured,connections=phylloStatus?.connections||[];return `<section class="hq-panel"><div class="hq-section-head"><div><span class="hq-eyebrow">Separate connection provider</span><h2>Other platforms via Phyllo</h2></div><span class="customer-pill">${escape(phylloStatus?.environment||'sandbox')}</span></div><p>Phyllo connections remain separate from direct Instagram. Sandbox connections use sample data, not verified creator performance. Identity, engagement and supported audience access may be requested; income access is excluded.</p><button class="cc-btn" data-action="connect-phyllo" ${phylloLoading||configured===false?'disabled':''}>${phylloLoading?'Checking connection…':'Open Phyllo connection →'}</button>${configured===false?'<p>Phyllo is not enabled on this deployment.</p>':''}<div role="status">${escape(phylloMessage)}</div><div class="hq-connections">${connections.map(c=>`<article><span class="hq-platform">${escape(c.platform[0]||'C')}</span><div><strong>${escape(c.platform)}</strong><small>${escape(c.username||'Connected creator account')}</small></div><span class="hq-connection-state">${escape(c.status.toLowerCase())}</span></article>`).join('')}</div></section>`;}
 function account(){if(!session){auth(false);return;}const body=accountTab==='income'?incomeContent():accountTab==='campaigns'?campaignsContent():accountTab==='connections'?'<section class="hq-panel" id="instagram-panel"></section>'+(youtubeStatus.loading ? (loadYoutubeStatus(), youtubeContent()) : youtubeContent())+connectionsContent():accountTab==='assistant'?assistantContent():overviewContent();document.getElementById('cc-screen').innerHTML=`<section class="hq-shell" id="main-content">${accountNav()}<div class="hq-main">${body}</div></section>`;if(accountTab==='connections')window.CCFInstagram?.mount(document.getElementById('instagram-panel'),session.token);}
@@ -196,5 +181,6 @@ document.addEventListener('submit',async e=>{if(e.target.id==='create-org-form')
 async function loadCampaignMessages(){if(!session)return;try{const r=await fetch('/api/collaboration/campaigns/'+campaign.id+'/messages',{headers:{Authorization:'Bearer '+session.token}});if(r.ok){const data=await r.json();campaign.messages=data.messages.map(m=>({sender:m.sender_name,text:m.content}));render();}}catch(e){console.error('Failed to load campaign messages:', e);}}
 document.addEventListener('DOMContentLoaded',()=>{const logo=document.querySelector('.cc-logo')?.outerHTML||'<a href="#landing">Creator Cash Flow</a>';const header=document.querySelector('header');if(header)header.outerHTML=`<header class="public-header">${logo}<button class="mobile-menu" data-action="menu" aria-controls="public-nav" aria-expanded="false">Menu</button><nav id="public-nav" class="public-nav" aria-label="Main navigation"><a href="#landing">Product</a><a href="#availability">What’s live</a><a href="#journey">Campaign demo</a><a href="#login">Sign in</a><a class="primary-link" href="#signup">Create free account</a></nav></header>`;document.querySelector('footer').outerHTML='<footer class="customer-footer"><span>© 2026 Creator Cash Flow</span><a href="#privacy">Privacy notice</a><a href="#terms">Service information</a><a href="#security">Security</a><a href="#availability">Free release & availability</a><a href="mailto:reamogetswemolefe@creatorcashflow.co.za">Contact support</a></footer>';const hash=location.hash.slice(1);state.page=known.includes(hash)?hash:'landing';window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(known.includes(h)&&state.page!==h){state.page=h;if(h==='journey')loadCampaignMessages();render();}});if(state.page==='journey')loadCampaignMessages();render();});
 })();
+
 
 

@@ -28,7 +28,7 @@ async function login(req, res) {
     }
     
     const scope = 'https://www.googleapis.com/auth/youtube.readonly';
-    const authUrl = https://accounts.google.com/o/oauth2/v2/auth?client_id= + YOUTUBE_CLIENT_ID + &redirect_uri= + encodeURIComponent(YOUTUBE_REDIRECT_URI) + &response_type=code&scope= + encodeURIComponent(scope) + &access_type=offline&prompt=consent&state= + state;
+    const authUrl = "https://accounts.google.com/o/oauth2/v2/auth?client_id=" + YOUTUBE_CLIENT_ID + "&redirect_uri=" + encodeURIComponent(YOUTUBE_REDIRECT_URI) + "&response_type=code&scope=" + encodeURIComponent(scope) + "&access_type=offline&prompt=consent&state=" + state;
     
     res.json({ url: authUrl });
 }
@@ -69,15 +69,7 @@ async function callback(req, res) {
                 memoryDb.youtubeConnections.push(connection);
             }
             
-            return res.send(
-                <script>
-                    if (window.opener) {
-                        window.close();
-                    } else {
-                        window.location.href = '/#connections';
-                    }
-                </script>
-            );
+            return res.send("<script>if (window.opener) { window.close(); } else { window.location.href = '/#connections'; }</script>");
         }
 
         // Real Google API Token Exchange
@@ -101,7 +93,7 @@ async function callback(req, res) {
 
         // Fetch channel info
         const channelResponse = await fetch('https://youtube.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true', {
-            headers: { Authorization: Bearer  + tokenData.access_token }
+            headers: { Authorization: "Bearer " + tokenData.access_token }
         });
         const channelData = await channelResponse.json();
 
@@ -127,15 +119,7 @@ async function callback(req, res) {
             memoryDb.youtubeConnections.push(connection);
         }
 
-        return res.send(
-            <script>
-                if (window.opener) {
-                    window.close();
-                } else {
-                    window.location.href = '/#connections';
-                }
-            </script>
-        );
+        return res.send("<script>if (window.opener) { window.close(); } else { window.location.href = '/#connections'; }</script>");
 
     } catch(err) {
         console.error(err);
@@ -170,7 +154,7 @@ async function getMetrics(req, res) {
     // Real API fetch
     try {
         const channelResponse = await fetch('https://youtube.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true', {
-            headers: { Authorization: Bearer  + connection.access_token }
+            headers: { Authorization: "Bearer " + connection.access_token }
         });
         const channelData = await channelResponse.json();
 
@@ -216,3 +200,4 @@ async function disconnect(req, res) {
 }
 
 module.exports = { login, callback, getMetrics, disconnect };
+
