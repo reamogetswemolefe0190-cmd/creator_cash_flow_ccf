@@ -175,8 +175,8 @@ const state = {
             if (state.page === 'landing') {
                 viewport.innerHTML = `
                     <!-- Hero Section -->
-                    <section class="ce-hero ce-hero-v2">
-                        <div class="ce-hero-copy">
+                    <section class="ce-hero ce-hero-v2 reveal-on-scroll">
+                        <div class="ce-hero-copy reveal-on-scroll reveal-delay-1">
                             <h1>Great campaigns.<br><em>Clearly connected.</em></h1>
                             <p>Briefs, creators, performance and payment milestones moving together in one beautifully simple workspace.</p>
                             <div class="cc-actions">
@@ -199,7 +199,7 @@ const state = {
                     </section>
 
                     <!-- Showcase Collage Grid -->
-                    <section class="ce-collage">
+                    <section class="ce-collage reveal-on-scroll">
                         <div class="ce-photo">
                             ${getPhotoHtml('creator')}
                             <div class="ce-photo-label">
@@ -991,3 +991,4 @@ const state = {
                 }
             });
         });
+
