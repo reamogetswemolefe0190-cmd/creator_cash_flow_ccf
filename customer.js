@@ -160,6 +160,13 @@ function setupScrollReveals(){
  scrollRevealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-revealed','is-visible');scrollRevealObserver?.unobserve(entry.target);}}),{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
  items.forEach(item=>scrollRevealObserver.observe(item));
 }
+function upgradeArrowGlyphs(){
+ const root=document.getElementById('cc-screen');if(!root)return;
+ const svg=direction=>`<svg class="cc-inline-arrow ${direction==='left'?'cc-inline-arrow-left':''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
+ const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>/[↗→←]/.test(n.nodeValue)&&n.parentElement?.closest('button,a,.cc-tag,.ce-money-top,.cc-link')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});
+ const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+ nodes.forEach(node=>{const fragment=document.createDocumentFragment();node.nodeValue.split(/([↗→←])/).forEach(part=>{if(!part)return;if(/[↗→←]/.test(part)){const wrap=document.createElement('span');wrap.innerHTML=svg(part==='←'?'left':'right');fragment.appendChild(wrap.firstChild);}else fragment.appendChild(document.createTextNode(part));});node.replaceWith(fragment);});
+}
 render=function(){
 if(!session)window.CCFInstagram?.reset();
  const route=known.includes(state.page)?state.page:'landing';state.page=route;
@@ -167,7 +174,7 @@ if(!session)window.CCFInstagram?.reset();
  if(route==='login'||route==='signup')auth(route==='signup');else if(route==='account')account();else if(info[route])infoPage(route);else if(route==='journey')campaignPage();else originalRender();
  const screen=document.getElementById('cc-screen');const demo=roles.includes(route)||route==='journey';
  document.getElementById('demo-notice')?.remove();if(demo&&!session){screen.insertAdjacentHTML('beforebegin',`<aside id="demo-notice" class="demo-notice"><strong>DEMO · Sample data</strong><span>Changes stay in this tab. No real approvals or payments.</span><select id="demo-perspective" aria-label="Demo perspective">${[...roles,'journey'].map(r=>`<option value="${r}" ${r===route?'selected':''}>${r==='journey'?'Shared campaign':r[0].toUpperCase()+r.slice(1)}</option>`).join('')}</select><a href="#landing">Exit demo</a></aside>`);}
- updateHeader(route);document.title=({landing:'Creator Cash Flow | Creator income and campaign collaboration',login:'Sign in | Creator Cash Flow',signup:'Create account | Creator Cash Flow'}[route]||route[0].toUpperCase()+route.slice(1)+' | Creator Cash Flow');
+ updateHeader(route);upgradeArrowGlyphs();document.title=({landing:'Creator Cash Flow | Creator income and campaign collaboration',login:'Sign in | Creator Cash Flow',signup:'Create account | Creator Cash Flow'}[route]||route[0].toUpperCase()+route.slice(1)+' | Creator Cash Flow');
  requestAnimationFrame(setupScrollReveals);
 };
 function updateHeader(route){const header=document.querySelector('.public-header');if(!header)return;const logo=header.querySelector('.cc-logo')?.outerHTML||'<a class="cc-logo" href="#landing">Creator Cash Flow</a>';if(session){header.innerHTML=`${logo}<div class="hq-header-actions"><span class="hq-plan">Creator Pilot</span><button class="hq-new" data-action="quick-log" data-preset="brand|Brand deal|Sponsored Reel|income|Sponsored Content">+ New transaction</button><button class="hq-profile" data-action="account-tab" data-tab="overview"><span>${escape(initials())}</span><b>${escape(creatorName().split(' ')[0])}</b></button><button class="hq-signout" data-action="logout">Sign out</button></div>`;}else if(!header.querySelector('.public-nav')){header.innerHTML=`${logo}<button class="mobile-menu" data-action="menu" aria-controls="public-nav" aria-expanded="false">Menu</button><nav id="public-nav" class="public-nav" aria-label="Main navigation"><a href="#landing">Product</a><a href="#availability">What’s live</a><a href="#journey">Campaign demo</a><a href="#login">Sign in</a><a class="primary-link" href="#signup">Create free account</a></nav>`;}}
@@ -189,7 +196,6 @@ document.addEventListener('submit',async e=>{if(e.target.id==='create-org-form')
 async function loadCampaignMessages(){if(!session)return;try{const r=await fetch('/api/collaboration/campaigns/'+campaign.id+'/messages',{headers:{Authorization:'Bearer '+session.token}});if(r.ok){const data=await r.json();campaign.messages=data.messages.map(m=>({sender:m.sender_name,text:m.content}));render();}}catch(e){console.error('Failed to load campaign messages:', e);}}
 document.addEventListener('DOMContentLoaded',()=>{const logo=document.querySelector('.cc-logo')?.outerHTML||'<a href="#landing">Creator Cash Flow</a>';const header=document.querySelector('header');if(header)header.outerHTML=`<header class="public-header">${logo}<button class="mobile-menu" data-action="menu" aria-controls="public-nav" aria-expanded="false">Menu</button><nav id="public-nav" class="public-nav" aria-label="Main navigation"><a href="#landing">Product</a><a href="#availability">What’s live</a><a href="#journey">Campaign demo</a><a href="#login">Sign in</a><a class="primary-link" href="#signup">Create free account</a></nav></header>`;document.querySelector('footer').outerHTML='<footer class="customer-footer"><span>© 2026 Creator Cash Flow</span><a href="#privacy">Privacy notice</a><a href="#terms">Service information</a><a href="#security">Security</a><a href="#availability">Free release & availability</a><a href="mailto:reamogetswemolefe@creatorcashflow.co.za">Contact support</a></footer>';const hash=location.hash.slice(1);state.page=known.includes(hash)?hash:'landing';window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(known.includes(h)&&state.page!==h){state.page=h;if(h==='journey')loadCampaignMessages();render();}});if(state.page==='journey')loadCampaignMessages();render();});
 })();
-
 
 
 
