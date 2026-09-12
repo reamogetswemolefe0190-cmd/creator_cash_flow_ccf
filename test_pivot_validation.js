@@ -52,7 +52,7 @@ assert(indexHtml.includes('My cash flow'), 'Step 3 option: "My cash flow"');
 assert(indexHtml.includes('My business growth'), 'Step 3 option: "My business growth"');
 assert(indexHtml.includes('Your Creator HQ is ready.'), 'Magic Moment: "Your Creator HQ is ready."');
 assert(indexHtml.includes("We've created your financial workspace around your business."), 'Magic Moment description');
-assert(indexHtml.includes("Let's see how you're doing →"), 'Magic moment CTA button');
+assert(indexHtml.includes("Let's see how you're doing <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>"), 'Magic moment CTA button');
 
 console.log('\n--- 5. Testing Dashboard Architecture & Business Analyst AI ---');
 assert(indexHtml.includes('tab-records'), 'Dashboard includes tab-records element');

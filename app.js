@@ -743,7 +743,7 @@ function executeLaunchSequence() {
 
     playAppLoadingSequence(() => {
         if (launchBtn) {
-            launchBtn.innerText = "Let's see how you're doing →";
+            launchBtn.innerText = "Let's see how you're doing <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>";
             launchBtn.disabled = false;
         }
         switchView('app');
@@ -1675,7 +1675,7 @@ async function executeOnboardingSignup() {
             signupError.classList.remove('hidden');
         }
         if (signupBtn) {
-            signupBtn.innerText = 'Create Account & Launch HQ →';
+            signupBtn.innerText = 'Create Account & Launch HQ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
             signupBtn.disabled = false;
         }
     }
@@ -1741,7 +1741,7 @@ async function executeOnboardingLogin() {
             loginError.classList.remove('hidden');
         }
         if (loginBtn) {
-            loginBtn.innerText = 'Sign In & Launch HQ →';
+            loginBtn.innerText = 'Sign In & Launch HQ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
             loginBtn.disabled = false;
         }
     }
@@ -1780,7 +1780,7 @@ function openUploadRecordModal() {
                 <span class="text-[10px] text-text-secondary">PDF, PNG, CSV up to 10MB</span>
             </div>
             <button class="w-full bg-white text-black font-bold font-label-lg py-sm rounded-xl shadow-lg active:scale-95 transition-transform" onclick="submitRecordEntry()">
-                Archive Record →
+                Archive Record <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </button>
         </div>
     `);

@@ -38,7 +38,7 @@
     function draw() {
         const element = root();
         if (!element) return;
-        element.innerHTML = `<div class="hq-section-head"><div><span class="hq-eyebrow">Direct Instagram · pilot</span><h2>Your content. Your results.</h2></div><button class="cc-btn cc-primary" data-ig="connect" ${busy || !configured ? 'disabled' : ''}>Connect Instagram →</button></div>
+        element.innerHTML = `<div class="hq-section-head"><div><span class="hq-eyebrow">Direct Instagram · pilot</span><h2>Your content. Your results.</h2></div><button class="cc-btn cc-primary" data-ig="connect" ${busy || !configured ? 'disabled' : ''}>Connect Instagram <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button></div>
             <p>Connect a professional Instagram account linked to a Facebook Page. CCF reads your profile, posts and performance—not your password, messages or income. These results stay private to your CCF account; campaign sharing is not enabled here.</p>
             <p class="customer-meta">Pilot access depends on your Meta app role and approved permissions. Connecting here does not publish or edit posts.</p>
             ${!configured && initialised ? '<p>Instagram setup is not complete on this deployment.</p>' : ''}
