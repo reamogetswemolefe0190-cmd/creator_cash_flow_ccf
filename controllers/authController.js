@@ -102,10 +102,10 @@ async function signup(req, res) {
 
         if (RESEND_API_KEY) {
             console.log('[RESEND] Sending account welcome email');
-            fetch( + "${RESEND_API_URL}/emails" + , {
+            fetch(`${RESEND_API_URL}/emails`, {
                 method: 'POST',
                 headers: {
-                    'Authorization':  + "Bearer " + ,
+                    'Authorization': `Bearer ${RESEND_API_KEY}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({

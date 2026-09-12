@@ -31,17 +31,17 @@ router.post('/invite', requireAgency, async (req, res) => {
     try {
         if (RESEND_API_KEY) {
             console.log('[RESEND] Sending agency invite email to:', email);
-            const r = await fetch( + "${RESEND_API_URL}/emails" + , {
+            const r = await fetch(RESEND_API_URL + '/emails', {
                 method: 'POST',
                 headers: {
-                    'Authorization':  + "Bearer " + ,
+                    'Authorization': 'Bearer ' + RESEND_API_KEY,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     from: FROM_EMAIL,
                     to: email,
-                    subject:  + "${req.user.name} has invited you to join their Creator Cash Flow roster" + ,
-                    html:  + "<p>Hello,</p><p><b></b> has invited you to connect your Creator Cash Flow account to their agency roster.</p><p>By joining their roster, you can easily share your verified YouTube/Instagram analytics and securely collaborate on campaigns.</p><p><a href=\"\" style=\"background:#fff;color:#000;padding:12px 24px;text-decoration:none;border-radius:4px;display:inline-block;margin-top:16px;\">Accept Invite & Join Roster</a></p>" + 
+                    subject: req.user.name + ' has invited you to join their Creator Cash Flow roster',
+                    html: '<p>Hello,</p><p><b>' + req.user.name + '</b> has invited you to connect your Creator Cash Flow account to their agency roster.</p><p>By joining their roster, you can easily share your verified YouTube/Instagram analytics and securely collaborate on campaigns.</p><p><a href="' + invite_link + '" style="background:#fff;color:#000;padding:12px 24px;text-decoration:none;border-radius:4px;display:inline-block;margin-top:16px;">Accept Invite & Join Roster</a></p>'
                 })
             });
             const data = await r.json();

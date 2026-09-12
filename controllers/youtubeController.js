@@ -198,7 +198,7 @@ async function getMetrics(req, res) {
             const startDate = formatDate(thirtyDaysAgo);
             const endDate = formatDate(today);
 
-            const analyticsUrl = https://youtubeanalytics.googleapis.com/v2/reports?ids=channel==MINE&startDate= + startDate + &endDate= + endDate + &metrics=views,likes,comments,estimatedMinutesWatched,estimatedRevenue;
+            const analyticsUrl = 'https://youtubeanalytics.googleapis.com/v2/reports?ids=channel==MINE&startDate=' + startDate + '&endDate=' + endDate + '&metrics=views,likes,comments,estimatedMinutesWatched,estimatedRevenue';
             
             let advancedStats = {
                 monthlyViews: '0',
