@@ -190,10 +190,10 @@ const state = {
                                 <div class="ce-stage-top"><span>SPRING IN MOTION</span><b>LIVE</b></div>
                                 <h3>One campaign.<br>Everyone in sync.</h3>
                                 <div class="ce-stage-progress"><span></span></div>
-                                <div class="ce-stage-people"><span>TM</span><span>SN</span><span>VA</span><small>Creator → Agency → Brand</small></div>
+                                <div class="ce-stage-people"><span>TM</span><span>SN</span><span>VA</span><small>Creator <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Agency <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Brand</small></div>
                             </article>
                             <article class="ce-float-card ce-float-metric"><small>VERIFIED VIEWS</small><strong>128.4K</strong><span>↑ 18.6%</span></article>
-                            <article class="ce-float-card ce-float-payment"><small>MILESTONE REACHED</small><strong>R5,000</strong><span>Ready for approval →</span></article>
+                            <article class="ce-float-card ce-float-payment"><small>MILESTONE REACHED</small><strong>R5,000</strong><span>Ready for approval <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></article>
                             <div class="ce-signal ce-signal-one"></div><div class="ce-signal ce-signal-two"></div>
                         </div>
                     </section>
@@ -234,7 +234,7 @@ const state = {
                             </div>
                             <div class="ce-money-bottom">
                                 <span>Next payment<br><strong>Vela Active</strong></span>
-                                <span>Due 30 Sep<br><strong>R12,000 →</strong></span>
+                                <span>Due 30 Sep<br><strong>R12,000 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></strong></span>
                             </div>
                         </div>
                     </section>
@@ -323,7 +323,7 @@ const state = {
                             </label>
 
                             <button class="cc-btn cc-primary" style="width: 100%; margin-top: 10px;" data-command="executeDemoLogin()">
-                                Enter demo workspace →
+                                Enter demo workspace <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </button>
 
                             <div class="cc-small" style="margin-top: 18px; text-align: center;">
@@ -387,7 +387,7 @@ const state = {
                                         ${isCreator ? 'Your first video draft is due on 16 September.' : isAgency ? 'Thando’s first video is ready for your quality check.' : 'The agency has sent 2 deliverables for final approval.'}
                                     </p>
                                     <button class="cc-btn cc-primary" data-command="openCampaignFlow('${role}')">
-                                        ${isCreator ? 'Open deliverables' : isAgency ? 'Review submissions' : 'Review & approve'} →
+                                        ${isCreator ? 'Open deliverables' : isAgency ? 'Review submissions' : 'Review & approve'} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </button>
                                 </div>
 
@@ -395,7 +395,7 @@ const state = {
                                 <div class="cc-box">
                                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
                                         <h3>${isCreator ? 'Upcoming payments' : isAgency ? 'Creator roster' : 'Campaign performance'}</h3>
-                                        <button class="cc-link" data-command="setWorkspaceTab('${isCreator ? 'Income' : isAgency ? 'Roster' : 'Partners'}')">View all →</button>
+                                        <button class="cc-link" data-command="setWorkspaceTab('${isCreator ? 'Income' : isAgency ? 'Roster' : 'Partners'}')">View all <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
                                     </div>
                                     ${isCreator ? (
                                         renderRow('Vela Active', 'Spring in motion · due 30 Sep', 'R12,000') +
@@ -436,7 +436,7 @@ const state = {
                                         “The updated brief is ready. Please keep the opening shot outdoors.”
                                     </p>
                                     <button class="cc-link" data-command="setWorkspaceTab('Inbox')">
-                                        Open conversation →
+                                        Open conversation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </button>
                                 </div>
                             </div>
@@ -475,7 +475,7 @@ const state = {
                                         <td><strong style="color:#A3E635;">R12,000</strong></td>
                                         <td>16 Sep 2026</td>
                                         <td><span class="cc-tag cc-tag-pending">Draft In Progress</span></td>
-                                        <td><button class="cc-btn cc-btn-nav cc-primary" data-command="setPage('journey')">Submit Draft →</button></td>
+                                        <td><button class="cc-btn cc-btn-nav cc-primary" data-command="setPage('journey')">Submit Draft <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button></td>
                                     </tr>
                                     <tr>
                                         <td><strong>Morning Ritual</strong><br><span class="cc-small">#CCF-019</span></td>
@@ -529,7 +529,7 @@ const state = {
                                         <td><strong>R60,000</strong></td>
                                         <td>8 / 12 Approved</td>
                                         <td><span class="cc-tag cc-tag-pending">Draft QC</span></td>
-                                        <td><button class="cc-btn cc-btn-nav cc-primary" data-command="setPage('journey')">Manage Brief →</button></td>
+                                        <td><button class="cc-btn cc-btn-nav cc-primary" data-command="setPage('journey')">Manage Brief <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button></td>
                                     </tr>
                                     <tr>
                                         <td><strong>Morning Ritual</strong></td>
@@ -894,7 +894,7 @@ const state = {
                                     <h2>${isCreator ? 'Good morning, ' : ''}${roleName}${isCreator ? '.' : ''}</h2>
                                     <p>${isCreator ? 'Your work is moving. Here’s where your money stands.' : isAgency ? 'Your campaigns, creators and next decisions.' : 'See what’s working. Keep your campaign moving.'}</p>
                                 </div>
-                                <div class="cc-demo-title-actions"><button class="cc-btn cc-primary" data-command="openCampaignFlow('${role}')">Open shared campaign →</button><span class="cc-avatar">${roleAvatar}</span></div>
+                                <div class="cc-demo-title-actions"><button class="cc-btn cc-primary" data-command="openCampaignFlow('${role}')">Open shared campaign <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button><span class="cc-avatar">${roleAvatar}</span></div>
                             </div>
 
                             ${subViewContent}
@@ -935,7 +935,7 @@ const state = {
                                     <div class="cc-small">Campaign #CCF-024 · shared record</div>
                                 </div>
 
-                                <button class="cc-btn cc-primary" data-command="nextStep()" style="padding: 12px 24px; font-size: 14px;">${s[3]} →</button>
+                                <button class="cc-btn cc-primary" data-command="nextStep()" style="padding: 12px 24px; font-size: 14px;">${s[3]} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; vertical-align: -2px; display: inline-block;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
                                 <div class="cc-small" style="margin-top: 14px;">
                                     ${state.step === 5 ? 'Payment is tracked separately from content approval.' : 'Next handoff: ' + s[4]}
                                 </div>
