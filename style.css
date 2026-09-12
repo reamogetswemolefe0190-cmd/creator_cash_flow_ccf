@@ -1150,3 +1150,61 @@ button, a, .onboard-choice-card, .admin-tab-btn, .mobile-nav-item {
 }
 
 
+
+/* ==========================================================================
+   GLASSMORPHISM OVERRIDES (Premium Fintech Aesthetic)
+   ========================================================================== */
+
+/* 1. The Global Header */
+.public-header {
+    background: rgba(11, 11, 11, 0.6) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 2. Modals (Invite Modal, Content Rooms) */
+.modal-content, .codex-modal {
+    background: rgba(18, 18, 18, 0.65) !important;
+    backdrop-filter: blur(24px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    border-radius: 24px !important;
+}
+
+/* 3. Dashboard Panels / Cards */
+.hq-panel, .glass-card, .onboard-choice-card, .card-shadow {
+    background: rgba(18, 18, 18, 0.4) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+.hq-panel:hover, .glass-card:hover, .onboard-choice-card:hover {
+    background: rgba(24, 24, 24, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 48px rgba(0, 255, 128, 0.05), 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* 4. Glassy Inputs & Form Fields */
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], select, textarea, .copy-link-box input {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+    transition: all 0.2s ease !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(0, 255, 128, 0.4) !important;
+    box-shadow: 0 0 0 3px rgba(0, 255, 128, 0.1) !important;
+    outline: none !important;
+}
